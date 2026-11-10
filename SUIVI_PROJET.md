@@ -184,6 +184,11 @@ Les remplacer après chaque jalon par des actions précises avec fichiers, comma
 - Panne trouvée au premier essai : **disque de fw-dc1 plein à 100 %**. strongSwan journalisait chaque paquet DPD (1,7 Go en 13 jours), FRR plantait en boucle (SIGBUS) : plus d'OSPF, trafic des sites hors tunnels, F05 et F09 en échec (recette `evidence/20261110T182053Z/`, non conforme).
 - Réparation : journaux de maintien vidés sur les 5 routeurs (35 % d'occupation), `deploy.py` corrigé (strongSwan au niveau 0, journal système plafonné à 50 Mo, bruit multicast refusé sans journal) et relancé. Recette **conforme 17/17, bascule 3,4 s** : `evidence/20261110T183628Z/`.
 
+### 10/11/2026 — dépôt GitHub et accès du groupe
+
+- Dépôt **privé** https://github.com/Kamalors/securite-des-infrastructures (privé : l'adresse du serveur et le rapport d'incident y figurent). Fichiers personnels exclus par `.gitignore`.
+- Accès des membres : `docs/ACCES_CAMARADES.md`. Côté serveur, en root : `05_acces_camarades.sh` (tunnels EVE-NG et Proxmox) et `06_comptes_proxmox.sh` (comptes Proxmox limités au lab). **Pas encore appliqués** ; changer d'abord le mot de passe d'usine du compte web `admin` d'EVE-NG.
+
 ### Modèle d’entrée à recopier
 
 - Date/heure/fuseau ; intervenant et IA :
