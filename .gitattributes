@@ -1,0 +1,10 @@
+# Scripts exécutés sur le serveur : fins de ligne Unix, sinon bash échoue ($'\r': command not found)
+*.sh   text eol=lf
+*.py   text eol=lf
+# Scripts Windows
+*.ps1  text eol=crlf
+*.cmd  text eol=crlf
+*.pdf  binary
+*.png  binary
+# Preuves de recette : octet pour octet, sinon les empreintes SHA256SUMS ne correspondent plus
+evidence/** -text

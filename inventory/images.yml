@@ -1,0 +1,41 @@
+# OBSOLÈTE (inventaire initial du 15/10/2026) : l'image réellement utilisée est Debian 13 + FRR 10.3 + strongSwan 6.0,
+# installée dans /opt/unetlab/addons/qemu/linux-debian13-routeur/virtioa.qcow2 (voir docs/MAQUETTE.md).
+# Images de la maquette. États : manquante | téléchargement en cours | téléchargée | vérifiée | installée | démarrage validé | bloquée
+# Dossier EVE et nom de disque : À VÉRIFIER sur https://www.eve-ng.net/index.php/documentation/qemu-image-namings/
+# avant toute installation. Aucune valeur ci-dessous n'a encore été contrôlée.
+# Choix par défaut : produits libres (pas de licence bloquante). Remplacer par des appliances éditeur si la démo doit coller à l'offre commerciale.
+
+platform:
+  eve-ng:
+    product: EVE-NG PRO 7.2.0-18, édition Freemium (fonctions complètes = licence payante ; limites à vérifier)
+    source: https://customers.eve-ng.net/eve-pro-prod-bm-7.2.0-18-full.iso   # lien « Direct » de la page officielle
+    file: /var/lib/vz/template/iso/eve-pro-prod-bm-7.2.0-18-full.iso   # sur PAR861454
+    size_bytes: 10775506944   # wget : « saved [10775506944/10775506944] », 15/10 16:21 CEST, 4h00 à ~729 Ko/s
+    sha256: à relever (empreinte de référence éditeur à rechercher)
+    state: téléchargée   # pas encore vérifiée (empreinte)
+
+images:
+  linux-router:
+    product: Debian 12 (cloud image) + FRR + strongSwan + nftables
+    source: https://cloud.debian.org/images/cloud/   # officiel, empreintes SHA512 publiées
+    eve_folder: linux-debian-12-router   # préfixe linux- : à confirmer
+    disk: virtioa.qcow2                  # à confirmer
+    resources: {cpu: 1, ram_mb: 512}
+    license: libre
+    state: manquante
+  linux-host:
+    product: Debian 12 (cloud image), rôles web/app/db/bastion/logs/clients
+    source: https://cloud.debian.org/images/cloud/
+    eve_folder: linux-debian-12-host
+    disk: virtioa.qcow2
+    resources: {cpu: 1, ram_mb: 1024}
+    license: libre
+    state: manquante
+  firewall:
+    product: OPNsense ou pfSense CE (à arbitrer)
+    source: https://opnsense.org/download/ | https://www.pfsense.org/download/
+    eve_folder: à déterminer selon la table officielle (pfsense- / opnsense-)
+    disk: à déterminer
+    resources: {cpu: 1, ram_mb: 1024}
+    license: libre (pfSense CE : compte Netgate requis pour l'installeur)
+    state: manquante

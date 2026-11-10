@@ -1,0 +1,7 @@
+Coupure de l'opérateur A sur gw-agfr à 2026-11-10T18:21:47+00:00 (UTC), pendant 10 s
+Route pendant la coupure : 10.11.20.20 via 203.0.113.1 dev eth2 src 203.0.113.40 uid 0 
+    cache
+Résultat du ping (0,2 s) depuis cli-ag :
+
+Route après rétablissement : 10.11.20.20 via 198.51.100.1 dev eth1 src 198.51.100.40 uid 0 
+    cache

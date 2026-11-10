@@ -1,0 +1,40 @@
+# Inventaire unique de la maquette (état DÉPLOYÉ le 16/10/2026). Adressage des réseaux : addressing.csv.
+# D1 : EVE Freemium (7 nœuds max) porte les nœuds réseau ; les hôtes et clients sont des conteneurs LXC Proxmox.
+# Accès : ssh -F automation/ssh_config <nom>. Lab EVE : /RAO.unl, créé par automation/eve/creer_lab.js.
+# Interfaces : e0/eth0 = gestion (Cloud1, 10.98.0.0/24, DHCP réservé, ni passerelle ni DNS).
+
+networks:          # id EVE : nom (type) -> segment
+  1: {name: Cloud1-gestion,      type: pnet1, pont: vmbr2,  segment: lab-gestion}
+  2: {name: Cloud2-dc1-dmz,      type: pnet2, pont: vmbr10, segment: dc1-dmz}
+  3: {name: Cloud3-dc1-app,      type: pnet3, pont: vmbr11, segment: dc1-app}
+  4: {name: Cloud4-dc1-data,     type: pnet4, pont: vmbr12, segment: dc1-data}
+  5: {name: Cloud5-dc1-adm,      type: pnet5, pont: vmbr13, segment: dc1-adm}
+  6: {name: Cloud6-agfr-lan,     type: pnet6, pont: vmbr14, segment: agfr-lan}
+  7: {name: Cloud7-inet-cli,     type: pnet7, pont: vmbr15, segment: inet-cli}
+  8: {name: Cloud8-agfr-invites, type: pnet8, pont: vmbr16, segment: agfr-invites}
+  9: {name: opA,      type: bridge, segment: opA}
+  10: {name: opB,     type: bridge, segment: opB}
+  11: {name: isp-ab,  type: bridge, segment: isp-ab}
+  12: {name: dc2-lan, type: bridge, segment: dc2-lan}
+  13: {name: hq-lan,  type: bridge, segment: hq-lan}
+  14: {name: part-lan, type: bridge, segment: part-lan}
+
+nodes_eve:         # image linux-debian13-routeur, 1 vCPU, 512 Mo ; interfaces dans l'ordre eth0, eth1...
+  isp-a:   {id: 1, gestion: 10.98.0.11, interfaces: [gestion, opA, inet-cli, isp-ab]}
+  isp-b:   {id: 2, gestion: 10.98.0.12, interfaces: [gestion, opB, isp-ab]}
+  fw-dc1:  {id: 3, gestion: 10.98.0.13, interfaces: [gestion, opA, opB, dc1-dmz, dc1-app, dc1-data, dc1-adm]}
+  fw-dc2:  {id: 4, gestion: 10.98.0.14, interfaces: [gestion, opA, opB, dc2-lan]}
+  gw-hq:   {id: 5, gestion: 10.98.0.15, interfaces: [gestion, opA, opB, hq-lan]}
+  gw-agfr: {id: 6, gestion: 10.98.0.16, interfaces: [gestion, opA, opB, agfr-lan, agfr-invites]}
+  gw-part: {id: 7, gestion: 10.98.0.17, interfaces: [gestion, opA, part-lan]}
+
+hotes_lxc:         # Debian 13, eth0 = segment métier (passerelle = nœud EVE), eth1 = gestion
+  srv-web: {ct: 301, ip: 10.11.10.10, segment: dc1-dmz,      gestion: 10.98.0.101}
+  srv-app: {ct: 302, ip: 10.11.20.20, segment: dc1-app,      gestion: 10.98.0.102}
+  srv-db:  {ct: 303, ip: 10.11.30.30, segment: dc1-data,     gestion: 10.98.0.103}
+  bastion: {ct: 304, ip: 10.11.99.10, segment: dc1-adm,      gestion: 10.98.0.104}
+  logs:    {ct: 305, ip: 10.11.99.20, segment: dc1-adm,      gestion: 10.98.0.105}
+  cli-ag:  {ct: 306, ip: 10.40.1.10,  segment: agfr-lan,     gestion: 10.98.0.106}
+  cli-ext: {ct: 307, ip: 192.0.2.10,  segment: inet-cli,     gestion: 10.98.0.107}
+  cli-inv: {ct: 308, ip: 10.40.2.10,  segment: agfr-invites, gestion: 10.98.0.108}
+# Écarts au plan initial : gw-agint non déployé (même schéma que gw-hq) ; un seul DC complet (DC2 réduit à fw-dc2 + dc2-lan).

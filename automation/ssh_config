@@ -1,0 +1,65 @@
+# Accès SSH au lab RAO, sans toucher à ~/.ssh/config.
+# Usage depuis la racine du projet : ssh -F automation/ssh_config fw-dc1
+# Chaîne : PC -> hôte Proxmox (administrateur) -> VM EVE (root) -> nœuds et conteneurs (réseau de gestion 10.98.0.0/24)
+
+Host par861454 lab-host
+    HostName 163.172.105.87
+    User administrateur
+
+# Interfaces web en une commande : ssh -F automation/ssh_config -N eve-web
+# puis https://localhost:8443 (EVE-NG) et https://localhost:8006 (Proxmox, écoute seulement sur 127.0.0.1 du serveur)
+Host eve-web
+    HostName 163.172.105.87
+    User administrateur
+    LocalForward 8443 10.99.0.10:443
+    LocalForward 8006 127.0.0.1:8006
+
+Host eve eve-rao
+    HostName 10.99.0.10
+    User root
+    ProxyJump par861454
+
+# Nœuds réseau EVE (réservations DHCP : /etc/rao/dhcp-hosts sur EVE, MAC 50:00:00:0N:00:00)
+Host isp-a
+    HostName 10.98.0.11
+Host isp-b
+    HostName 10.98.0.12
+Host fw-dc1
+    HostName 10.98.0.13
+Host fw-dc2
+    HostName 10.98.0.14
+Host gw-hq
+    HostName 10.98.0.15
+Host gw-agfr
+    HostName 10.98.0.16
+Host gw-part
+    HostName 10.98.0.17
+
+# Conteneurs LXC Proxmox (04_lxc_lab.sh)
+Host srv-web
+    HostName 10.98.0.101
+Host srv-app
+    HostName 10.98.0.102
+Host srv-db
+    HostName 10.98.0.103
+Host bastion
+    HostName 10.98.0.104
+Host logs
+    HostName 10.98.0.105
+Host cli-ag
+    HostName 10.98.0.106
+Host cli-ext
+    HostName 10.98.0.107
+Host cli-inv
+    HostName 10.98.0.108
+
+Host isp-* fw-* gw-* srv-* bastion logs cli-*
+    User root
+    ProxyJump eve
+    StrictHostKeyChecking accept-new
+
+Host *
+    IdentityFile ~/.ssh/id_ed25519_par861454
+    IdentitiesOnly yes
+    BatchMode yes
+    ServerAliveInterval 30

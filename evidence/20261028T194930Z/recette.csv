@@ -1,0 +1,22 @@
+id;description;source;ip_source;destination;attendu;obtenu;statut;horodatage_utc;detail
+F01;Internet -> publication web HTTPS;cli-ext;-;198.51.100.10:443;ok;ok;réussi;2026-10-28T19:49:32+00:00;OUVERT
+F02;Internet -> SFTP publie (port 22);cli-ext;-;198.51.100.10:22;ok;ok;réussi;2026-10-28T19:49:34+00:00;OUVERT
+F03;srv-web -> srv-app 8443;srv-web;-;10.11.20.20:8443;ok;ok;réussi;2026-10-28T19:49:35+00:00;OUVERT
+F04;srv-app -> srv-db 5432;srv-app;-;10.11.30.30:5432;ok;ok;réussi;2026-10-28T19:49:36+00:00;OUVERT
+F05;agence FR -> application (tunnel);cli-ag;-;10.11.20.20:8443;ok;ok;réussi;2026-10-28T19:49:37+00:00;OUVERT
+F06;partenaire S2S -> application;gw-part;10.60.1.1;10.11.20.20:8443;ok;ok;réussi;2026-10-28T19:49:38+00:00;Connection to 10.11.20.20 8443 port [tcp/*] succeeded!
+F09;admin (siege) -> bastion 22;gw-hq;10.30.1.1;10.11.99.10:22;ok;ok;réussi;2026-10-28T19:49:39+00:00;Connection to 10.11.99.10 22 port [tcp/ssh] succeeded!
+F10;bastion -> serveur (administration);bastion;-;10.11.30.30:22;ok;ok;réussi;2026-10-28T19:49:40+00:00;OUVERT
+F11;serveur -> collecteur de journaux;srv-app;-;10.11.99.20:6514;ok;ok;réussi;2026-10-28T19:49:40+00:00;OUVERT
+F13;invite agence -> Internet 80;cli-inv;-;192.0.2.10:80;ok;ok;réussi;2026-10-28T19:49:41+00:00;OUVERT
+N01;Internet -> base de donnees;cli-ext;-;198.51.100.10:5432;refus;refus;réussi;2026-10-28T19:49:42+00:00;FERME
+N02;Internet -> bastion;cli-ext;-;10.11.99.10:22;refus;refus;réussi;2026-10-28T19:49:46+00:00;FERME
+N03;srv-web -> srv-db 5432;srv-web;-;10.11.30.30:5432;refus;refus;réussi;2026-10-28T19:49:47+00:00;FERME
+N04;srv-app -> srv-db autre port (22);srv-app;-;10.11.30.30:22;refus;refus;réussi;2026-10-28T19:49:51+00:00;FERME
+N05;invite agence -> reseau interne;cli-inv;-;10.11.20.20:8443;refus;refus;réussi;2026-10-28T19:49:54+00:00;FERME
+N06;partenaire -> base de donnees;gw-part;10.60.1.1;10.11.30.30:5432;refus;refus;réussi;2026-10-28T19:49:58+00:00;FERME
+N08;agence -> serveur en SSH sans bastion;cli-ag;-;10.11.30.30:22;refus;refus;réussi;2026-10-28T19:50:02+00:00;FERME
+F07;nomade salarie -> application;-;-;-;-;-;non exécuté;-;ZTNA/VPN nomade non modelise dans la maquette
+F08;nomade partenaire -> portail;-;-;-;-;-;non exécuté;-;ZTNA/VPN nomade non modelise dans la maquette
+N07;nomade partenaire -> application;-;-;-;-;-;non exécuté;-;ZTNA/VPN nomade non modelise dans la maquette
+N09;nomade revoque;-;-;-;-;-;non exécuté;-;IdP/MFA non modelise dans la maquette

@@ -1,0 +1,8 @@
+Coupure de l'opérateur A sur gw-agfr à 2026-11-10T18:37:31+00:00 (UTC), pendant 10 s
+Route pendant la coupure : 10.11.20.20 via 10.255.2.1 dev xb-dc1 src 10.255.2.2 uid 0 
+    cache
+Résultat du ping (0,2 s) depuis cli-ag :
+125 packets transmitted, 108 received, +8 errors, 13.6% packet loss, time 25006ms
+rtt min/avg/max/mdev = 0.893/2.011/3.047/0.293 ms
+Route après rétablissement : 10.11.20.20 via 10.255.1.1 dev xa-dc1 src 10.255.1.2 uid 0 
+    cache

@@ -1,0 +1,16 @@
+network,prefix,gateway,pont_proxmox,note
+opA,198.51.100.0/24,198.51.100.1,,transport A simulé dans EVE (RFC 5737)
+opB,203.0.113.0/24,203.0.113.1,,transport B simulé dans EVE (RFC 5737)
+inet-cli,192.0.2.0/24,192.0.2.1,vmbr15,clients externes simulés (RFC 5737) ; LXC cli-ext
+dc1-dmz,10.11.10.0/24,10.11.10.1,vmbr10,LXC srv-web
+dc1-app,10.11.20.0/24,10.11.20.1,vmbr11,LXC srv-app
+dc1-data,10.11.30.0/24,10.11.30.1,vmbr12,LXC srv-db
+dc1-adm,10.11.99.0/24,10.11.99.1,vmbr13,LXC bastion et logs
+dc2-lan,10.20.10.0/24,10.20.10.1,,interne à EVE
+hq-lan,10.30.1.0/24,10.30.1.1,,interne à EVE
+agfr-lan,10.40.1.0/24,10.40.1.1,vmbr14,LXC cli-ag
+agfr-invites,10.40.2.0/24,10.40.2.1,vmbr16,segment invités (tests F13/N05) ; LXC cli-inv
+part-lan,10.60.1.0/24,10.60.1.1,,interne à EVE
+nomades,10.70.1.0/24,,,pool VPN/ZTNA
+lab-gestion,10.98.0.0/24,,vmbr2,gestion des nœuds du lab (Ansible) : ni passerelle ni DNS annoncés, pas d'IP sur l'hôte
+eve-gestion,10.99.0.0/24,10.99.0.1,vmbr1,gestion de la VM EVE et du conteneur de contrôle (NAT vers Internet)

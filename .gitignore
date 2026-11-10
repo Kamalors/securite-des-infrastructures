@@ -1,0 +1,20 @@
+# Fichiers personnels, sans rapport avec le projet
+planning_20262027.pdf
+resume_complet_chat_force_combat_seche.md
+
+# Jamais de clés ni de secrets dans le dépôt
+id_*
+*.pem
+*.key
+*.pfx
+known_hosts*
+*.env
+proxmox.ps1
+
+# Fichiers générés
+__pycache__/
+*.pyc
+*.iso
+*.qcow2
+Thumbs.db
+desktop.ini
