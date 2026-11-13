@@ -1,0 +1,1027 @@
+{
+ "title": "Le projet RAO expliqué",
+ "total_words": 2880,
+ "changelog": [
+  "v4 : critique WF2b (4 relecteurs, 3 sceptiques) et transcription Whisper de la v2.",
+  "Documents corrigés hors vidéo : offre (§ 1, § 4.4, § 12.3, annexe B), CHIFFRAGE, GLOSSAIRE (Gartner, licence des hubs) ; PDF explicatif p. 4, 6 et 11.",
+  "Écoute : « se paie chaque mois », « sans investissement de départ », « affichent encore », « double authentification ».",
+  "Démo : scénario écrit (docs/DEMO_EVE.md à l'écran), accès à demander à Maxime ; diapos 5 et 22 à corriger.",
+  "Rôles : numéros de diapos retirés de la voix (affichés) ; items ajoutés pour Fatih, Nolan, Younes, Maxime (écrans fixes de plus de 23 s supprimés) ; Broadcom, correctifs Fortinet, EDR, couverture à remplir.",
+  "Exactitude : 700G successeur probable, 221 400 €, actif/passif des bases, définition du SASE, 64 TiB par datacenter, HDS « pour le remboursement », services exposés au Cloud Act, réversibilité à rédiger, 3,8 s à citer.",
+  "v5 : vérification finale WF2c (3 vérificateurs, 3 sceptiques) : écran de Younes coupé par un item, détails de Valentin sur une ligne, non-inclus de Diane à jour, « devant lui » sans ambiguïté, accès au diaporama demandé à Maxime.",
+  "Hors vidéo : calcul.py (ZTNA, non-inclus), offre § 16.4 et annexe B (sources externes), QUESTIONS_JURY Q3 et Q36, ROLES_SOUTENANCE, SUIVI D6, PDF p. 11 et p. 18 (profils neutres)."
+ ],
+ "scenes": [
+  {
+   "id": "ouverture",
+   "layout": "ouverture",
+   "section": "Ouverture",
+   "chapitre": "Ouverture",
+   "title": "RAO Sécurité des infrastructures : le projet expliqué",
+   "subtitle": "Le cas, la finalité, la solution, les sept rôles, les problématiques",
+   "items": [],
+   "beats": [
+    {
+     "reveal": 0,
+     "say": "Bonjour à toute l'équipe. Le jury interrogera chaque rôle sur son domaine : cette vidéo vous y prépare, en une vingtaine de minutes. D'abord le cas et la solution, puis chaque rôle et les problématiques."
+    }
+   ]
+  },
+  {
+   "id": "cas-client",
+   "layout": "chiffres",
+   "section": "Le cas",
+   "chapitre": "Le cas · le client",
+   "title": "Le client : une grande mutuelle santé",
+   "subtitle": "Un client fictif, un périmètre fixé par l'appel d'offres",
+   "items": [
+    {
+     "label": "sites",
+     "detail": "2 sièges · 498 agences en France\n30 à l'étranger",
+     "value": "530"
+    },
+    {
+     "label": "utilisateurs",
+     "detail": "4 000 aux sièges, 4 000 en agences France\n2 000 à l'étranger",
+     "value": "10 000"
+    },
+    {
+     "label": "partenaires",
+     "detail": "40 % reliés site à site\n60 % connectés en nomades",
+     "value": "≈ 100"
+    }
+   ],
+   "beats": [
+    {
+     "reveal": 0,
+     "say": "Commençons par le cas. Un appel d'offres met des entreprises en concurrence sur le besoin d'un client. Ici, une grande mutuelle santé, fictive, veut sécuriser toute son infrastructure : ses sites, ses datacenters et ses accès à distance."
+    },
+    {
+     "reveal": 1,
+     "say": "La mutuelle compte cinq cent trente sites : deux sièges, quatre cent quatre-vingt-dix-huit agences en France et trente à l'étranger."
+    },
+    {
+     "reveal": 2,
+     "say": "Dix mille utilisateurs y travaillent, dont huit mille en France."
+    },
+    {
+     "reveal": 3,
+     "say": "S'y ajoutent une centaine de partenaires : quarante pour cent reliés en site à site, les autres en nomades. Et comme une mutuelle traite des données de santé, nous exigeons par prudence un hébergeur certifié H-D-S, c'est-à-dire hébergeur de données de santé."
+    }
+   ]
+  },
+  {
+   "id": "cas-demande",
+   "layout": "texte",
+   "section": "Le cas",
+   "chapitre": "Le cas · la demande",
+   "title": "Ce que demande l'appel d'offres",
+   "subtitle": "Un cahier des charges de trois pages",
+   "items": [
+    {
+     "label": "Relier les sites",
+     "detail": "Connectivité WAN des datacenters et des 530 sites"
+    },
+    {
+     "label": "Les datacenters",
+     "detail": "Housing, redondance, serveurs virtuels ou physiques"
+    },
+    {
+     "label": "La sécurité des flux",
+     "detail": "Nord-sud : publication, accès Internet filtré ; est-ouest : entre serveurs"
+    },
+    {
+     "label": "Les agences",
+     "detail": "Réseau, sécurité, accès à Internet et aux datacenters"
+    },
+    {
+     "label": "Les accès à distance",
+     "detail": "Infogérance, collaborateurs nomades, partenaires (VPN, ZTNA, MFA…)"
+    }
+   ],
+   "beats": [
+    {
+     "reveal": 0,
+     "say": "Que demande le client ? Le cahier des charges tient en trois pages."
+    },
+    {
+     "reveal": 1,
+     "say": "D'abord, relier les sites. C'est le Wan, le réseau étendu entre sites éloignés."
+    },
+    {
+     "reveal": 2,
+     "say": "Puis les datacenters, ces bâtiments sécurisés où tournent les serveurs, que le client veut redondants."
+    },
+    {
+     "reveal": 3,
+     "say": "Vient la sécurité des flux. Le trafic nord-sud, ce sont les échanges avec Internet : sites publiés, mais aussi navigation des serveurs et des utilisateurs. Le trafic est-ouest, ce qui circule entre les serveurs."
+    },
+    {
+     "reveal": 4,
+     "say": "S'y ajoutent le réseau et la sécurité des agences.",
+     "debit": "-12%"
+    },
+    {
+     "reveal": 5,
+     "say": "Enfin, les accès à distance : nomades, partenaires et infogérance, c'est-à-dire les prestataires qui administrent le système."
+    }
+   ]
+  },
+  {
+   "id": "cas-notation",
+   "layout": "schema",
+   "reuse_page": 4,
+   "section": "Le cas",
+   "chapitre": "Le cas · la notation",
+   "title": "Ce que le client va noter",
+   "items": [],
+   "beats": [
+    {
+     "reveal": 0,
+     "say": "Le client annonce aussi ce qui sera noté, en trois volets."
+    },
+    {
+     "reveal": 1,
+     "say": "Un, les solutions techniques : pour chaque fonction, le modèle retenu et sa justification. Notre méthode : chaque rôle cite aussi l'alternative écartée."
+    },
+    {
+     "reveal": 2,
+     "say": "Deux, les schémas H-L-D du datacenter et des agences : des schémas de principe, sans chaque câble."
+    },
+    {
+     "reveal": 3,
+     "say": "Trois, le coût global, ventilé par poste. Le client précise que sa direction informatique ne peut pas débloquer une grosse somme d'un coup. D'où l'abonnement."
+    }
+   ]
+  },
+  {
+   "id": "finalite",
+   "layout": "texte",
+   "section": "La finalité",
+   "chapitre": "La finalité",
+   "title": "La finalité : ce que nous livrons, et pourquoi",
+   "subtitle": "Un projet de cours : gagner l'appel d'offres, prouver notre maîtrise",
+   "items": [
+    {
+     "label": "Une offre technique et financière",
+     "detail": "19 sections, chaque choix justifié face à une alternative",
+     "value": "volet 1"
+    },
+    {
+     "label": "Quatre schémas HLD",
+     "detail": "Global, datacenter, agences, accès distants : diapos 5, 9, 13, 17",
+     "value": "volet 2"
+    },
+    {
+     "label": "Un chiffrage en abonnement",
+     "detail": "Prix sourcés, calculés par script : 221 424 € HT par mois",
+     "value": "volet 3"
+    },
+    {
+     "label": "Une maquette, non demandée",
+     "detail": "15 machines sur EVE-NG et Proxmox : 17 tests sur 17 conformes",
+     "value": "bonus"
+    },
+    {
+     "label": "Une soutenance à sept",
+     "detail": "24 diapositives, ≈ 20 min + 4 min de démo, puis les questions"
+    }
+   ],
+   "beats": [
+    {
+     "reveal": 0,
+     "say": "Quelle est la finalité ? C'est un projet de cours, défendu devant un jury. Le but : gagner l'appel d'offres, en montrant notre maîtrise de la sécurité des infrastructures. Le groupe livre cinq choses ; les trois premières répondent aux trois volets notés."
+    },
+    {
+     "reveal": 1,
+     "say": "D'abord, une offre technique et financière en dix-neuf sections, où chaque choix est justifié face à une alternative."
+    },
+    {
+     "reveal": 2,
+     "say": "Ensuite, quatre schémas H-L-D, intégrés au diaporama : la vue globale, le datacenter, les agences et les accès distants."
+    },
+    {
+     "reveal": 3,
+     "say": "Puis un chiffrage en abonnement. Chaque prix a une source, et un petit programme recalcule tout si une hypothèse change."
+    },
+    {
+     "reveal": 4,
+     "say": "Quatrième livrable, non demandé : une maquette, un réseau réduit simulé sur un serveur loué. Des tests automatiques y vérifient nos principes de sécurité, pas les produits."
+    },
+    {
+     "reveal": 5,
+     "say": "Enfin, la soutenance à sept : vingt-quatre diapositives, environ vingt minutes, plus quatre minutes de démonstration, durée à confirmer. Puis les questions du jury."
+    }
+   ]
+  },
+  {
+   "id": "solution",
+   "layout": "schema",
+   "reuse_page": 6,
+   "section": "La solution",
+   "chapitre": "La solution",
+   "title": "La solution en une image",
+   "items": [
+    {
+     "label": "Traits bleus : tunnels chiffrés IPsec",
+     "detail": "Chaque site a au moins 2 accès Internet et rejoint les 2 datacenters"
+    },
+    {
+     "label": "SD-WAN : le GPS des tunnels",
+     "detail": "Il choisit le meilleur accès et bascule seul en cas de panne"
+    },
+    {
+     "label": "Orange : accès Zero Trust",
+     "detail": "Nomades et partenaires nomades via FortiSASE, vers les 2 datacenters",
+     "accent": "orange"
+    },
+    {
+     "label": "MFA, puis une seule application",
+     "detail": "Mot de passe + second facteur ; jamais le réseau entier",
+     "accent": "orange"
+    },
+    {
+     "label": "Pointillés : partenaires site à site",
+     "detail": "Un tunnel vers la zone partenaire de chacun des 2 datacenters"
+    }
+   ],
+   "beats": [
+    {
+     "reveal": 0,
+     "say": "La solution, en une image. À gauche, les trois types de sites. À droite, deux datacenters certifiés H-D-S, en région parisienne."
+    },
+    {
+     "reveal": 1,
+     "say": "Chaque site reçoit un pare-feu Forti-Gate, un boîtier qui filtre les échanges. Sur ses accès Internet, ce boîtier monte des tunnels chiffrés, dits I-P sec, vers les deux datacenters, appelés hubs."
+    },
+    {
+     "reveal": 2,
+     "say": "Le S-D WAN pilote ces tunnels comme un G-P-S : il choisit le meilleur accès, et bascule seul en cas de panne."
+    },
+    {
+     "reveal": 3,
+     "say": "En bas, les nomades passent par Forti-SASE, un service de sécurité dans le cloud. C'est le Zero Trust : aucune confiance par défaut."
+    },
+    {
+     "reveal": 4,
+     "say": "On s'identifie par M-F-A : un mot de passe, plus un second facteur. Puis on n'ouvre qu'une application, jamais le réseau entier."
+    },
+    {
+     "reveal": 5,
+     "say": "Les partenaires site à site arrivent dans une zone réservée. Partout, une règle : tout est refusé par défaut, sauf ce qui est écrit."
+    }
+   ]
+  },
+  {
+   "id": "role-1-farah",
+   "layout": "personne",
+   "section": "Les sept rôles",
+   "chapitre": "Rôle 1 · Farah, chef de projet",
+   "title": "Rôle 1 · Farah, chef de projet",
+   "subtitle": "Ouvre et conclut la soutenance",
+   "person": {
+    "name": "Farah",
+    "role": "Chef de projet",
+    "order": 1,
+    "slides": "Diapos 1, 2, 3, 4, 24",
+    "duration": "3 min 30 en tout",
+    "page": 18
+   },
+   "items": [
+    {
+     "label": "Présente",
+     "detail": "Couverture, équipe, synthèse, besoin ; conclusion (diapo 24) ; distribue la parole"
+    },
+    {
+     "label": "Message clé",
+     "detail": "Une architecture complète, en abonnement, aux principes prouvés sur maquette"
+    },
+    {
+     "label": "Chiffres à citer",
+     "detail": "530 sites · 10 000 utilisateurs · 221,4 k€ HT/mois · 17/17"
+    },
+    {
+     "label": "Et si vos hypothèses sont fausses ?",
+     "detail": "Le script recalcule tout : +1 000 nomades = +4 152 € HT par mois"
+    },
+    {
+     "label": "Point de vigilance : Gartner",
+     "detail": "SASE 2026 : Challenger (Leader en 2025) ; Leader 2026 des pare-feu"
+    },
+    {
+     "label": "Transition",
+     "detail": "« Valentin va vous présenter comment les 530 sites sont reliés. »"
+    }
+   ],
+   "beats": [
+    {
+     "reveal": 0,
+     "say": "Place aux sept rôles, dans l'ordre de passage : Farah, Valentin, Nolan, Fatih, Younes, Maxime, Diane. Puis Valentin revient pour la démo, Younes pour les risques, et Farah conclut. Premier rôle, Farah, chef de projet, en trois minutes trente au total."
+    },
+    {
+     "reveal": 1,
+     "say": "Farah présente l'équipe, la synthèse, le besoin du client et nos hypothèses, comme trois mille nomades. Couverture : remplissez nom du groupe et date. Aux questions, Farah passe la parole au rôle concerné. En conclusion, si le jury demande la suite : valider ces hypothèses, obtenir des devis fermes, choisir l'hébergeur H-D-S."
+    },
+    {
+     "reveal": 2,
+     "say": "Message clé : une architecture complète, en abonnement, sans investissement de départ, dont les principes sont prouvés sur maquette."
+    },
+    {
+     "reveal": 3,
+     "say": "Chiffres : cinq cent trente sites, dix mille utilisateurs, deux cent vingt et un mille quatre cents euros hors taxes par mois, et dix-sept tests sur dix-sept."
+    },
+    {
+     "reveal": 4,
+     "say": "Question probable : et si vos hypothèses sont fausses ? Le chiffrage est un script : on corrige la valeur, tout se recalcule. Mille nomades de plus ajoutent quatre mille cent cinquante-deux euros par mois."
+    },
+    {
+     "reveal": 5,
+     "say": "Point de vigilance sur Gartner, le cabinet qui classe les éditeurs. En deux mille vingt-six, dans son classement S-A-S-E, réseau et sécurité dans le cloud, Forti-net est Challenger, et non plus Leader. En revanche, Forti-net reste Leader des pare-feu, l'essentiel de notre usage."
+    },
+    {
+     "reveal": 6,
+     "say": "Transition : Valentin va vous présenter comment les cinq cent trente sites sont reliés."
+    }
+   ]
+  },
+  {
+   "id": "role-2-valentin",
+   "layout": "personne",
+   "section": "Les sept rôles",
+   "chapitre": "Rôle 2 · Valentin, architecte SD-WAN",
+   "title": "Rôle 2 · Valentin, architecte SD-WAN",
+   "subtitle": "Le réseau entre les sites, puis la maquette",
+   "person": {
+    "name": "Valentin",
+    "role": "Architecte SD-WAN",
+    "order": 2,
+    "slides": "Diapos 5, 6, 22",
+    "duration": "2 min 30 + démo (≈ 4 min)",
+    "page": 7
+   },
+   "items": [
+    {
+     "label": "Présente",
+     "detail": "HLD global, SD-WAN ; en fin de parcours, la maquette et la démo (diapo 22)"
+    },
+    {
+     "label": "Messages clés",
+     "detail": "SD-WAN sur Internet, double hub vers les 2 datacenters ; pas de MPLS"
+    },
+    {
+     "label": "Chiffres à citer",
+     "detail": "1 060 tunnels par hub, 1 100 avec partenaires, pour 2 000 · 3,8 s · 17/17"
+    },
+    {
+     "label": "Point de vigilance : le 600F",
+     "detail": "Plus commandable depuis mai 2026 : 700G, successeur probable, même capacité"
+    },
+    {
+     "label": "La démo en 7 étapes",
+     "detail": "docs/DEMO_EVE.md · recette sur le PC de Maxime · plan B : preuves enregistrées"
+    },
+    {
+     "label": "La maquette prouve vos produits ?",
+     "detail": "Non, les principes : Linux remplace les FortiGate ; proposer une preuve de concept"
+    },
+    {
+     "label": "À corriger : diapos 5 et 22",
+     "detail": "Note 5 : intervention garantie, pas le rétablissement ; 22 : empreintes, pas signées"
+    },
+    {
+     "label": "Transitions",
+     "detail": "Diapo 6 → Nolan (datacenters) ; après la démo → Younes (risques)"
+    }
+   ],
+   "beats": [
+    {
+     "reveal": 0,
+     "say": "Deuxième rôle, Valentin, architecte S-D WAN : deux minutes trente au total, plus environ quatre minutes de démonstration."
+    },
+    {
+     "reveal": 1,
+     "say": "Valentin présente le schéma global et le S-D WAN, puis, en fin de parcours, la maquette."
+    },
+    {
+     "reveal": 2,
+     "say": "Messages clés : un S-D WAN sur Internet, vers les deux datacenters à la fois. Pas de M-P-L-S, le réseau privé des opérateurs : l'Internet professionnel coûte moins cher et se paie chaque mois."
+    },
+    {
+     "reveal": 3,
+     "say": "Chiffres : mille soixante tunnels par datacenter, mille cent avec les partenaires, pour deux mille acceptés par boîtier. Et une bascule d'opérateur en trois virgule huit secondes : le temps que met le routage à voir la panne, pas une performance de produit."
+    },
+    {
+     "reveal": 4,
+     "say": "Point de vigilance : le Forti-Gate six cents F n'est plus commandable depuis mai deux mille vingt-six. Annoncez d'emblée son successeur probable, le sept cents G, même capacité de tunnels, recoté au devis. Ce modèle figure aussi sur les diapos de Nolan, Fatih et Diane : dites six cents F ou son successeur."
+    },
+    {
+     "reveal": 5,
+     "say": "La démo suit un scénario écrit, en sept étapes, dans le simulateur Ève N-G, jusqu'à la recette des dix-sept tests. Demandez votre accès à Maxime pour répéter. La recette exige la clé d'administration : sur l'ordinateur de Maxime, rejouez la recette rapide la veille, puis un quart d'heure avant. Plan B, si le réseau bloque : les preuves enregistrées."
+    },
+    {
+     "reveal": 6,
+     "say": "Question piège : la maquette prouve-t-elle vos produits ? Non, les principes : des routeurs Linux y remplacent les Forti-Gate, sans double authentification ni haute disponibilité. Proposez une preuve de concept sur Forti-Gate."
+    },
+    {
+     "reveal": 7,
+     "say": "Deux corrections : dans la note de la diapo cinq, la fibre garantit l'intervention en huit heures, pas le rétablissement. Sur la diapo vingt-deux, les preuves ont des empreintes : elles ne sont pas signées."
+    },
+    {
+     "reveal": 8,
+     "say": "Transitions. Après la diapo six : Nolan va vous présenter les deux datacenters où arrivent ces tunnels. Après la démonstration : Younes va vous présenter les risques et la conformité."
+    }
+   ]
+  },
+  {
+   "id": "role-3-nolan",
+   "layout": "personne",
+   "section": "Les sept rôles",
+   "chapitre": "Rôle 3 · Nolan, architecte datacenter",
+   "title": "Rôle 3 · Nolan, architecte datacenter",
+   "subtitle": "Deux datacenters, des serveurs, une sauvegarde",
+   "person": {
+    "name": "Nolan",
+    "role": "Architecte datacenter",
+    "order": 3,
+    "slides": "Diapos 7, 8, 9",
+    "duration": "2 min 30",
+    "page": 8
+   },
+   "items": [
+    {
+     "label": "Présente",
+     "detail": "Housing, serveurs, puis le HLD datacenter, lu de haut en bas"
+    },
+    {
+     "label": "Messages clés",
+     "detail": "2 DC HDS : publication actif/actif ; bases actif/passif, copiées en asynchrone"
+    },
+    {
+     "label": "Serveurs et sauvegarde",
+     "detail": "VMware N+1 plutôt que Proxmox ou Nutanix ; Broadcom : prix figé 36 mois ; 3-2-1"
+    },
+    {
+     "label": "Chiffres à citer",
+     "detail": "Par DC : 4 Dell R760, 2 paires de FortiGate, ≈ 150 VM de production"
+    },
+    {
+     "label": "Points de vigilance",
+     "detail": "Diapo 8 à corriger : 64 TiB inclus, 70 à 80 requis ; DC perdu : le critique seul"
+    },
+    {
+     "label": "Quels RPO et RTO ?",
+     "detail": "Non fixés par le client : à décider en atelier, par classe d'application"
+    },
+    {
+     "label": "Transition",
+     "detail": "« Fatih va détailler la sécurité de ces flux. »"
+    }
+   ],
+   "beats": [
+    {
+     "reveal": 0,
+     "say": "Troisième rôle, Nolan, architecte datacenter, en deux minutes trente."
+    },
+    {
+     "reveal": 1,
+     "say": "Nolan présente le housing, c'est-à-dire une place louée en datacenter, puis les serveurs, et le schéma du datacenter, lu de haut en bas."
+    },
+    {
+     "reveal": 2,
+     "say": "Messages clés : deux datacenters certifiés H-D-S et indépendants. La publication tourne sur les deux ; les bases sont copiées vers l'autre en différé, on dit en asynchrone."
+    },
+    {
+     "reveal": 3,
+     "say": "Des serveurs sous VMware, préféré à Proxmox ou Nutanix pour sa maturité. Et le rachat par Broadcom ? Prix figé trente-six mois, sortie vers Proxmox préparée. Enfin, une sauvegarde dite trois-deux-un : trois copies, deux supports, une hors site et immuable, que même un attaquant ne peut pas effacer."
+    },
+    {
+     "reveal": 4,
+     "say": "Chiffres : par datacenter, quatre serveurs de marque Dell, dont un de marge, deux paires de pare-feu, et environ cent cinquante machines virtuelles de production."
+    },
+    {
+     "reveal": 5,
+     "say": "Points de vigilance. La diapo huit dit encore aucune baie de stockage à acheter : corrigez-la. Le V-SAN, le stockage logé dans les serveurs, est inclus pour soixante-quatre tébioctets bruts par datacenter ; il en faudrait soixante-dix à quatre-vingts. Et si un datacenter brûle, l'autre ne relance que les applications critiques. Dites-le d'emblée."
+    },
+    {
+     "reveal": 6,
+     "say": "Le jury demandera sans doute : quels R-P-O et R-T-O ? La perte de données et la durée d'interruption maximales acceptées. Le client ne les a pas fixés : c'est une décision métier, à prendre en atelier."
+    },
+    {
+     "reveal": 7,
+     "say": "Transition : Fatih va détailler la sécurité de ces flux."
+    }
+   ]
+  },
+  {
+   "id": "role-4-fatih",
+   "layout": "personne",
+   "section": "Les sept rôles",
+   "chapitre": "Rôle 4 · Fatih, sécurité des flux",
+   "title": "Rôle 4 · Fatih, sécurité des flux",
+   "subtitle": "Ce qui entre, ce qui circule, qui administre",
+   "person": {
+    "name": "Fatih",
+    "role": "Sécurité des flux",
+    "order": 4,
+    "slides": "Diapos 10, 11, 12",
+    "duration": "2 min 30",
+    "page": 9
+   },
+   "items": [
+    {
+     "label": "Présente",
+     "detail": "Nord-sud : DMZ seule exposée, WAF, SFTP au lieu du FTP, sorties Internet filtrées"
+    },
+    {
+     "label": "Puis l'est-ouest et l'infogérance",
+     "detail": "5 zones, seconde paire de pare-feu ; administrateurs par un bastion enregistré"
+    },
+    {
+     "label": "Message clé",
+     "detail": "Tout est refusé par défaut ; chaque flux autorisé est écrit, justifié, journalisé"
+    },
+    {
+     "label": "Chiffres à citer",
+     "detail": "4 WAF F5 · 13 flux autorisés, 9 refus, 17 testés · 50 comptes WALLIX"
+    },
+    {
+     "label": "Et si le serveur web est piraté ?",
+     "detail": "Le serveur reste en DMZ : l'application sur un seul port, jamais la base (testé)"
+    },
+    {
+     "label": "Un partenaire ne fait que du FTP ?",
+     "detail": "Exception datée, passerelle isolée en DMZ ; mieux : le FTP dans un tunnel IPsec"
+    },
+    {
+     "label": "Transition",
+     "detail": "« Younes va vous présenter le terrain : les sièges et les agences. »"
+    }
+   ],
+   "beats": [
+    {
+     "reveal": 0,
+     "say": "Quatrième rôle, Fatih, sécurité des flux, en deux minutes trente."
+    },
+    {
+     "reveal": 1,
+     "say": "Fatih présente d'abord le trafic nord-sud. Seule une zone tampon, la D-M-Z, reçoit les connexions d'Internet. Un pare-feu web, le W-A-F, y bloque les attaques, et le F-T-P devient du S-F-T-P, chiffré. Les sorties vers Internet sont filtrées."
+    },
+    {
+     "reveal": 2,
+     "say": "Puis le trafic est-ouest : cinq zones, séparées par une seconde paire de pare-feu. Enfin l'infogérance, par un bastion, porte unique et enregistrée des administrateurs."
+    },
+    {
+     "reveal": 3,
+     "say": "Message clé : tout est refusé par défaut, et chaque flux autorisé est écrit, justifié, journalisé. Le W-A-F reste chez nous plutôt que dans le cloud, pour ne rien déchiffrer hors du périmètre H-D-S."
+    },
+    {
+     "reveal": 4,
+     "say": "Chiffres : quatre W-A-F, deux par datacenter. La matrice compte treize flux autorisés et neuf refus attendus ; la maquette en teste dix-sept. Cinquante comptes à privilèges passent par le bastion Wallix, éditeur français préféré aux éditeurs non européens."
+    },
+    {
+     "reveal": 5,
+     "say": "Question probable : et si le serveur web est piraté ? Le serveur reste enfermé dans la D-M-Z. Depuis là, seule l'application est joignable, sur un seul port, jamais la base de données. La maquette le vérifie."
+    },
+    {
+     "reveal": 6,
+     "say": "Autre question : un partenaire ne sait faire que du F-T-P ? Alors une exception temporaire et datée, sur une passerelle isolée en D-M-Z. Mieux : faire passer ce F-T-P dans un tunnel I-P sec."
+    },
+    {
+     "reveal": 7,
+     "say": "Transition : Younes va vous présenter le terrain, les sièges et les agences."
+    }
+   ]
+  },
+  {
+   "id": "role-5-younes",
+   "layout": "personne",
+   "section": "Les sept rôles",
+   "chapitre": "Rôle 5 · Younes, exploitation et agences",
+   "title": "Rôle 5 · Younes, exploitation et agences",
+   "subtitle": "Le terrain, les consoles, les risques",
+   "person": {
+    "name": "Younes",
+    "role": "Exploitation et agences",
+    "order": 5,
+    "slides": "Diapos 13, 14, 23",
+    "duration": "2 min 30 au total",
+    "page": 10
+   },
+   "items": [
+    {
+     "label": "Présente",
+     "detail": "HLD agences, exploitation ; en fin de parcours, risques HDS, DORA, RGPD"
+    },
+    {
+     "label": "Messages clés",
+     "detail": "Réseaux séparés ; FortiManager et Aruba Central, deux éditeurs"
+    },
+    {
+     "label": "SIEM et failles de Fortinet",
+     "detail": "Wazuh plutôt que Splunk ; correctifs par vagues, rien d'exposé sur Internet"
+    },
+    {
+     "label": "Chiffres à citer",
+     "detail": "5 ports pour 4 utilisateurs · 1 borne pour 25 · HA au-delà de 50 · 570 FortiGate"
+    },
+    {
+     "label": "Comment déployer 498 agences ?",
+     "detail": "Kit préconfiguré, 1 jour par agence, ≈ 25 par semaine après 10 pilotes"
+    },
+    {
+     "label": "Vigilance : le cœur des sièges",
+     "detail": "53 switchs sur 2 cœurs de 24 ports : un niveau manque, ≈ 8 k€/mois, à valider"
+    },
+    {
+     "label": "Vigilance : le piratage",
+     "detail": "Une cause probable, pas certaine : ne parlez pas de mot de passe faible"
+    },
+    {
+     "label": "Transitions",
+     "detail": "Diapo 14 → Maxime (les nomades) ; diapo 23 → Farah (conclusion)"
+    }
+   ],
+   "beats": [
+    {
+     "reveal": 0,
+     "say": "Cinquième rôle, Younes, exploitation et agences, en deux minutes trente au total."
+    },
+    {
+     "reveal": 1,
+     "say": "Younes présente les trois profils de site, l'exploitation, et à la fin les risques : H-D-S, R-G-P-D, et DORA, règlement européen de résilience numérique."
+    },
+    {
+     "reveal": 2,
+     "say": "Messages clés : réseaux séparés, et Internet seul pour les invités. Une console pour les pare-feu, une autre pour le réseau local et le wifi, confiés à Aruba pour ne pas tout miser sur Forti-net."
+    },
+    {
+     "reveal": 3,
+     "say": "Et Wazou, un S-I-E-M gratuit, qui centralise les journaux et détecte les attaques, plutôt qu'un outil facturé au volume. Et les failles de Forti-net ? Des correctifs par vagues, et aucune interface d'administration sur Internet."
+    },
+    {
+     "reveal": 4,
+     "say": "Chiffres : cinq ports réseau pour quatre utilisateurs, une borne wifi pour vingt-cinq, deux boîtiers au-delà de cinquante utilisateurs. Au total, cinq cent soixante-dix Forti-Gate."
+    },
+    {
+     "reveal": 5,
+     "say": "Question probable : comment déployer quatre cent quatre-vingt-dix-huit agences ? Même kit préconfiguré, un jour d'ingénieur par agence, et environ vingt-cinq agences par semaine après dix pilotes."
+    },
+    {
+     "reveal": 6,
+     "say": "Vigilance : dans chaque siège, cinquante-trois commutateurs doivent se brancher sur deux commutateurs centraux de vingt-quatre ports. Il manque un niveau de distribution, hors prix : environ huit mille euros par mois pour les deux sièges, à valider."
+    },
+    {
+     "reveal": 7,
+     "say": "Et le piratage de notre serveur de maquette, raconté plus loin, n'a qu'une cause probable. Même si votre note le dit, ne parlez pas de mot de passe faible. Valentin en appui."
+    },
+    {
+     "reveal": 8,
+     "say": "Transitions. Après la diapo quatorze : Maxime va vous présenter les utilisateurs qui ne sont dans aucun site, les nomades. Après les risques : Farah va maintenant conclure."
+    }
+   ]
+  },
+  {
+   "id": "role-6-maxime",
+   "layout": "personne",
+   "section": "Les sept rôles",
+   "chapitre": "Rôle 6 · Maxime, Zero Trust (ZTNA)",
+   "title": "Rôle 6 · Maxime, Zero Trust (ZTNA)",
+   "subtitle": "Nomades, partenaires et accès distants",
+   "person": {
+    "name": "Maxime",
+    "role": "Zero Trust (ZTNA)",
+    "order": 6,
+    "slides": "Diapos 15, 16, 17, 18",
+    "duration": "3 min 20",
+    "page": 11
+   },
+   "items": [
+    {
+     "label": "Présente",
+     "detail": "Nomadisme, partenaires, HLD des accès distants, choix du ZTNA"
+    },
+    {
+     "label": "Message clé",
+     "detail": "Une application, jamais le réseau, après MFA ; poste contrôlé si l'agent est installé"
+    },
+    {
+     "label": "Chiffres à citer",
+     "detail": "3 000 nomades · 3 300 licences FortiSASE · ZPA écarté : 1,99 M€ bruts évités"
+    },
+    {
+     "label": "Le ZTNA est-il vraiment inclus ?",
+     "detail": "Côté utilisateur oui ; licence sur les 4 pare-feu hubs ; écart net ≥ 1,5 M€"
+    },
+    {
+     "label": "Vigilance : diapos 15 et 18",
+     "detail": "« Inclus », « Déjà payé », et 24 % au lieu de 25 % : à corriger, à ne pas dire"
+    },
+    {
+     "label": "Limite à dire",
+     "detail": "ZTNA absent de la maquette : ses 4 tests n'ont pas été exécutés"
+    },
+    {
+     "label": "Transition",
+     "detail": "« Diane va vous présenter ce que tout cela coûte. »"
+    }
+   ],
+   "beats": [
+    {
+     "reveal": 0,
+     "say": "Sixième rôle : Maxime, pour l'accès Zero Trust, ou Z-T-N-A, en trois minutes vingt."
+    },
+    {
+     "reveal": 1,
+     "say": "Maxime présente les nomades, les partenaires, le schéma des accès distants, et le choix du Z-T-N-A. Une quarantaine de partenaires arrivent par un tunnel ; une soixantaine passent surtout par un portail web, sans logiciel."
+    },
+    {
+     "reveal": 2,
+     "say": "Message clé : personne n'entre dans le réseau. Chaque utilisateur n'atteint que ses applications, après M-F-A, et contrôle de son poste quand l'agent est installé. Sans agent, seulement des applications web peu sensibles. À l'inverse, un V-P-N ouvre le réseau entier."
+    },
+    {
+     "reveal": 3,
+     "say": "Chiffres : trois mille nomades, et trois mille trois cents licences Forti-SASE en comptant les partenaires. Écarter Z-P-A, l'offre concurrente, évite environ deux millions d'euros bruts sur trente-six mois."
+    },
+    {
+     "reveal": 4,
+     "say": "Question piège : le Z-T-N-A est-il vraiment inclus ? Côté utilisateur, oui, mais il faut aussi une licence sur les quatre pare-feu d'entrée des datacenters. L'écart avec Z-P-A reste d'au moins un million et demi d'euros. Sur Gartner, même réponse que Farah."
+    },
+    {
+     "reveal": 5,
+     "say": "Les diapos quinze et dix-huit affichent encore inclus et déjà payé : corrigez-les, et ne le dites pas. Sur la diapo dix-huit, vingt-quatre pour cent devient vingt-cinq."
+    },
+    {
+     "reveal": 6,
+     "say": "Limite à dire franchement : le Z-T-N-A n'est pas dans la maquette, et ses quatre tests n'ont pas été exécutés.",
+     "debit": "-12%"
+    },
+    {
+     "reveal": 7,
+     "say": "Transition : Diane va vous présenter ce que tout cela coûte."
+    }
+   ]
+  },
+  {
+   "id": "role-7-diane",
+   "layout": "personne",
+   "section": "Les sept rôles",
+   "chapitre": "Rôle 7 · Diane, finances",
+   "title": "Rôle 7 · Diane, finances",
+   "subtitle": "Les modèles, le prix, le planning",
+   "person": {
+    "name": "Diane",
+    "role": "Finances",
+    "order": 7,
+    "slides": "Diapos 19, 20, 21",
+    "duration": "2 min 30",
+    "page": 13
+   },
+   "items": [
+    {
+     "label": "Présente",
+     "detail": "Modèles d'équipements, coûts en abonnement, phasage en 9 mois"
+    },
+    {
+     "label": "Message clé",
+     "detail": "221 424 € HT par mois pendant 36 mois, sans investissement de départ"
+    },
+    {
+     "label": "Chiffres à citer",
+     "detail": "TCO 7,97 M€ · 22,14 € par utilisateur et par mois · 418 € par site et par mois"
+    },
+    {
+     "label": "Ventilation et non inclus",
+     "detail": "Sécurité 64 k€/mois · non inclus : SOC 24/7, DDoS, licence des hubs, EDR"
+    },
+    {
+     "label": "Pourquoi plus cher que l'achat ?",
+     "detail": "+0,47 M€ sur 36 mois : le prix du financement, qui évite d'avancer 4,22 M€"
+    },
+    {
+     "label": "Transition",
+     "detail": "« Valentin va vous montrer ce que notre maquette prouve,\net ce qu'elle ne prouve pas. »"
+    }
+   ],
+   "beats": [
+    {
+     "reveal": 0,
+     "say": "Septième rôle, Diane, finances, en deux minutes trente."
+    },
+    {
+     "reveal": 1,
+     "say": "Diane présente les modèles d'équipements, les coûts, puis le phasage en neuf mois. D'abord le socle des datacenters, puis les sièges et dix agences pilotes, puis environ vingt-cinq agences par semaine. L'international suit, et les nomades arrivent en parallèle."
+    },
+    {
+     "reveal": 2,
+     "say": "Message clé : deux cent vingt et un mille quatre cent vingt-quatre euros hors taxes par mois, pendant trente-six mois, sans rien avancer. Un bailleur achète matériel et licences, puis les loue au mois, au taux supposé de sept pour cent par an."
+    },
+    {
+     "reveal": 3,
+     "say": "Chiffres : le coût total sur trente-six mois, ou T-C-O, atteint sept virgule quatre-vingt-dix-sept millions d'euros. Soit vingt-deux euros quatorze par utilisateur et par mois, quatre cent dix-huit par site. Une remise négociée de vingt pour cent sur matériel et licences ramènerait l'abonnement à cent quatre-vingt-quinze mille euros par mois."
+    },
+    {
+     "reveal": 4,
+     "say": "Par poste, la sécurité pèse soixante-quatre mille euros par mois, devant le réseau et les services. Les exclusions sont listées, dont la licence Z-T-N-A des hubs et la protection des postes de travail : citez-les. Prix sourcés, à confirmer par devis."
+    },
+    {
+     "reveal": 5,
+     "say": "Le jury demandera sans doute : pourquoi l'abonnement coûte-t-il plus cher que l'achat ? Quatre cent soixante-dix mille euros de plus sur trois ans : le prix du financement, qui évite d'avancer quatre virgule vingt-deux millions d'euros.",
+     "debit": "-12%"
+    },
+    {
+     "reveal": 6,
+     "say": "Transition : Valentin va vous montrer ce que notre maquette prouve, et ce qu'elle ne prouve pas."
+    }
+   ]
+  },
+  {
+   "id": "problemes-offre",
+   "layout": "problemes",
+   "section": "Les problématiques",
+   "chapitre": "Problématiques du client et de l'offre",
+   "title": "Les problématiques du client et de l'offre",
+   "subtitle": "Ce qui pèse sur l'offre, et qui répond",
+   "items": [
+    {
+     "label": "Données de santé",
+     "detail": "HDS par prudence, RGPD, DORA · Cloud Act : FortiSASE et consoles cloud, pas nos DC",
+     "value": "Nolan, Younes"
+    },
+    {
+     "label": "530 sites à déployer",
+     "detail": "570 pare-feu, fibre à vérifier ; 600F à remplacer par le 700G",
+     "value": "Younes, Valentin"
+    },
+    {
+     "label": "Un budget au mois",
+     "detail": "Location sur 36 mois ; prix publics ou estimés, à confirmer par devis",
+     "value": "Diane"
+    },
+    {
+     "label": "Si un datacenter tombe",
+     "detail": "L'autre relance le critique : 2 To de mémoire pour 2,4 To requis",
+     "value": "Nolan"
+    },
+    {
+     "label": "Dépendance et hypothèses",
+     "detail": "Fortinet : pare-feu, SD-WAN, SASE ; réversibilité à rédiger ; hypothèses H1 à H12",
+     "value": "Maxime, Farah"
+    }
+   ],
+   "beats": [
+    {
+     "reveal": 0,
+     "say": "Voici les problématiques du client et de l'offre, et qui répond à chacune."
+    },
+    {
+     "reveal": 1,
+     "say": "Un, les données de santé : H-D-S, R-G-P-D et DORA. H-D-S n'est pas forcément obligatoire pour le remboursement, mais nous l'exigeons par prudence : Nolan répond."
+    },
+    {
+     "reveal": 1,
+     "say": "DORA s'applique très probablement. Le Cloud Act oblige un fournisseur américain à livrer les données qu'il détient, même en Europe. Forti-SASE et nos consoles cloud y sont exposés, pas nos équipements. Younes répond."
+    },
+    {
+     "reveal": 2,
+     "say": "Deux, cinq cent trente sites à déployer : cinq cent soixante-dix pare-feu à livrer, et la fibre à vérifier. Younes répond, et Valentin pour le pare-feu de datacenter, qui n'est plus vendu."
+    },
+    {
+     "reveal": 3,
+     "say": "Trois, le budget au mois, d'où le choix de la location. Nos prix restent à confirmer par devis : Diane répond."
+    },
+    {
+     "reveal": 4,
+     "say": "Quatre, si un datacenter tombe, l'autre n'a que deux téraoctets de mémoire pour deux virgule quatre requis : seules les applications critiques redémarrent. Nolan répond."
+    },
+    {
+     "reveal": 5,
+     "say": "Cinq, la dépendance à Forti-net. DORA demande de l'encadrer par un plan de réversibilité, encore à rédiger : Maxime répond. Enfin, le cahier des charges ne donne ni débits ni nombre de nomades, d'où nos hypothèses : Farah répond."
+    }
+   ]
+  },
+  {
+   "id": "problemes-projet",
+   "layout": "problemes",
+   "section": "Les problématiques",
+   "chapitre": "Obstacles rencontrés pendant le projet",
+   "title": "Les obstacles rencontrés pendant le projet",
+   "subtitle": "Quatre anecdotes à connaître",
+   "items": [
+    {
+     "label": "Serveur piraté, puis réinstallé",
+     "detail": "Rootkit trouvé le 16/10 ; réinstallé, SSH par clé ; si le jury doute : recette en direct"
+    },
+    {
+     "label": "EVE-NG limité à 7 nœuds",
+     "detail": "7 routeurs dans EVE-NG, 8 conteneurs à côté : 15 machines"
+    },
+    {
+     "label": "Une bascule invisible : MOBIKE",
+     "detail": "Le tunnel déménageait sur l'opérateur B : la panne échappait au routage"
+    },
+    {
+     "label": "Disque plein, routage arrêté",
+     "detail": "Découvert le 10/11 : OSPF à l'arrêt ; réparé, 17/17 ; à l'oral, citer 3,8 s"
+    }
+   ],
+   "beats": [
+    {
+     "reveal": 0,
+     "say": "Puis quatre obstacles rencontrés pendant le projet."
+    },
+    {
+     "reveal": 1,
+     "say": "Un, le serveur loué pour la maquette a été piraté, avant même qu'elle existe. Le seize octobre, on y a trouvé un rootkit, un programme malveillant caché. Cause probable, sans certitude : un accès à distance par mot de passe."
+    },
+    {
+     "reveal": 1,
+     "say": "Si le jury s'en inquiète, rejouez devant lui la recette en direct, depuis l'ordinateur de Maxime : les mêmes résultats se reproduisent.",
+     "debit": "-12%"
+    },
+    {
+     "reveal": 2,
+     "say": "Deux, Ève N-G gratuit est limité à sept nœuds. Les sept routeurs y restent ; les huit serveurs et postes tournent à côté, en conteneurs, plus légers que des machines virtuelles."
+    },
+    {
+     "reveal": 3,
+     "say": "Trois, une bascule invisible : l'option I-P sec Mo-baïk faisait déménager le tunnel de l'opérateur A vers l'opérateur B. Le tunnel restait vivant : le routage ne voyait pas la panne, et la bascule échappait à la mesure. La recette l'a révélé, et l'option a été désactivée. Valentin la raconte à la diapo vingt-deux.",
+     "debit": "-12%"
+    },
+    {
+     "reveal": 4,
+     "say": "Quatre, le dix novembre, on découvre qu'un disque de routeur saturé de journaux a arrêté le routage O-S-P-F. Après réparation : dix-sept sur dix-sept, et une bascule toujours sous quatre secondes. Devant le jury, citez trois virgule huit, le chiffre des diapos."
+    }
+   ]
+  },
+  {
+   "id": "conclusion",
+   "layout": "conclusion",
+   "section": "Conclusion",
+   "chapitre": "À retenir",
+   "title": "À retenir",
+   "subtitle": "Votre fiche : docs/ROLES_SOUTENANCE.md · vos questions : docs/QUESTIONS_JURY.md",
+   "items": [
+    {
+     "label": "Un prix au mois",
+     "detail": "221,4 k€ HT par mois sur 36 mois, sans investissement de départ"
+    },
+    {
+     "label": "Une architecture cohérente",
+     "detail": "Refus par défaut du site au datacenter, Zero Trust à distance"
+    },
+    {
+     "label": "Des preuves honnêtes",
+     "detail": "17 tests sur 17, bascule en 3,8 s, limites assumées"
+    },
+    {
+     "label": "Vigilance",
+     "detail": "SASE : Challenger · 700G · licence des hubs · vSAN à étendre · piratage : cause probable"
+    },
+    {
+     "label": "Aux questions",
+     "detail": "N'inventez aucun chiffre ; distinguez le prouvé, le sourcé et le supposé"
+    },
+    {
+     "label": "La suite",
+     "detail": "Diaporama : Maxime · notes à écrire : 3, 6, 7, 8, 18, 19, 20, 22, 23 · diapo 1 : nom, date"
+    }
+   ],
+   "beats": [
+    {
+     "reveal": 0,
+     "say": "Pour conclure, le message à retenir."
+    },
+    {
+     "reveal": 1,
+     "say": "Une offre en abonnement : deux cent vingt et un mille quatre cents euros hors taxes par mois, sans investissement de départ.",
+     "debit": "-15%"
+    },
+    {
+     "reveal": 2,
+     "say": "Une architecture cohérente, où tout est refusé par défaut, du site au datacenter.",
+     "debit": "-12%"
+    },
+    {
+     "reveal": 3,
+     "say": "Des principes prouvés sur maquette, dix-sept tests sur dix-sept, avec des limites dites franchement.",
+     "debit": "-12%"
+    },
+    {
+     "reveal": 4,
+     "say": "Gardez en tête cinq points de vigilance : Gartner, le six cents F, la licence Z-T-N-A des hubs, le V-SAN et la cause du piratage.",
+     "debit": "-12%"
+    },
+    {
+     "reveal": 5,
+     "say": "Aux questions, n'inventez aucun chiffre. S'il dépend d'une hypothèse, dites-le : le script recalcule le prix avec la vraie valeur. Distinguez le prouvé, le sourcé et le supposé.",
+     "debit": "-12%"
+    },
+    {
+     "reveal": 6,
+     "say": "La suite : demandez à Maxime l'accès en écriture au diaporama, puis lisez les notes d'orateur de vos diapositives. Neuf n'ont qu'une note courte, listées à l'écran : écrivez-y votre texte. Puis une répétition chronométrée, et des questions croisées entre rôles. Bonne préparation !",
+     "debit": "-12%"
+    }
+   ]
+  }
+ ]
+}
