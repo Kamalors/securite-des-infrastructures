@@ -1,14 +1,14 @@
 # Questions probables du jury et réponses modèles
 
 Préparation de la séance de questions qui suit la soutenance. Rédigé le 28/10/2026 par l'agent « jury et vérification ».
-Les chiffres viennent de `docs/CHIFFRAGE.md` (régénéré le 28/10/2026, il fait foi) et de `docs/OFFRE_TECHNIQUE.md` v1.0. Les sources des faits externes sont dans `docs/VERIFICATIONS.md`.
+Les chiffres viennent de `docs/CHIFFRAGE.md` (régénéré le 13/11/2026, il fait foi) et de `docs/OFFRE_TECHNIQUE.md` v1.0. Les sources des faits externes repris dans l'offre sont dans l'annexe B de `docs/OFFRE_TECHNIQUE.md`.
 
 **Mode d'emploi.** Chaque question indique qui répond (rôle de `docs/ROLES_SOUTENANCE.md`), une réponse modèle de 2 à 4 phrases, le chiffre à citer et, s'il y a lieu, la faiblesse à reconnaître. Reconnaître une faiblesse avant que le jury la pointe vaut mieux que la défendre après.
 
 **Trois règles pour toute l'équipe.**
 1. Ne jamais inventer un chiffre. Dire plutôt : « c'est une hypothèse affichée (H…), le script recalcule le prix si vous nous donnez la vraie valeur ».
 2. Distinguer ce qui est **prouvé** (maquette, calcul), **sourcé** (fiche, texte officiel) et **supposé** (hypothèse).
-3. Trois affirmations ont été corrigées le 28/10 (voir `VERIFICATIONS.md`) : Fortinet **n'est pas** « Leader » du Magic Quadrant SASE 2026 ; le **FortiGate 600F n'est plus commercialisé** depuis le 01/05/2026 ; l'accès privé de **FortiSASE Standard demande une licence sur les hubs FortiGate**. Ne plus les répéter.
+3. Trois affirmations ont été corrigées le 28/10 (détail : Q10, Q47 et Q48 ci-dessous) : Fortinet **n'est pas** « Leader » du Magic Quadrant SASE 2026 ; le **FortiGate 600F n'est plus commercialisé** depuis le 01/05/2026 ; l'accès privé de **FortiSASE Standard demande une licence sur les hubs FortiGate**. Ne plus les répéter.
 
 ## Les chiffres à connaître par cœur
 
@@ -40,8 +40,7 @@ Les chiffres viennent de `docs/CHIFFRAGE.md` (régénéré le 28/10/2026, il fai
 - Faiblesse : H8 (300 VM de 2 vCPU, 8 Go, 150 Go) pèse sur les serveurs, le stockage vSAN et la sauvegarde ; c'est la plus fragile.
 
 **Q3. « Qu'est-ce qui n'est pas dans votre prix ? »**
-- Réponse : c'est listé (offre § 16.4) : raccordements opérateurs en datacenter, logistique et douanes, extension vSAN, surcoût d'un hébergeur HDS, SOC 24/7, protection DDoS, fournisseur d'identité et MFA (supposés existants), optiques et câbles, étage de distribution des sièges, onduleurs d'agence, licences des systèmes et applications des VM, renouvellements après 36 mois.
-- À ajouter honnêtement : la licence d'accès privé FortiSASE sur les hubs FortiGate (Q47) et la protection des postes de travail (EDR, Q36).
+- Réponse : c'est listé (offre § 16.4) : raccordements opérateurs en datacenter, logistique et douanes, extension vSAN, surcoût d'un hébergeur HDS, SOC 24/7, protection DDoS, fournisseur d'identité et MFA (supposés existants), optiques et câbles, étage de distribution des sièges, onduleurs d'agence, licences des systèmes et applications des VM, renouvellements après 36 mois, licence d'accès privé FortiSASE des 4 hubs (Q47), protection des postes de travail (EDR, Q36).
 - Faiblesse : les postes qui risquent le plus de faire bouger le prix sont la distribution des sièges, l'extension vSAN, le surcoût HDS et la licence des hubs.
 
 **Q4. « Le client n'a pas demandé de maquette. Pourquoi en faire une ? »**
@@ -191,7 +190,7 @@ Les chiffres viennent de `docs/CHIFFRAGE.md` (régénéré le 28/10/2026, il fai
 
 **Q36. « Et les postes de travail : antivirus, EDR ? »**
 - Réponse : l'offre traite le réseau, les datacenters et les accès ; la protection des 10 000 postes est supposée existante. C'est pourtant une brique clé contre le rançongiciel : nous recommandons un EDR, à chiffrer.
-- Faiblesse : absent de l'offre et de la liste des non inclus ; à reconnaître.
+- Faiblesse : non chiffré, seulement listé dans les non inclus (offre § 16.4) ; à reconnaître.
 
 ---
 
@@ -308,7 +307,7 @@ Les chiffres viennent de `docs/CHIFFRAGE.md` (régénéré le 28/10/2026, il fai
 
 | # | Question | Pourquoi elle est dangereuse | Comment la désamorcer |
 |---|---|---|---|
-| 1 | « Fortinet est Leader SASE 2026 ? » (Q48) | Affirmation fausse encore présente dans l'offre, le guide, le glossaire et le diaporama ; un jury qui la vérifie met en doute toutes nos sources | Retirer l'affirmation partout avant la soutenance ; si la question vient, corriger nous-mêmes : « Challenger en 2026, Leader en 2025 ; Leader 2026 des pare-feu » |
+| 1 | « Fortinet est Leader SASE 2026 ? » (Q48) | Affirmation fausse, retirée le 13/11/2026 de l'offre, du guide, du glossaire et du diaporama ; un jury qui la vérifie mettrait en doute toutes nos sources | Retirer l'affirmation partout avant la soutenance ; si la question vient, corriger nous-mêmes : « Challenger en 2026, Leader en 2025 ; Leader 2026 des pare-feu » |
 | 2 | « Le 600F est-il encore vendu ? » (Q10) | Modèle en fin de commande depuis le 01/05/2026 : un expert réseau le sait | Annoncer d'emblée « 600F ou son successeur de la génération G (700G), même capacité de tunnels, recoté au devis » |
 | 3 | « Le ZTNA est-il vraiment inclus ? » (Q47) | Pilier de l'argument à 1,99 M€ ; le guide de commande Fortinet exige une licence par hub en Standard | Dire « inclus côté utilisateur, licence à ajouter sur 4 hubs, l'écart avec ZPA reste d'au moins 1,5 M€ » |
 | 4 | « Votre maquette prouve-t-elle vos produits ? » (Q11) | Tentation de survendre | Répondre « non, les principes », citer ce qui n'est pas prouvé, proposer une preuve de concept FortiGate |

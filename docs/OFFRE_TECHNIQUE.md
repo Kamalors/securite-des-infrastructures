@@ -50,7 +50,7 @@ Annexe A. Glossaire · Annexe B. Sources
 **Le coût.** **221,4 k€ HT par mois pendant 36 mois, tout compris** (matériel, licences, accès réseau, housing, déploiement, infogérance ; exclusions listées en section 16.4), **sans investissement initial**. Cela représente 7,97 M€ sur la durée, soit **22,14 € par utilisateur et par mois** ou 418 € par site et par mois. Le matériel et les licences sont financés par une location financière (taux supposé de 7 % par an). Ce prix est calculé sur des prix publics : une remise de 20 %, courante sur ce volume, le ramènerait à 195,3 k€ par mois.
 
 **Ce qui distingue l'offre.**
-- Chaque choix est justifié face à une alternative (section 15). Par exemple, nous utilisons le ZTNA déjà inclus dans FortiSASE, ce qui évite 1,99 M€ de dépense par rapport à Zscaler ZPA.
+- Chaque choix est justifié face à une alternative (section 15). Par exemple, nous utilisons le ZTNA compris dans la souscription utilisateur FortiSASE, ce qui évite 1,99 M€ bruts par rapport à Zscaler ZPA, et au moins 1,5 M€ une fois ajoutées les licences des 4 FortiGate hubs (section 12.3).
 - L'architecture est éprouvée sur maquette : 17 flux sur 17 conformes (autorisations et refus) et une bascule WAN en 3,8 s.
 - La conformité est intégrée dès la conception : HDS, DORA (plan de réversibilité), RGPD.
 
@@ -246,10 +246,10 @@ Le SD-WAN (réseau étendu piloté par logiciel) répartit le trafic de chaque s
 | Exploitation | 570 FortiGate configurés depuis une seule console (FortiManager Cloud), par modèles de configuration ; un seul système et un seul moteur d'inspection, des agences jusqu'aux datacenters. |
 | Conformité | Le trafic des sites va directement aux datacenters de la mutuelle, chiffré de bout en bout, sans passer par la plateforme d'un tiers. |
 | Abonnement | Lots de 3 ans intégrés à la location financière : aucune avance. |
-| Reconnaissance | Fortinet est classé « Leader » par Gartner pour le SD-WAN (2024, cinquième année consécutive, selon Fortinet) et pour le SASE (2025 et 2026). |
+| Reconnaissance | Fortinet est classé « Leader » par Gartner pour le SD-WAN (2024, cinquième année consécutive, selon Fortinet) et pour les pare-feu (Magic Quadrant 2026 « Hybrid Mesh Firewall ») ; pour le SASE, il est « Challenger » en 2026, après « Leader » en 2025 (sources en annexe B). |
 
 **Alternatives écartées :**
-- **Cato Networks (SASE entièrement dans le cloud)** : solution reconnue (également « Leader » Gartner SASE 2026), mais tout le trafic des sites transite par les points de présence de Cato, ce qui dépend de cette plateforme pour chaque flux et ajoute un tiers sur le chemin des données de santé. Les prix ne sont pas publics.
+- **Cato Networks (SASE entièrement dans le cloud)** : solution reconnue (« Leader » Gartner SASE 2026), mais tout le trafic des sites transite par les points de présence de Cato, ce qui dépend de cette plateforme pour chaque flux et ajoute un tiers sur le chemin des données de santé. Les prix ne sont pas publics.
 - **Peplink en agence** : très bon pour l'agrégation de liens cellulaires, mais avec des fonctions de sécurité plus limitées ; il aurait fallu un second boîtier pare-feu par agence.
 - **MPLS** : voir 4.1.
 
@@ -545,12 +545,12 @@ Un VPN classique place le poste « dans le réseau » : une fois connecté, il v
 
 L'accès Zero Trust aux applications privées est assuré par FortiSASE, déjà retenu pour la sécurité des nomades. Zscaler Private Access (ZPA), envisagé initialement, est écarté.
 
-1. **La fonction est déjà payée.** La souscription FortiSASE Standard (3 300 utilisateurs : 3 000 nomades et 300 utilisateurs partenaires) comprend l'accès privé : « Secure Private Access via unified agent », et un accès sans agent via la passerelle web, d'après l'intitulé de la référence FC4-10-EMS05-547-02-36 chez deux revendeurs ([datacenter360](https://datacenter360.ca/shop/zero-trust-access/sase/fortisase-standard-subscription-3-year-fortisase-standard-subscription-for-2000-9999-users-cloud-delivered-security-ips-web-dns-ssl-anti-malware-casb-with-secure-private-access-via-unified-a/), [firewalls.com](https://www.firewalls.com/fortisase-standard-subscription-for-2000-9999-users-3-year.html)). Ajouter ZPA reviendrait à payer deux fois le même service. *À confirmer sur le guide de commande Fortinet au moment du devis.*
+1. **La fonction est comprise côté utilisateur.** La souscription FortiSASE Standard (3 300 utilisateurs : 3 000 nomades et 300 utilisateurs partenaires) comprend l'accès privé : « Secure Private Access via unified agent », et un accès sans agent via la passerelle web, d'après l'intitulé de la référence FC4-10-EMS05-547-02-36 chez deux revendeurs ([datacenter360](https://datacenter360.ca/shop/zero-trust-access/sase/fortisase-standard-subscription-3-year-fortisase-standard-subscription-for-2000-9999-users-cloud-delivered-security-ips-web-dns-ssl-anti-malware-casb-with-secure-private-access-via-unified-a/), [firewalls.com](https://www.firewalls.com/fortisase-standard-subscription-for-2000-9999-users-3-year.html)). Ajouter ZPA reviendrait à payer deux fois le même service. En revanche, le guide de commande FortiSASE de Fortinet (septembre 2026, annexe B) demande une licence d'accès privé par FortiGate hub, chaque membre d'un cluster compris : 4 licences à ajouter sur nos hubs, ou l'édition Advanced, de ~30 k€ à ~410 k€ sur 36 mois selon les prix revendeurs, à chiffrer au devis (listé en section 16.4).
 2. **Coût évité : 1,99 M€ sur 36 mois**, soit 25 % du TCO de l'offre retenue (9,96 M€ contre 7,97 M€), ou 5,52 € par utilisateur et par mois. ZPA n'a pas de prix public : même au bas de la fourchette des estimations tierces (140 $ par utilisateur et par an), le surcoût reste de 1,24 M€ ; au haut (375 $), il atteint 3,31 M€.
 3. **Un seul agent sur le poste nomade.** FortiClient seul, au lieu de FortiClient et Zscaler Client Connector : pas de conflit entre deux agents qui interceptent le trafic et le DNS, un seul déploiement, un seul support.
 4. **Une politique et une console uniques.** Les mêmes objets et le même moteur d'inspection s'appliquent en agence et en datacenter (FortiGate) comme pour les nomades (FortiSASE), avec un pilotage central. Pour l'infogérance : un seul éditeur à suivre, moins de compétences à maintenir.
 5. **Les partenaires sans poste géré restent couverts.** Fortinet documente un portail sans agent pour les sous-traitants et utilisateurs temporaires qui n'ont qu'un navigateur ([architecture Secure Private Access](https://docs.fortinet.com/document/fortisase/latest/secure-private-access-architecture-guide)). Cela couvre les partenaires nomades (60 %), auxquels la mutuelle publie des applications web et API. Limite : l'accès sans agent porte sur les applications web ; un partenaire qui a besoin d'un autre protocole passe par l'agent ou par l'interconnexion site à site.
-6. **Ce n'est pas un choix d'entrée de gamme.** Fortinet figure parmi les « Leaders » du Magic Quadrant SASE 2026 de Gartner ([SDxCentral](https://www.sdxcentral.com/news/fortinet-joins-palo-alto-cato-netskope-as-gartner-sase-leaders/)).
+6. **Ce n'est pas un choix d'entrée de gamme.** Fortinet est « Leader » du Magic Quadrant Gartner 2026 des pare-feu (« Hybrid Mesh Firewall »), ce qui couvre l'essentiel de notre usage (570 pare-feu). Dans celui des plateformes SASE, il est passé de « Leader » en 2025 ([SDxCentral](https://www.sdxcentral.com/news/fortinet-joins-palo-alto-cato-netskope-as-gartner-sase-leaders/)) à « Challenger » en 2026 (annexe B).
 7. **Risque assumé : la dépendance à un éditeur unique**, sujet de la stratégie de sortie demandée par DORA pour les prestataires informatiques. Parades : identité et MFA chez un fournisseur indépendant (H12, par exemple Entra ID) ; protocoles standard (IPsec, SAML/OIDC) ; réseau local (Aruba), WAF (F5) et bastion (WALLIX) chez d'autres éditeurs ; engagement de 36 mois aligné sur la location ; plan de réversibilité documenté. ZPA resterait pertinent si la mutuelle exploitait déjà Zscaler, ce qui n'est pas indiqué pour cette nouvelle architecture.
 
 ### 12.4 Preuves sur maquette
@@ -664,6 +664,8 @@ Les trois postes les plus lourds sont les équipements de sécurité (64 478 €
 - Surcoût éventuel d'un hébergeur certifié HDS par rapport au prix de référence retenu.
 - SOC 24 h/24 et 7 j/7 : l'infogérance chiffrée couvre les heures ouvrées.
 - Protection contre les attaques DDoS volumétriques auprès des opérateurs de transit (option).
+- Licence d'accès privé FortiSASE sur les 4 FortiGate hubs (ou passage en édition Advanced) : de ~30 k€ à ~410 k€ sur 36 mois selon les prix revendeurs, à chiffrer au devis (section 12.3).
+- Protection des postes de travail (EDR) : supposée existante chez le client, à chiffrer si besoin.
 - Fournisseur d'identité et MFA : supposés existants chez le client (H12).
 - Renouvellements au-delà de 36 mois.
 - Optiques (SFP+, QSFP28) et câbles de raccordement des liaisons montantes des commutateurs, des cœurs et des FortiGate des datacenters : quantité à fixer avec le plan de câblage.
@@ -783,7 +785,10 @@ Voir la section 16.4.
 
 Prix : voir les sources ligne à ligne de `docs/CHIFFRAGE.md`. Sources des justifications techniques et réglementaires :
 
-- Gartner SASE 2026 (Fortinet, Cato, Palo Alto, Netskope « Leaders ») : https://www.sdxcentral.com/news/fortinet-joins-palo-alto-cato-netskope-as-gartner-sase-leaders/ ; https://www.sdxcentral.com/news/gartner-sase-2026-rankings-netskope-leads-cato-networks-leaps-and-palo-alto-networks-falls/
+- Gartner SASE 2025, Fortinet « Leader » avec Palo Alto, Cato et Netskope : https://www.sdxcentral.com/news/fortinet-joins-palo-alto-cato-netskope-as-gartner-sase-leaders/
+- Gartner SASE 2026 : « Leaders » Netskope, Cato Networks, Palo Alto Networks et Zscaler ; Fortinet « Challenger » : https://www.sdxcentral.com/news/gartner-sase-2026-rankings-netskope-leads-cato-networks-leaps-and-palo-alto-networks-falls/
+- Gartner, Magic Quadrant 2026 « Hybrid Mesh Firewall » (7 septembre 2026), Fortinet « Leader » (page Fortinet) : https://www.fortinet.com/fr/resources/analyst-reports/gartner-magic-quadrant-hmf
+- Fortinet, FortiSASE Ordering Guide (10/09/2026) : licence d'accès privé (SPA) exigée sur chaque FortiGate hub, chaque membre d'un cluster HA compris ; incluse d'office seulement en Advanced et Comprehensive : https://www.fortinet.com/content/dam/fortinet/assets/data-sheets/og-fortisase.pdf
 - Fortinet « Leader » Gartner SASE 2025 et SD-WAN 2024 (communiqué Fortinet) : https://www.nasdaq.com/press-release/fortinet-recognized-leader-2025-gartnerr-magic-quadranttm-sase-platforms-2025-07-15
 - HPE Aruba Networking « Leader » Gartner LAN filaire et sans fil, 19e année (page HPE) : https://www.hpe.com/us/en/networking/magic-quadrant-wired-wireless.html
 - FortiSASE, architecture Secure Private Access : https://docs.fortinet.com/document/fortisase/latest/secure-private-access-architecture-guide

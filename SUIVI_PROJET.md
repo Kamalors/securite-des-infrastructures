@@ -2,7 +2,7 @@
 
 ## 1. Point de reprise immédiat
 
-- Dernière mise à jour : 28/10/2026 soir (CET).
+- Dernière mise à jour : 13/11/2026 soir (CET) : vidéo explicative (`presentation/video/`) et documents remis en cohérence (journal, section 10).
 - Intervenant : Claude Code (Opus) pour kamaravael@gmail.com.
 - État : **offre, chiffrage, diaporama et maquette terminés et mis en cohérence le 28/10** (revue à 6 agents). Offre v1.0 (`docs/OFFRE_TECHNIQUE.md`, 19 sections, table de correspondance des 21 exigences) ; chiffrage : **221 424 € HT/mois sur 36 mois, TCO 7,97 M€, 22,14 €/utilisateur/mois** ; diaporama de 24 diapositives avec notes d'orateur ; maquette EVE vérifiée, recette **17/17 conforme** le 28/10 (`evidence/20261028T200408Z/`).
 - Objectif : soutenance de groupe à 7 (rôles dans `docs/ROLES_SOUTENANCE.md`).
@@ -104,7 +104,7 @@ Avant chaque opération longue, renseigner la cible, la commande ou le script sa
 
 ## 9. Trois prochaines actions
 
-1. Groupe : remplacer `[Prénom N]` (diapositive 2 et `docs/ROLES_SOUTENANCE.md`) et `[Date de soutenance]` ; partager le diaporama ; répétition chronométrée.
+1. Groupe : regarder la vidéo (`presentation/video/`, chapitre de son rôle) ; Maxime partage le diaporama en écriture ; chacun fait les corrections listées dans `presentation/video/LISEZMOI.md` (diapo 1 : `[Nom du groupe]` et `[Date de soutenance]` ; diapos 5, 8, 15, 18, 22 ; notes des diapos 3, 6, 7, 8, 18, 19, 20, 22, 23) ; puis répétition chronométrée et questions croisées.
 2. Utilisateur, en root sur l'hôte : `qm snapshot 200 eve-lab-ok` ; changer le mot de passe du compte web `admin` d'EVE ; appliquer `automation/host/05_acces_camarades.sh` pour les camarades.
 3. Points à arbitrer par le groupe (ils sont déjà signalés comme limites ou hypothèses dans l'offre) : reprise après perte d'un DC limitée au périmètre critique, ou un serveur de plus par DC ; licences FortiSASE des infogérants ; protection DDoS (option) ; certification HDS du stockage de sauvegarde ; WALLIX (seule la version 6.0 de 2019 a une CSPN) ; DORA à confirmer ; étage de distribution des sièges non chiffré.
 
@@ -188,6 +188,20 @@ Les remplacer après chaque jalon par des actions précises avec fichiers, comma
 
 - Dépôt **privé** https://github.com/Kamalors/securite-des-infrastructures (privé : l'adresse du serveur et le rapport d'incident y figurent). Fichiers personnels exclus par `.gitignore`.
 - Accès des membres : `docs/ACCES_CAMARADES.md`. Côté serveur, en root : `05_acces_camarades.sh` (tunnels EVE-NG et Proxmox) et `06_comptes_proxmox.sh` (comptes Proxmox limités au lab). **Pas encore appliqués** ; changer d'abord le mot de passe d'usine du compte web `admin` d'EVE-NG.
+
+### 13/11/2026 — vidéo explicative et mise en cohérence des documents
+
+- Intervenant : Claude Code (Opus 5.5), à la demande de Maxime.
+- Livré : `presentation/video/projet_rao_explique.mp4` (19 min 40, 48 Mo, 16 chapitres dont une fiche par rôle, sous-titres désactivés par défaut), avec `sous-titres_fr.srt`, `TRANSCRIPTION.md` et `LISEZMOI.md`. Voix Microsoft « Rémy » (edge-tts 7.3.1), choisie après une recherche sur les forums (sources dans le LISEZMOI).
+- Sources de la vidéo : `presentation/sources/video/` (script, rendu, mesures, test, voix archivées des 103 phrases) ; générateur du PDF explicatif `presentation/sources/generer.py` et ses polices.
+- Contrôles : quatre bancs de prononciation (synthèse puis transcription Whisper), trois tours de critique multi-agents avec contre-vérification par des sceptiques, `test_build.py` (26 cas).
+- Documents corrigés pour lever des contradictions avec Q47 et Q48 :
+  - offre : Gartner 2026 et ZTNA (§ 1, 4.4, 12.3) ; licence des hubs et EDR dans les non-inclus (§ 16.4) ; sources externes en annexe B ;
+  - `calcul.py` puis `CHIFFRAGE.md` (prix inchangé : 221 424 € HT/mois) ;
+  - GLOSSAIRE, QUESTIONS_JURY (Q3, Q36) et ROLES_SOUTENANCE ;
+  - PDF explicatif, pages 4, 6, 11 et 18.
+- La décision D6 reste valable : le ZTNA est compris côté utilisateur, mais une licence est à ajouter sur les 4 hubs (Q47) ; l'écart net avec ZPA est d'au moins 1,5 M€.
+- Diaporama non modifié : la vidéo et `presentation/video/LISEZMOI.md` listent les corrections à faire (diapos 1, 5, 8, 15, 18, 22, 23, et les 9 notes courtes).
 
 ### Modèle d’entrée à recopier
 

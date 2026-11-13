@@ -6,7 +6,7 @@ Projet étudiant du cours « Sécurité des infrastructures ». Nous répondons 
 
 Nouveau dans le projet ? Lisez d'abord **[docs/GUIDE_EXPLICATIF.md](docs/GUIDE_EXPLICATIF.md)** (30 minutes), puis gardez **[docs/GLOSSAIRE.md](docs/GLOSSAIRE.md)** ouvert à côté.
 
-**Membres du groupe** : pour vous connecter à EVE-NG et à Proxmox, suivez **[docs/ACCES_CAMARADES.md](docs/ACCES_CAMARADES.md)**. Présentation du projet pour tous : `presentation/RAO_projet_explique.pdf` ; rôles de la soutenance : `docs/ROLES_SOUTENANCE.md`.
+**Membres du groupe** : pour vous connecter à EVE-NG et à Proxmox, suivez **[docs/ACCES_CAMARADES.md](docs/ACCES_CAMARADES.md)**. Présentation du projet pour tous : `presentation/RAO_projet_explique.pdf` et la vidéo **[presentation/video/](presentation/video/LISEZMOI.md)** (19 min 40, une fiche par rôle, voix off) ; rôles de la soutenance : `docs/ROLES_SOUTENANCE.md`.
 
 ## Chiffres clés
 
@@ -59,6 +59,10 @@ Restent ouverts : les prix « sur devis » (nature D dans le chiffrage), les RPO
 │   ├── PLAN_V2.md                     plan révisé du 16/10 et décisions D1 à D5
 │   ├── PREFLIGHT.md                   audit du PC et du serveur avant la maquette (15/10)
 │   └── INCIDENT_PAR861454.md          rapport sur la compromission du serveur (rootkit)
+├── presentation/
+│   ├── RAO_projet_explique.pdf        le projet expliqué en 18 pages
+│   ├── video/                         vidéo explicative (19 min 40), sous-titres, transcription, LISEZMOI
+│   └── sources/                       générateurs du PDF (generer.py) et de la vidéo (video/), polices
 ├── inventory/
 │   ├── topology.yml                   nœuds, conteneurs et réseaux de la maquette (état déployé)
 │   ├── addressing.csv                 plan d'adressage de la maquette

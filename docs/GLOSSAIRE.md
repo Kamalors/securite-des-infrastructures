@@ -93,7 +93,7 @@ Accès rapide : [0-9](#0-9) · [A](#a) · [B](#b) · [C](#c) · [D](#d) · [E](#
 
 | Terme | Définition | Dans notre projet |
 |---|---|---|
-| **Gartner Magic Quadrant** | Classement annuel des éditeurs d'un marché par le cabinet Gartner ; les mieux placés sont les « Leaders ». | Fortinet et Cato sont « Leaders » du SASE 2026 : argument du choix (`docs/OFFRE_TECHNIQUE.md`). |
+| **Gartner Magic Quadrant** | Classement annuel des éditeurs d'un marché par le cabinet Gartner ; les mieux placés sont les « Leaders ». | SASE 2026 : Cato est « Leader », Fortinet « Challenger » (« Leader » en 2025) ; Fortinet est « Leader » 2026 des pare-feu (`docs/QUESTIONS_JURY.md`, Q48). |
 | **Gigue** | Variation du délai de transmission entre paquets. Gênante pour la voix et la vidéo. | Mesurée par le SD-WAN, avec la latence et la perte, pour choisir le chemin. |
 | **GTI** | Garantie de temps d'intervention de l'opérateur après une panne. | Fibre des agences avec GTI 8 h (`docs/CHIFFRAGE.csv`). |
 
@@ -259,5 +259,5 @@ Accès rapide : [0-9](#0-9) · [A](#a) · [B](#b) · [C](#c) · [D](#d) · [E](#
 | **XFRM** | Le cadre du noyau Linux qui gère IPsec. Une « interface XFRM » fait apparaître un tunnel comme une interface réseau. | Chaque tunnel de la maquette est une interface (`xa-agfr`, `xb-dc1`…). |
 | **Zero Trust** | Principe « ne jamais faire confiance, toujours vérifier » : aucun utilisateur ni réseau n'est de confiance par défaut ; chaque accès est vérifié. | Fil rouge de l'offre : ZTNA, MFA, refus par défaut, bastion. |
 | **Zone partenaire** | Zone du datacenter réservée aux partenaires, isolée du reste. | Terminaison des tunnels IPsec des partenaires site à site ; accès aux seules applications contractuelles (F06, N06). |
-| **Zscaler ZPA** | Zscaler Private Access, service ZTNA de l'éditeur Zscaler. | Candidat initial, écarté : la fonction est déjà incluse dans FortiSASE (1,99 M€ évités sur 36 mois). |
+| **Zscaler ZPA** | Zscaler Private Access, service ZTNA de l'éditeur Zscaler. | Candidat initial, écarté : la fonction est comprise côté utilisateur dans FortiSASE (1,99 M€ bruts évités sur 36 mois, au moins 1,5 M€ une fois ajoutées les licences des hubs, Q47). |
 | **ZTNA** | Zero Trust Network Access : accès à une application précise après vérification de l'identité, de la MFA et du poste, au lieu d'un accès au réseau entier. | Assuré par FortiSASE pour les nomades, les partenaires nomades et les infogérants (vers le bastion). Non modélisé dans la maquette (F07, F08, N07, N09). |
