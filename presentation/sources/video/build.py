@@ -18,8 +18,10 @@ from PIL import Image, ImageDraw
 
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
-import scenes  # noqa: E402
-from scenes import H, PROGRESS_Y, W  # noqa: E402
+import ecrans  # noqa: E402
+from ecrans import H, W  # noqa: E402
+
+PROGRESS_Y = ecrans.NAV_Y
 
 FFMPEG = imageio_ffmpeg.get_ffmpeg_exe()
 SR = 48000
@@ -27,6 +29,8 @@ FPS = 30
 # silences : avant la première phrase, entre deux phrases, entre deux scènes, entre deux chapitres, après la dernière
 LEAD, BEAT_GAP, SCENE_GAP, SECTION_GAP, TAIL = 1.5, 0.65, 1.5, 2.0, 4.0
 XF_BEAT, XF_SCENE, ANTICIPE = 0.35, 0.7, 0.30   # fondus (s) ; une révélation précède la voix de ANTICIPE
+XF_ECRAN, D_CHEMIN, LARGEUR_TRACE = 0.5, 1.4, 34  # changement d'écran d'une fiche ; tracé progressif des chemins
+XF_TEXTE = 0.6  # pendant un tracé, le chapeau du schéma s'efface puis réapparaît (zone_texte)
 
 
 def run(args, **kw):
@@ -186,9 +190,12 @@ def lire_wav(path):
 
 
 # ------------------------------------------------------------------ chronologie
-def chronologie(script, durees):
+def chronologie(script, durees, metas=None):
     """durees[(si, bi)] -> secondes. Renvoie les phrases (si, bi, début, durée), les changements d'image
-    (instant, (scène, état), durée du fondu), le début de chaque scène et la durée totale."""
+    (instant, (scène, état), durée de la transition), le début de chaque scène et la durée totale.
+    metas[(si, k)] : un état qui trace des chemins a une transition plus longue (D_CHEMIN) ; un changement
+    d'écran dans une fiche passe par le fond (XF_ECRAN). « pause » sur un beat : silence ajouté après lui."""
+    metas = metas or {}
     t, beats, cles, debuts, gap = LEAD, [], [], [], 0.0
     scs = script["scenes"]
     for si, sc in enumerate(scs):
@@ -209,15 +216,17 @@ def chronologie(script, durees):
                     cles.append((t0, cle, XF_SCENE))
                     debuts.append(t0)
                 else:
-                    cles.append((max(cles[-1][0] + cles[-1][2], t - ANTICIPE), cle, XF_BEAT))
-            t += durees[(si, bi)]
+                    m, avant = metas.get(cle, {}), metas.get(cles[-1][1], {})
+                    xf = D_CHEMIN if m.get("chemins") else XF_ECRAN if m.get("ecran") != avant.get("ecran") else XF_BEAT
+                    cles.append((max(cles[-1][0] + cles[-1][2], t - ANTICIPE), cle, xf))
+            t += durees[(si, bi)] + b.get("pause", 0)
     return beats, cles, debuts, t + TAIL
 
 
 def sections_de(script):
     sections = []
     for sc in script["scenes"]:
-        if sc.get("section") and sc["section"] not in sections and sc["layout"] != "ouverture":
+        if sc.get("section") and sc["section"] not in sections and sc["layout"] not in ("ouverture", "titre"):
             sections.append(sc["section"])
     return sections
 
@@ -226,7 +235,7 @@ def sections_de(script):
 MAX_CUE, MAX_LIGNE, MIN_DUREE = 82, 44, 1.2
 
 
-_MAL_COUPE = re.compile(r"(?:\d|\b(?:le|la|les|de|du|des|un|une|à|au|aux|et|en))$")  # jamais de coupure après
+_MAL_COUPE = re.compile(r"\b(?:le|la|les|de|du|des|un|une|à|au|aux|et|en|par|pour|sur|dans|sans|ne|ce|ses|son|sa|nos|vos|que|qui)$")  # jamais de coupure après
 
 
 def _moities(m):
@@ -288,7 +297,7 @@ def _deux_lignes(b, limite=MAX_LIGNE):
     mots, meilleur = b.split(" "), None
     for i in range(1, len(mots)):
         l1, l2 = " ".join(mots[:i]), " ".join(mots[i:])
-        score = abs(len(l1) - len(l2)) + (0 if l1[-1] in ",;:." else 6) + (12 if _MAL_COUPE.search(l1) else 0) \
+        score = abs(len(l1) - len(l2)) + (0 if l1[-1] in ",;:." else 6) + (100 if l1[-1].isdigit() else 12 if _MAL_COUPE.search(l1) else 0) \
             + (100 if max(len(l1), len(l2)) > limite else 0)
         if meilleur is None or score < meilleur[0]:
             meilleur = (score, l1, l2)
@@ -310,6 +319,9 @@ def sous_titres(script, beats, chemin):
     cues, n = [], 1
     for si, bi, t0, d in beats:
         blocs = _decoupe(pour_affichage(script["scenes"][si]["beats"][bi]["say"].strip()))
+        # un bloc qu'aucune coupure ne met en deux lignes de 44 caractères devient deux blocs d'une ligne
+        blocs = [x for b in blocs for x in ([b] if max(map(len, _deux_lignes(b).split("\n"))) <= MAX_LIGNE
+                                             else _deux_lignes(b, len(b) // 2 + 12).split("\n"))]
         poids = [_poids(b) for b in blocs]
         durees = [d * p / (sum(poids) or 1) for p in poids]
         for i, du in enumerate(durees):  # un bloc trop bref emprunte du temps à son voisin
@@ -331,6 +343,7 @@ def chapitres_ffmetadata(script, debuts, duree, chemin):
     def esc(s):
         return re.sub(r"([=;#\\\n])", r"\\\1", s)
     lignes = [";FFMETADATA1", f"title={esc(script.get('title', 'Le projet RAO expliqué'))}"]
+    debuts = [0.0] + [d + XF_SCENE for d in debuts[1:]]  # un chapitre commence sur son propre écran, fondu fini
     fins = debuts[1:] + [duree]
     for sc, t0, t1 in zip(script["scenes"], debuts, fins):
         lignes += ["[CHAPTER]", "TIMEBASE=1/1000", f"START={int(t0 * 1000)}", f"END={int(t1 * 1000)}",
@@ -340,18 +353,47 @@ def chapitres_ffmetadata(script, debuts, duree, chemin):
 
 # ------------------------------------------------------------------ images
 def images_etats(script, dossier):
+    """Une image par état ; la méta décrit l'écran affiché et les chemins à tracer à l'entrée de l'état."""
     sections = sections_de(script)
-    cache = {}
+    cache, metas = {}, {}
     for si, sc in enumerate(script["scenes"]):
         for k in sorted({max(0, b.get("reveal", 0)) for b in sc["beats"]}):
-            im = scenes.render_state(sc, k, sections)
-            cache[(si, k)] = im
+            im, meta = ecrans.render_state(sc, k, sections)
+            cache[(si, k)], metas[(si, k)] = im, meta
             im.save(dossier / f"etat_{si:02d}_{k}.png")
-    return cache
+    return cache, metas
 
 
 def couleur_barre(im):
-    return scenes.D_TEAL if sum(im.getpixel((5, 5))) < 200 else scenes.TEAL
+    return ecrans.RESEAU
+
+
+def _prefixe(chemin, f):
+    """Début d'un chemin brisé, sur la fraction f de sa longueur."""
+    segs = list(zip(chemin, chemin[1:]))
+    longs = [((b[0] - a[0]) ** 2 + (b[1] - a[1]) ** 2) ** 0.5 for a, b in segs]
+    reste, out = f * sum(longs), [chemin[0]]
+    for (a, b), lg in zip(segs, longs):
+        if reste >= lg:
+            out.append(b)
+            reste -= lg
+        else:
+            r = reste / lg if lg else 0
+            out.append((a[0] + (b[0] - a[0]) * r, a[1] + (b[1] - a[1]) * r))
+            break
+    return out
+
+
+def masque_trace(chemins, f, seq=False):
+    """Blanc sur la partie déjà tracée des chemins (fraction f de leur longueur), noir ailleurs.
+    seq : le premier chemin se trace d'abord (40 % du temps), les autres ensuite, dans l'ordre du flux."""
+    m = Image.new("L", (W, H), 0)
+    d = ImageDraw.Draw(m)
+    for j, ch in enumerate(chemins):
+        fj = f if not seq else (min(1.0, f / .4) if j == 0 else max(0.0, (f - .4) / .6))
+        if fj > 0:
+            d.line(_prefixe(ch, fj), fill=255, width=LARGEUR_TRACE, joint="curve")
+    return m
 
 
 def x_barre(t, bornes):
@@ -359,34 +401,57 @@ def x_barre(t, bornes):
     n = len(bornes) - 1
     i = next((j for j in range(n - 1, -1, -1) if bornes[j] <= t), None)
     if i is None:
-        return 120
-    return 120 + 1680 * (i + min(1.0, (t - bornes[i]) / (bornes[i + 1] - bornes[i]))) / n
+        return ecrans.MARGE
+    return ecrans.MARGE + (ecrans.DROITE - ecrans.MARGE) * (i + min(1.0, (t - bornes[i]) / (bornes[i + 1] - bornes[i]))) / n
 
 
-def image_a(t, i, cles, cache):
-    t0, cle, xf = cles[i]
-    if not (xf and t < t0 + xf and i > 0):
-        return cache[cle].copy()
-    a = (t - t0) / xf
-    a = a * a * (3 - 2 * a)  # fondu adouci
-    avant, apres = cache[cles[i - 1][1]], cache[cle]
-    if cle[0] == cles[i - 1][1][0]:
-        return Image.blend(avant, apres, a)
-    # changement de scène : passage par le fond de la scène qui arrive (pas de superposition de deux mises en page)
-    fond = Image.new("RGB", (W, H), apres.getpixel((5, 5)))
-    im = Image.blend(avant, fond, 2 * a) if a < 0.5 else Image.blend(fond, apres, 2 * a - 1)
-    if avant.getpixel((5, 5)) == apres.getpixel((5, 5)):  # même fond : les repères de chapitres restent en place
-        im.paste(Image.blend(avant.crop((0, 0, W, 100)), apres.crop((0, 0, W, 100)), a), (0, 0))
+def _creux(im, avant, apres, zone, a):
+    """Texte remplacé au même endroit : l'ancien s'efface jusqu'au fond, puis le nouveau apparaît (pas de mélange)."""
+    za, zb = avant.crop(zone), apres.crop(zone)
+    if za.tobytes() != zb.tobytes():
+        fond = Image.new("RGB", za.size, apres.getpixel((5, 5)))
+        im.paste(Image.blend(za, fond, 2 * a) if a < 0.5 else Image.blend(fond, zb, 2 * a - 1), zone[:2])
     return im
 
 
-def encoder(cles, cache, duree, bornes, audio, srt, meta, sortie, apercu=False):
+def _adouci(a):
+    a = min(1.0, max(0.0, a))
+    return a * a * (3 - 2 * a)
+
+
+def image_a(t, i, cles, cache, metas=None):
+    metas = metas or {}
+    t0, cle, xf = cles[i]
+    if not (xf and t < t0 + xf and i > 0):
+        return cache[cle].copy()
+    a = _adouci((t - t0) / xf)
+    avant, apres = cache[cles[i - 1][1]], cache[cle]
+    m, m0 = metas.get(cle, {}), metas.get(cles[i - 1][1], {})
+    zone = m.get("zone_texte") if m.get("zone_texte") == m0.get("zone_texte") else None
+    if cle[0] == cles[i - 1][1][0] and m.get("chemins"):
+        base = Image.blend(avant, m["sans"], min(1.0, (t - t0) / XF_BEAT))  # le reste du nouvel état, en fondu
+        im = Image.composite(apres, base, masque_trace(m["chemins"], a, m.get("sequentiel")))      # puis les chemins, au fil du tracé
+        return _creux(im, avant, apres, zone, _adouci((t - t0) / XF_TEXTE)) if zone else im
+    if cle[0] == cles[i - 1][1][0] and m.get("ecran") == m0.get("ecran"):
+        im = Image.blend(avant, apres, a)
+        return _creux(im, avant, apres, zone, a) if zone else im
+    # changement de scène : passage par le fond de la scène qui arrive (pas de superposition de deux mises en page)
+    # même passage par le fond pour un changement d'écran dans une fiche, en gardant l'en-tête de la fiche en place
+    fond = Image.new("RGB", (W, H), apres.getpixel((5, 5)))
+    im = Image.blend(avant, fond, 2 * a) if a < 0.5 else Image.blend(fond, apres, 2 * a - 1)
+    if avant.getpixel((5, 5)) == apres.getpixel((5, 5)):  # même fond : les repères (et l'en-tête de fiche) restent
+        bande = m.get("bande", 100) if cle[0] == cles[i - 1][1][0] else 100  # fiche : l'en-tête du rôle reste
+        im.paste(Image.blend(avant.crop((0, 0, W, bande)), apres.crop((0, 0, W, bande)), a), (0, 0))
+    return im
+
+
+def encoder(cles, cache, metas, duree, bornes, audio, srt, chap, sortie, apercu=False):
     n = int(round(duree * FPS))
     vcodec = ["-c:v", "libx264", "-preset", "veryfast" if apercu else "slow", "-crf", "26" if apercu else "20",
               "-tune", "stillimage", "-pix_fmt", "yuv420p"]
     cmd = [FFMPEG, "-y", "-hide_banner", "-loglevel", "error", "-nostats",
            "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-",
-           "-i", str(audio), "-i", str(srt), "-i", str(meta),
+           "-i", str(audio), "-i", str(srt), "-i", str(chap),
            "-map", "0:v", "-map", "1:a", "-map", "2:s", "-map_metadata", "3", "-map_chapters", "3", *vcodec,
            "-c:a", "aac", "-b:a", "160k", "-c:s", "mov_text", "-metadata:s:a:0", "language=fre",
            "-metadata:s:s:0", "language=fre", "-disposition:s:0", "0",  # ne suffit pas en MP4 : voir couper_sous_titres_par_defaut()
@@ -399,8 +464,8 @@ def encoder(cles, cache, duree, bornes, audio, srt, meta, sortie, apercu=False):
         t = f / FPS
         while i + 1 < len(cles) and cles[i + 1][0] <= t:
             i += 1
-        im = image_a(t, i, cles, cache)
-        ImageDraw.Draw(im).line([(120, PROGRESS_Y), (x_barre(t, bornes), PROGRESS_Y)], fill=couleur_barre(im), width=3)
+        im = image_a(t, i, cles, cache, metas)
+        ImageDraw.Draw(im).line([(ecrans.MARGE, PROGRESS_Y), (x_barre(t, bornes), PROGRESS_Y)], fill=couleur_barre(im), width=3)
         if t > duree - 1:  # fondu au noir sur la dernière seconde
             im = Image.blend(im, Image.new("RGB", (W, H)), min(1.0, t - duree + 1))
         proc.stdin.write(im.tobytes())
@@ -458,7 +523,9 @@ def main():
             vers_wav(mp3, wav)
         durees[(si, bi)] = len(lire_wav(wav)) / SR
 
-    beats, cles, debuts, duree = chronologie(script, durees)
+    print("images…")
+    cache, metas = images_etats(script, out / "etats")
+    beats, cles, debuts, duree = chronologie(script, durees, metas)
     sections = sections_de(script)
     premiere = {s: next(si for si, sc in enumerate(script["scenes"]) if sc.get("section") == s) for s in sections}
     bornes = [debuts[premiere[s]] + XF_SCENE / 2 for s in sections] + [duree]
@@ -487,8 +554,8 @@ def main():
 
     srt = out / "sous-titres_fr.srt"  # autre nom que la vidéo : VLC ne le charge pas d'office
     sous_titres(script, beats, srt)
-    meta = out / "chapitres.txt"
-    chapitres_ffmetadata(script, debuts, duree, meta)
+    chap = out / "chapitres.txt"
+    chapitres_ffmetadata(script, debuts, duree, chap)
     (out / "chronologie.json").write_text(json.dumps(
         {"duree": duree, "scenes": [{"si": si, "id": sc["id"], "debut": round(t0, 2),
                                      "chapitre": sc.get("chapitre") or sc["title"]}
@@ -496,12 +563,12 @@ def main():
          "beats": [{"si": si, "scene": script["scenes"][si]["id"], "beat": bi, "debut": round(t0, 2),
                     "duree": round(d, 2), "texte": script["scenes"][si]["beats"][bi]["say"],
                     "lu": fichiers[(si, bi)][0], "audio": str(fichiers[(si, bi)][2])}
-                   for si, bi, t0, d in beats]}, ensure_ascii=False, indent=1), encoding="utf-8")
-    print("images…")
-    cache = images_etats(script, out / "etats")
+                   for si, bi, t0, d in beats],
+         "changements": [{"t": round(t0, 2), "scene": si, "etat": k, "transition": xf}
+                         for t0, (si, k), xf in cles]}, ensure_ascii=False, indent=1), encoding="utf-8")
     print("encodage…")
     sortie = out / ("apercu.mp4" if a.apercu else "projet_rao_explique.mp4")
-    encoder(cles, cache, duree, bornes, norm, srt, meta, sortie, a.apercu)
+    encoder(cles, cache, metas, duree, bornes, norm, srt, chap, sortie, a.apercu)
     couper_sous_titres_par_defaut(sortie)
     print("ok :", sortie, f"{sortie.stat().st_size / 1e6:.1f} Mo")
 

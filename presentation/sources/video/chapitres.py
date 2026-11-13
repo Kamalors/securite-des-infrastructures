@@ -6,7 +6,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from build import pour_affichage  # noqa: E402
+from build import XF_SCENE, pour_affichage  # noqa: E402
 
 
 def hms(t):
@@ -17,7 +17,7 @@ def hms(t):
 def main():
     script = json.loads(Path(sys.argv[1]).read_text(encoding="utf-8"))
     chrono = json.loads((Path(sys.argv[2]) / "chronologie.json").read_text(encoding="utf-8"))
-    debut = {s["si"]: s["debut"] for s in chrono["scenes"]}
+    debut = {s["si"]: s["debut"] + (XF_SCENE if s["si"] else 0) for s in chrono["scenes"]}  # comme les chapitres MP4
     nom = [sc.get("chapitre") or sc["title"] for sc in script["scenes"]]
     lignes = ["# Le projet RAO expliqué : chapitres et transcription", "",
               f"Vidéo : [projet_rao_explique.mp4](projet_rao_explique.mp4) · durée : {hms(chrono['duree'])}", "",

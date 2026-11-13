@@ -3,1371 +3,1392 @@
 Bonjour à toute l'équipe.
 
 2
-00:00:03,184 --> 00:00:07,728
+00:00:03,184 --> 00:00:07,727
 Le jury interrogera chaque rôle sur son
 domaine : cette vidéo vous y prépare,
 
 3
-00:00:07,728 --> 00:00:09,565
+00:00:07,727 --> 00:00:09,565
 en une vingtaine de minutes.
 
 4
-00:00:09,565 --> 00:00:13,751
+00:00:09,565 --> 00:00:13,750
 D'abord le cas et la solution, puis
 chaque rôle et les problématiques.
 
 5
-00:00:15,751 --> 00:00:17,335
+00:00:15,750 --> 00:00:17,334
 Commençons par le cas.
 
 6
-00:00:17,335 --> 00:00:21,930
+00:00:17,334 --> 00:00:21,928
 Un appel d'offres met des entreprises
 en concurrence sur le besoin d'un client.
 
 7
-00:00:21,930 --> 00:00:27,316
+00:00:21,928 --> 00:00:27,314
 Ici, une grande mutuelle santé, fictive,
 veut sécuriser toute son infrastructure :
 
 8
-00:00:27,316 --> 00:00:30,643
+00:00:27,314 --> 00:00:30,640
 ses sites, ses datacenters
 et ses accès à distance.
 
 9
-00:00:31,293 --> 00:00:37,959
+00:00:31,290 --> 00:00:37,960
 La mutuelle compte 530 sites : 2 sièges,
 498 agences en France et 30 à l'étranger.
 
 10
-00:00:38,609 --> 00:00:42,058
+00:00:38,610 --> 00:00:42,060
 10 000 utilisateurs y travaillent,
 dont 8 000 en France.
 
 11
-00:00:42,708 --> 00:00:45,028
+00:00:42,710 --> 00:00:45,029
 S'y ajoutent une centaine de partenaires :
 
 12
-00:00:45,028 --> 00:00:48,647
+00:00:45,029 --> 00:00:48,647
 40 % reliés en site à site,
 les autres en nomades.
 
 13
-00:00:48,647 --> 00:00:51,153
+00:00:48,647 --> 00:00:51,152
 Et comme une mutuelle
 traite des données de santé,
 
 14
-00:00:51,153 --> 00:00:54,076
+00:00:51,152 --> 00:00:54,074
 nous exigeons par prudence
 un hébergeur certifié HDS,
 
 15
-00:00:54,076 --> 00:00:56,443
+00:00:54,074 --> 00:00:56,440
 c'est-à-dire hébergeur de données de santé.
 
 16
-00:00:57,943 --> 00:01:01,777
+00:00:57,940 --> 00:01:01,770
 Que demande le client ? Le cahier
 des charges tient en 3 pages.
 
 17
-00:01:02,427 --> 00:01:08,191
+00:01:02,430 --> 00:01:08,190
 D'abord, relier les sites. C'est le WAN,
 le réseau étendu entre sites éloignés.
 
 18
-00:01:08,841 --> 00:01:12,727
+00:01:08,840 --> 00:01:12,729
 Puis les datacenters, ces bâtiments
 sécurisés où tournent les serveurs,
 
 19
-00:01:12,727 --> 00:01:14,597
+00:01:12,729 --> 00:01:14,600
 que le client veut redondants.
 
 20
-00:01:15,247 --> 00:01:17,129
+00:01:15,250 --> 00:01:17,133
 Vient la sécurité des flux.
 
 21
-00:01:17,129 --> 00:01:21,809
+00:01:17,133 --> 00:01:21,815
 Le trafic nord-sud, ce sont les échanges
 avec Internet : sites publiés,
 
 22
-00:01:21,809 --> 00:01:25,198
+00:01:21,815 --> 00:01:25,205
 mais aussi navigation
 des serveurs et des utilisateurs.
 
 23
-00:01:25,198 --> 00:01:28,802
-Le trafic est-ouest, ce qui
-circule entre les serveurs.
+00:01:25,205 --> 00:01:28,810
+Le trafic est-ouest,
+ce qui circule entre les serveurs.
 
 24
-00:01:29,452 --> 00:01:32,646
+00:01:29,450 --> 00:01:32,640
 S'y ajoutent le réseau
 et la sécurité des agences.
 
 25
-00:01:33,296 --> 00:01:37,673
+00:01:33,300 --> 00:01:37,679
 Enfin, les accès à distance :
 nomades, partenaires et infogérance,
 
 26
-00:01:37,673 --> 00:01:41,032
+00:01:37,679 --> 00:01:41,040
 c'est-à-dire les prestataires
 qui administrent le système.
 
 27
-00:01:42,532 --> 00:01:46,087
-Le client annonce aussi ce
-qui sera noté, en 3 volets.
+00:01:42,530 --> 00:01:46,080
+Le client annonce aussi
+ce qui sera noté, en 3 volets.
 
 28
-00:01:46,737 --> 00:01:50,241
+00:01:46,740 --> 00:01:50,244
 Un, les solutions techniques :
 pour chaque fonction,
 
 29
-00:01:50,241 --> 00:01:52,560
+00:01:50,244 --> 00:01:52,562
 le modèle retenu et sa justification.
 
 30
-00:01:52,560 --> 00:01:56,529
+00:01:52,562 --> 00:01:56,530
 Notre méthode : chaque rôle cite
 aussi l'alternative écartée.
 
 31
-00:01:57,179 --> 00:02:00,571
+00:01:57,180 --> 00:02:00,574
 Deux, les schémas HLD
 du datacenter et des agences :
 
 32
-00:02:00,571 --> 00:02:03,236
+00:02:00,574 --> 00:02:03,240
 des schémas de principe, sans chaque câble.
 
 33
-00:02:03,886 --> 00:02:06,816
+00:02:03,890 --> 00:02:06,819
 Trois, le coût global, ventilé par poste.
 
 34
-00:02:06,816 --> 00:02:09,231
-Le client précise que sa
-direction informatique
+00:02:06,819 --> 00:02:09,234
+Le client précise
+que sa direction informatique
 
 35
-00:02:09,231 --> 00:02:13,549
+00:02:09,234 --> 00:02:13,550
 ne peut pas débloquer une grosse
 somme d'un coup. D'où l'abonnement.
 
 36
-00:02:15,549 --> 00:02:20,303
+00:02:15,550 --> 00:02:20,306
 Quelle est la finalité ? C'est un projet
 de cours, défendu devant un jury.
 
 37
-00:02:20,303 --> 00:02:22,579
+00:02:20,306 --> 00:02:22,582
 Le but : gagner l'appel d'offres,
 
 38
-00:02:22,579 --> 00:02:26,120
+00:02:22,582 --> 00:02:26,124
 en montrant notre maîtrise
 de la sécurité des infrastructures.
 
 39
-00:02:26,120 --> 00:02:30,925
+00:02:26,124 --> 00:02:30,930
 Le groupe livre 5 choses ; les 3 premières
 répondent aux 3 volets notés.
 
 40
-00:02:31,575 --> 00:02:35,096
+00:02:31,570 --> 00:02:35,094
 D'abord, une offre technique
 et financière en 19 sections,
 
 41
-00:02:35,096 --> 00:02:38,031
+00:02:35,094 --> 00:02:38,030
 où chaque choix est justifié
 face à une alternative.
 
 42
-00:02:38,681 --> 00:02:44,618
+00:02:38,680 --> 00:02:44,614
 Ensuite, 4 schémas HLD, intégrés au
 diaporama : la vue globale, le datacenter,
 
 43
-00:02:44,618 --> 00:02:46,825
+00:02:44,614 --> 00:02:46,820
 les agences et les accès distants.
 
 44
-00:02:47,475 --> 00:02:50,893
+00:02:47,480 --> 00:02:50,899
 Puis un chiffrage en abonnement.
 Chaque prix a une source,
 
 45
-00:02:50,893 --> 00:02:54,263
+00:02:50,899 --> 00:02:54,270
 et un petit programme recalcule
 tout si une hypothèse change.
 
 46
-00:02:54,913 --> 00:02:58,124
+00:02:54,910 --> 00:02:58,121
 Quatrième livrable, non
 demandé : une maquette,
 
 47
-00:02:58,124 --> 00:03:00,774
+00:02:58,121 --> 00:03:00,772
 un réseau réduit simulé sur un serveur loué.
 
 48
-00:03:00,774 --> 00:03:05,412
-Des tests automatiques y vérifient nos
-principes de sécurité, pas les produits.
+00:03:00,772 --> 00:03:05,410
+Des tests automatiques y vérifient
+nos principes de sécurité, pas les produits.
 
 49
-00:03:06,062 --> 00:03:11,073
+00:03:06,060 --> 00:03:11,073
 Enfin, la soutenance à 7 :
 24 diapositives, environ 20 minutes,
 
 50
-00:03:11,073 --> 00:03:16,338
+00:03:11,073 --> 00:03:16,340
 plus 4 minutes de démonstration, durée
 à confirmer. Puis les questions du jury.
 
 51
-00:03:18,338 --> 00:03:23,381
+00:03:18,340 --> 00:03:23,384
 La solution, en une image.
 À gauche, les 3 types de sites.
 
 52
-00:03:23,381 --> 00:03:28,366
+00:03:23,384 --> 00:03:28,370
 À droite, 2 datacenters certifiés
 HDS, en région parisienne.
 
 53
-00:03:29,016 --> 00:03:33,750
+00:03:29,020 --> 00:03:33,614
 Chaque site reçoit un pare-feu FortiGate,
 un boîtier qui filtre les échanges.
 
 54
-00:03:33,750 --> 00:03:38,538
+00:03:33,614 --> 00:03:38,260
 Sur ses accès Internet, ce boîtier
 monte des tunnels chiffrés, dits IPsec,
 
 55
-00:03:38,538 --> 00:03:41,304
-vers les 2 datacenters, appelés hubs.
+00:03:38,260 --> 00:03:42,080
+vers les pare-feu d'entrée
+des 2 datacenters, appelés hubs.
 
 56
-00:03:41,954 --> 00:03:46,678
+00:03:42,730 --> 00:03:47,458
 Le SD-WAN pilote ces tunnels comme
 un GPS : il choisit le meilleur accès,
 
 57
-00:03:46,678 --> 00:03:48,549
+00:03:47,458 --> 00:03:49,330
 et bascule seul en cas de panne.
 
 58
-00:03:49,199 --> 00:03:54,509
+00:03:49,970 --> 00:03:55,280
 En bas, les nomades passent par FortiSASE,
 un service de sécurité dans le cloud.
 
 59
-00:03:54,509 --> 00:03:57,879
+00:03:55,280 --> 00:03:58,650
 C'est le Zero Trust :
 aucune confiance par défaut.
 
 60
-00:03:58,529 --> 00:04:03,163
+00:03:59,300 --> 00:04:03,899
 On s'identifie par MFA : un mot
 de passe, plus un second facteur.
 
 61
-00:04:03,163 --> 00:04:06,829
-Puis on n'ouvre qu'une application,
+00:04:03,899 --> 00:04:07,740
+Puis on n'atteint que ses applications,
 jamais le réseau entier.
 
 62
-00:04:07,479 --> 00:04:10,842
+00:04:08,390 --> 00:04:11,752
 Les partenaires site à site
 arrivent dans une zone réservée.
 
 63
-00:04:10,842 --> 00:04:15,541
+00:04:11,752 --> 00:04:16,450
 Partout, une règle : tout est refusé
 par défaut, sauf ce qui est écrit.
 
 64
-00:04:17,541 --> 00:04:21,467
-Place aux 7 rôles, dans
-l'ordre de passage : Farah,
+00:04:20,450 --> 00:04:24,377
+Place aux 7 rôles,
+dans l'ordre de passage : Farah,
 
 65
-00:04:21,467 --> 00:04:25,618
+00:04:24,377 --> 00:04:28,528
 Valentin, Nolan, Fatih,
 Younes, Maxime, Diane.
 
 66
-00:04:25,618 --> 00:04:30,890
+00:04:28,528 --> 00:04:33,801
 Puis Valentin revient pour la démo,
 Younes pour les risques, et Farah conclut.
 
 67
-00:04:30,890 --> 00:04:35,938
+00:04:33,801 --> 00:04:38,850
 Premier rôle, Farah, chef
 de projet, en 3 min 30 au total.
 
 68
-00:04:36,588 --> 00:04:38,974
+00:04:39,500 --> 00:04:41,887
 Farah présente l'équipe, la synthèse,
 
 69
-00:04:38,974 --> 00:04:43,058
-le besoin du client et nos
-hypothèses, comme 3 000 nomades.
+00:04:41,887 --> 00:04:45,970
+le besoin du client et nos hypothèses,
+comme 3 000 nomades.
 
 70
-00:04:43,058 --> 00:04:46,346
+00:04:45,970 --> 00:04:49,258
 Couverture : remplissez
 nom du groupe et date.
 
 71
-00:04:46,346 --> 00:04:49,847
+00:04:49,258 --> 00:04:52,759
 Aux questions, Farah passe
 la parole au rôle concerné.
 
 72
-00:04:49,847 --> 00:04:54,302
+00:04:52,759 --> 00:04:57,214
 En conclusion, si le jury demande
 la suite : valider ces hypothèses,
 
 73
-00:04:54,302 --> 00:04:57,908
+00:04:57,214 --> 00:05:00,820
 obtenir des devis fermes,
 choisir l'hébergeur HDS.
 
 74
-00:04:58,558 --> 00:05:01,836
+00:05:01,470 --> 00:05:04,748
 Message clé : une architecture
 complète, en abonnement,
 
 75
-00:05:01,836 --> 00:05:05,898
+00:05:04,748 --> 00:05:08,810
 sans investissement de départ, dont
 les principes sont prouvés sur maquette.
 
 76
-00:05:06,548 --> 00:05:09,658
+00:05:09,460 --> 00:05:12,555
 Chiffres : 530 sites, 10 000 utilisateurs,
 
 77
-00:05:09,658 --> 00:05:14,575
-221 400 € HT par mois, et 17 tests sur 17.
+00:05:12,555 --> 00:05:17,950
+221 424 € HT par mois, et 17 tests sur 17.
 
 78
-00:05:15,225 --> 00:05:18,598
+00:05:18,600 --> 00:05:21,973
 Question probable : et si
 vos hypothèses sont fausses ?
 
 79
-00:05:18,598 --> 00:05:22,827
+00:05:21,973 --> 00:05:26,202
 Le chiffrage est un script :
 on corrige la valeur, tout se recalcule.
 
 80
-00:05:22,827 --> 00:05:27,056
+00:05:26,202 --> 00:05:30,430
 1 000 nomades de plus
 ajoutent 4 152 € par mois.
 
 81
-00:05:27,706 --> 00:05:32,003
+00:05:31,080 --> 00:05:35,378
 Point de vigilance sur Gartner,
 le cabinet qui classe les éditeurs.
 
 82
-00:05:32,003 --> 00:05:37,660
+00:05:35,378 --> 00:05:41,037
 En 2026, dans son classement SASE,
 réseau et sécurité dans le cloud,
 
 83
-00:05:37,660 --> 00:05:40,707
+00:05:41,037 --> 00:05:44,084
 Fortinet est Challenger, et non plus Leader.
 
 84
-00:05:40,707 --> 00:05:45,711
+00:05:44,084 --> 00:05:49,090
 En revanche, Fortinet reste Leader
 des pare-feu, l'essentiel de notre usage.
 
 85
-00:05:46,361 --> 00:05:50,682
+00:05:49,740 --> 00:05:54,060
 Transition : Valentin va vous présenter
 comment les 530 sites sont reliés.
 
 86
-00:05:52,182 --> 00:05:57,567
+00:05:55,560 --> 00:06:00,945
 Deuxième rôle, Valentin,
 architecte SD-WAN : 2 min 30 au total,
 
 87
-00:05:57,567 --> 00:06:00,311
+00:06:00,945 --> 00:06:03,690
 plus environ 4 minutes de démonstration.
 
 88
-00:06:00,961 --> 00:06:04,384
+00:06:04,340 --> 00:06:07,761
 Valentin présente le schéma
 global et le SD-WAN,
 
 89
-00:06:04,384 --> 00:06:07,365
+00:06:07,761 --> 00:06:10,740
 puis, en fin de parcours, la maquette.
 
 90
-00:06:08,015 --> 00:06:13,455
+00:06:11,390 --> 00:06:16,829
 Messages clés : un SD-WAN sur Internet,
 vers les 2 datacenters à la fois.
 
 91
-00:06:13,455 --> 00:06:16,791
+00:06:16,829 --> 00:06:20,164
 Pas de MPLS, le réseau
 privé des opérateurs :
 
 92
-00:06:16,791 --> 00:06:20,537
+00:06:20,164 --> 00:06:23,910
 l'Internet professionnel coûte
 moins cher et se paie chaque mois.
 
 93
-00:06:21,187 --> 00:06:25,667
-Chiffres : 1 060 tunnels par datacenter,
-1 100 avec les partenaires,
+00:06:24,560 --> 00:06:29,409
+Chiffres : environ 1 060 tunnels
+par datacenter, 1 100 avec les partenaires,
 
 94
-00:06:25,667 --> 00:06:27,724
+00:06:29,409 --> 00:06:31,467
 pour 2 000 acceptés par boîtier.
 
 95
-00:06:27,724 --> 00:06:30,969
+00:06:31,467 --> 00:06:34,715
 Et une bascule d'opérateur en 3,8 secondes :
 
 96
-00:06:30,969 --> 00:06:34,992
+00:06:34,715 --> 00:06:38,740
 le temps que met le routage à voir
 la panne, pas une performance de produit.
 
 97
-00:06:35,642 --> 00:06:41,595
+00:06:39,390 --> 00:06:45,344
 Point de vigilance : le FortiGate 600F
 n'est plus commandable depuis mai 2026.
 
 98
-00:06:41,595 --> 00:06:43,956
+00:06:45,344 --> 00:06:47,704
 Annoncez d'emblée son successeur probable,
 
 99
-00:06:43,956 --> 00:06:47,753
+00:06:47,704 --> 00:06:51,502
 le 700G, même capacité
 de tunnels, recoté au devis.
 
 100
-00:06:47,753 --> 00:06:51,653
-Ce modèle figure aussi sur
-les diapos de Nolan, Fatih et Diane :
+00:06:51,502 --> 00:06:55,403
+Ce modèle figure aussi sur les diapos
+de Nolan, Fatih et Diane :
 
 101
-00:06:51,653 --> 00:06:53,860
+00:06:55,403 --> 00:06:57,610
 dites 600F ou son successeur.
 
 102
-00:06:54,510 --> 00:06:59,522
+00:06:58,260 --> 00:07:03,271
 La démo suit un scénario écrit,
 en 7 étapes, dans le simulateur EVE-NG,
 
 103
-00:06:59,522 --> 00:07:01,923
+00:07:03,271 --> 00:07:05,673
 jusqu'à la recette des 17 tests.
 
 104
-00:07:01,923 --> 00:07:04,586
+00:07:05,673 --> 00:07:08,335
 Demandez votre accès à Maxime pour répéter.
 
 105
-00:07:04,586 --> 00:07:08,866
+00:07:08,335 --> 00:07:12,615
 La recette exige la clé d'administration :
 sur l'ordinateur de Maxime,
 
 106
-00:07:08,866 --> 00:07:12,886
+00:07:12,615 --> 00:07:16,635
 rejouez la recette rapide la veille,
 puis un quart d'heure avant.
 
 107
-00:07:12,886 --> 00:07:16,802
+00:07:16,635 --> 00:07:20,550
 Plan B, si le réseau bloque :
 les preuves enregistrées.
 
 108
-00:07:17,452 --> 00:07:21,249
+00:07:21,200 --> 00:07:24,997
 Question piège : la maquette
 prouve-t-elle vos produits ?
 
 109
-00:07:21,249 --> 00:07:25,566
+00:07:24,997 --> 00:07:29,313
 Non, les principes : des routeurs
 Linux y remplacent les FortiGate,
 
 110
-00:07:25,566 --> 00:07:28,686
+00:07:29,313 --> 00:07:32,434
 sans double authentification
 ni haute disponibilité.
 
 111
-00:07:28,686 --> 00:07:31,443
+00:07:32,434 --> 00:07:35,190
 Proposez une preuve
 de concept sur FortiGate.
 
 112
-00:07:32,093 --> 00:07:34,869
-Deux corrections : dans
-la note de la diapo 5,
+00:07:35,840 --> 00:07:38,617
+Deux corrections :
+dans la note de la diapo 5,
 
 113
-00:07:34,869 --> 00:07:38,647
+00:07:38,617 --> 00:07:42,395
 la fibre garantit l'intervention
 en 8 heures, pas le rétablissement.
 
 114
-00:07:38,647 --> 00:07:43,381
+00:07:42,395 --> 00:07:47,130
 Sur la diapo 22, les preuves ont
 des empreintes : elles ne sont pas signées.
 
 115
-00:07:44,031 --> 00:07:46,592
+00:07:47,780 --> 00:07:50,341
 Transitions. Après la diapo 6 :
 
 116
-00:07:46,592 --> 00:07:50,617
+00:07:50,341 --> 00:07:54,365
 Nolan va vous présenter les 2 datacenters
 où arrivent ces tunnels.
 
 117
-00:07:50,617 --> 00:07:55,582
+00:07:54,365 --> 00:07:59,330
 Après la démonstration : Younes va vous
 présenter les risques et la conformité.
 
 118
-00:07:57,082 --> 00:08:02,115
+00:08:00,830 --> 00:08:05,860
 Troisième rôle, Nolan,
 architecte datacenter, en 2 min 30.
 
 119
-00:08:02,765 --> 00:08:06,850
+00:08:06,510 --> 00:08:10,596
 Nolan présente le housing, c'est-à-dire
 une place louée en datacenter,
 
 120
-00:08:06,850 --> 00:08:11,091
+00:08:10,596 --> 00:08:14,840
 puis les serveurs, et le schéma
 du datacenter, lu de haut en bas.
 
 121
-00:08:11,741 --> 00:08:16,118
+00:08:15,490 --> 00:08:19,803
 Messages clés : 2 datacenters
 certifiés HDS et indépendants.
 
 122
-00:08:16,118 --> 00:08:18,177
-La publication tourne sur les 2 ;
+00:08:19,803 --> 00:08:24,471
+La publication tourne sur les 2 ; les bases
+sont copiées vers l'autre en différé,
 
 123
-00:08:18,177 --> 00:08:22,348
-les bases sont copiées vers l'autre
-en différé, on dit en asynchrone.
+00:08:24,471 --> 00:08:25,739
+on dit en asynchrone,
 
 124
-00:08:22,998 --> 00:08:27,633
+00:08:25,739 --> 00:08:29,240
+sous réserve des objectifs
+de reprise à fixer avec le client.
+
+125
+00:08:29,880 --> 00:08:34,515
 Des serveurs sous VMware, préféré
 à Proxmox ou Nutanix pour sa maturité.
 
-125
-00:08:27,633 --> 00:08:33,111
+126
+00:08:34,515 --> 00:08:39,992
 Et le rachat par Broadcom ? Prix figé
 36 mois, sortie vers Proxmox préparée.
 
-126
-00:08:33,111 --> 00:08:37,904
+127
+00:08:39,992 --> 00:08:44,784
 Enfin, une sauvegarde dite
 3-2-1 : 3 copies, 2 supports,
 
-127
-00:08:37,904 --> 00:08:42,171
+128
+00:08:44,784 --> 00:08:49,050
 une hors site et immuable, que même
 un attaquant ne peut pas effacer.
 
-128
-00:08:42,821 --> 00:08:47,326
+129
+00:08:49,710 --> 00:08:54,217
 Chiffres : par datacenter, 4 serveurs
 de marque Dell, dont un de marge,
 
-129
-00:08:47,326 --> 00:08:51,878
+130
+00:08:54,217 --> 00:08:58,770
 2 paires de pare-feu, et environ
 150 machines virtuelles de production.
 
-130
-00:08:52,528 --> 00:08:53,991
+131
+00:08:59,410 --> 00:09:00,864
 Points de vigilance.
 
-131
-00:08:53,991 --> 00:08:58,643
-La diapo 8 dit encore aucune baie
-de stockage à acheter : corrigez-la.
-
 132
-00:08:58,643 --> 00:09:01,674
-Le vSAN, le stockage logé dans les serveurs,
+00:09:00,864 --> 00:09:05,433
+La diapo 8 laisse croire que le stockage
+inclus suffit : corrigez-la.
 
 133
-00:09:01,674 --> 00:09:08,050
-est inclus pour 64 tébioctets bruts par
-datacenter ; il en faudrait 70 à 80.
+00:09:05,433 --> 00:09:08,444
+Le vSAN, le stockage logé dans les serveurs,
 
 134
-00:09:08,050 --> 00:09:12,701
-Et si un datacenter brûle, l'autre ne
-relance que les applications critiques.
+00:09:08,444 --> 00:09:14,779
+est inclus pour 64 tébioctets bruts
+par datacenter ; il en faudrait 70 à 80.
 
 135
-00:09:12,701 --> 00:09:14,060
-Dites-le d'emblée.
+00:09:14,779 --> 00:09:19,400
+Et si un datacenter brûle, l'autre
+ne relance que les applications critiques.
 
 136
-00:09:14,710 --> 00:09:18,659
-Le jury demandera sans
-doute : quels RPO et RTO ?
+00:09:19,400 --> 00:09:20,750
+Dites-le d'emblée.
 
 137
-00:09:18,659 --> 00:09:22,504
+00:09:21,410 --> 00:09:25,358
+Le jury demandera sans doute :
+quels RPO et RTO ?
+
+138
+00:09:25,358 --> 00:09:29,204
 La perte de données et la durée
 d'interruption maximales acceptées.
 
-138
-00:09:22,504 --> 00:09:27,580
+139
+00:09:29,204 --> 00:09:34,280
 Le client ne les a pas fixés : c'est
 une décision métier, à prendre en atelier.
 
-139
-00:09:28,230 --> 00:09:31,652
+140
+00:09:34,930 --> 00:09:38,350
 Transition : Fatih va détailler
 la sécurité de ces flux.
 
-140
-00:09:33,152 --> 00:09:37,740
+141
+00:09:39,850 --> 00:09:44,440
 Quatrième rôle, Fatih,
 sécurité des flux, en 2 min 30.
 
-141
-00:09:38,390 --> 00:09:41,262
+142
+00:09:45,090 --> 00:09:47,940
 Fatih présente d'abord le trafic nord-sud.
 
-142
-00:09:41,262 --> 00:09:46,202
-Seule une zone tampon, la DMZ,
-reçoit les connexions d'Internet.
-
 143
-00:09:46,202 --> 00:09:49,935
+00:09:47,940 --> 00:09:53,241
+Seule une zone tampon, la DMZ,
+héberge les services ouverts à Internet.
+
+144
+00:09:53,241 --> 00:09:56,947
 Un pare-feu web, le WAF,
 y bloque les attaques,
 
-144
-00:09:49,935 --> 00:09:53,439
+145
+00:09:56,947 --> 00:10:00,424
 et le FTP devient du SFTP, chiffré.
 
-145
-00:09:53,439 --> 00:09:56,196
+146
+00:10:00,424 --> 00:10:03,160
 Les sorties vers Internet sont filtrées.
 
-146
-00:09:56,846 --> 00:10:02,251
+147
+00:10:03,810 --> 00:10:09,213
 Puis le trafic est-ouest : 5 zones,
 séparées par une seconde paire de pare-feu.
 
-147
-00:10:02,251 --> 00:10:04,582
+148
+00:10:09,213 --> 00:10:11,544
 Enfin l'infogérance, par un bastion,
 
-148
-00:10:04,582 --> 00:10:07,550
+149
+00:10:11,544 --> 00:10:14,510
 porte unique et enregistrée
 des administrateurs.
 
-149
-00:10:08,200 --> 00:10:11,074
+150
+00:10:15,170 --> 00:10:18,045
 Message clé : tout est refusé par défaut,
 
-150
-00:10:11,074 --> 00:10:14,980
+151
+00:10:18,045 --> 00:10:21,950
 et chaque flux autorisé est
 écrit, justifié, journalisé.
 
-151
-00:10:14,980 --> 00:10:18,126
+152
+00:10:21,950 --> 00:10:25,096
 Le WAF reste chez nous
 plutôt que dans le cloud,
 
-152
-00:10:18,126 --> 00:10:21,380
+153
+00:10:25,096 --> 00:10:28,350
 pour ne rien déchiffrer
 hors du périmètre HDS.
 
-153
-00:10:22,030 --> 00:10:25,821
+154
+00:10:29,000 --> 00:10:32,792
 Chiffres : 4 WAF, 2 par datacenter.
 
-154
-00:10:25,821 --> 00:10:31,700
-La matrice compte 13 flux autorisés et 9
-refus attendus ; la maquette en teste 17.
-
 155
-00:10:31,700 --> 00:10:35,271
+00:10:32,792 --> 00:10:38,671
+La matrice compte 13 flux autorisés et
+9 refus attendus ; la maquette en teste 17.
+
+156
+00:10:38,671 --> 00:10:42,243
 50 comptes à privilèges
 passent par le bastion Wallix,
 
-156
-00:10:35,271 --> 00:10:38,567
+157
+00:10:42,243 --> 00:10:45,540
 éditeur français préféré
 aux éditeurs non européens.
 
-157
-00:10:39,217 --> 00:10:42,838
+158
+00:10:46,180 --> 00:10:49,802
 Question probable : et si
 le serveur web est piraté ?
 
-158
-00:10:42,838 --> 00:10:45,514
+159
+00:10:49,802 --> 00:10:52,479
 Le serveur reste enfermé dans la DMZ.
 
-159
-00:10:45,514 --> 00:10:49,450
+160
+00:10:52,479 --> 00:10:56,416
 Depuis là, seule l'application
 est joignable, sur un seul port,
 
-160
-00:10:49,450 --> 00:10:52,914
+161
+00:10:56,416 --> 00:10:59,880
 jamais la base de données.
 La maquette le vérifie.
 
-161
-00:10:53,564 --> 00:10:57,868
+162
+00:11:00,530 --> 00:11:04,833
 Autre question : un partenaire
 ne sait faire que du FTP ?
 
-162
-00:10:57,868 --> 00:11:02,881
+163
+00:11:04,833 --> 00:11:09,845
 Alors une exception temporaire et datée,
 sur une passerelle isolée en DMZ.
 
-163
-00:11:02,881 --> 00:11:06,968
-Mieux : faire passer ce
-FTP dans un tunnel IPsec.
-
 164
-00:11:07,618 --> 00:11:12,253
+00:11:09,845 --> 00:11:13,930
+Mieux : faire passer ce FTP
+dans un tunnel IPsec.
+
+165
+00:11:14,580 --> 00:11:19,220
 Transition : Younes va vous présenter
 le terrain, les sièges et les agences.
 
-165
-00:11:13,753 --> 00:11:19,115
+166
+00:11:20,720 --> 00:11:26,080
 Cinquième rôle, Younes, exploitation
 et agences, en 2 min 30 au total.
 
-166
-00:11:19,765 --> 00:11:24,393
+167
+00:11:26,730 --> 00:11:31,359
 Younes présente les 3 profils de site,
 l'exploitation, et à la fin les risques :
 
-167
-00:11:24,393 --> 00:11:29,253
+168
+00:11:31,359 --> 00:11:36,220
 HDS, RGPD, et DORA, règlement
 européen de résilience numérique.
 
-168
-00:11:29,903 --> 00:11:34,262
+169
+00:11:36,870 --> 00:11:41,228
 Messages clés : réseaux séparés,
 et Internet seul pour les invités.
 
-169
-00:11:34,262 --> 00:11:38,321
+170
+00:11:41,228 --> 00:11:45,285
 Une console pour les pare-feu,
 une autre pour le réseau local et le wifi,
 
-170
-00:11:38,321 --> 00:11:41,327
+171
+00:11:45,285 --> 00:11:48,290
 confiés à Aruba pour ne pas
 tout miser sur Fortinet.
 
-171
-00:11:41,977 --> 00:11:46,971
+172
+00:11:48,940 --> 00:11:53,934
 Et Wazuh, un SIEM gratuit, qui centralise
 les journaux et détecte les attaques,
 
-172
-00:11:46,971 --> 00:11:51,107
+173
+00:11:53,934 --> 00:11:58,070
 plutôt qu'un outil facturé au volume.
 Et les failles de Fortinet ?
 
-173
-00:11:51,107 --> 00:11:55,595
+174
+00:11:58,070 --> 00:12:02,560
 Des correctifs par vagues, et aucune
 interface d'administration sur Internet.
 
-174
-00:11:56,245 --> 00:12:01,581
-Chiffres : 5 ports réseau pour
-4 utilisateurs, une borne wifi pour 25,
-
 175
-00:12:01,581 --> 00:12:07,439
+00:12:03,210 --> 00:12:08,544
+Chiffres : 5 ports réseau
+pour 4 utilisateurs, une borne wifi pour 25,
+
+176
+00:12:08,544 --> 00:12:14,400
 2 boîtiers au-delà de 50 utilisateurs.
 Au total, 570 FortiGate.
 
-176
-00:12:08,089 --> 00:12:12,914
+177
+00:12:15,050 --> 00:12:19,875
 Question probable :
 comment déployer 498 agences ?
 
-177
-00:12:12,914 --> 00:12:16,030
+178
+00:12:19,875 --> 00:12:22,992
 Même kit préconfiguré,
 un jour d'ingénieur par agence,
 
-178
-00:12:16,030 --> 00:12:19,448
-et environ 25 agences par
-semaine après 10 pilotes.
-
 179
-00:12:20,098 --> 00:12:22,022
-Vigilance : dans chaque siège,
+00:12:22,992 --> 00:12:26,410
+et environ 25 agences
+par semaine après 10 pilotes.
 
 180
-00:12:22,022 --> 00:12:27,061
-53 commutateurs doivent se brancher sur
-2 commutateurs centraux de 24 ports.
+00:12:27,060 --> 00:12:28,985
+Vigilance : dans chaque siège,
 
 181
-00:12:27,061 --> 00:12:29,810
+00:12:28,985 --> 00:12:34,025
+53 commutateurs doivent se brancher
+sur 2 commutateurs centraux de 24 ports.
+
+182
+00:12:34,025 --> 00:12:36,774
 Il manque un niveau
 de distribution, hors prix :
 
-182
-00:12:29,810 --> 00:12:33,475
+183
+00:12:36,774 --> 00:12:40,440
 environ 8 000 € par mois
 pour les 2 sièges, à valider.
 
-183
-00:12:34,125 --> 00:12:37,783
+184
+00:12:41,090 --> 00:12:44,750
 Et le piratage de notre serveur
 de maquette, raconté plus loin,
 
-184
-00:12:37,783 --> 00:12:39,535
+185
+00:12:44,750 --> 00:12:46,502
 n'a qu'une cause probable.
 
-185
-00:12:39,535 --> 00:12:43,451
+186
+00:12:46,502 --> 00:12:50,420
 Même si votre note le dit,
 ne parlez pas de mot de passe faible.
 
-186
-00:12:43,451 --> 00:12:44,790
+187
+00:12:50,420 --> 00:12:51,760
 Valentin en appui.
 
-187
-00:12:45,440 --> 00:12:48,209
+188
+00:12:52,410 --> 00:12:55,178
 Transitions. Après la diapo 14 :
 
-188
-00:12:48,209 --> 00:12:50,311
+189
+00:12:55,178 --> 00:12:57,280
 Maxime va vous présenter les utilisateurs
 
-189
-00:12:50,311 --> 00:12:53,028
+190
+00:12:57,280 --> 00:12:59,998
 qui ne sont dans aucun site, les nomades.
 
-190
-00:12:53,028 --> 00:12:56,360
+191
+00:12:59,998 --> 00:13:03,330
 Après les risques : Farah
 va maintenant conclure.
 
-191
-00:12:57,860 --> 00:13:03,689
+192
+00:13:04,830 --> 00:13:10,660
 Sixième rôle : Maxime, pour l'accès
 Zero Trust, ou ZTNA, en 3 min 20.
 
-192
-00:13:04,339 --> 00:13:07,046
+193
+00:13:11,300 --> 00:13:14,007
 Maxime présente les nomades,
 les partenaires,
 
-193
-00:13:07,046 --> 00:13:10,622
+194
+00:13:14,007 --> 00:13:17,582
 le schéma des accès distants,
 et le choix du ZTNA.
 
-194
-00:13:10,622 --> 00:13:13,635
+195
+00:13:17,582 --> 00:13:20,596
 Une quarantaine de partenaires
 arrivent par un tunnel ;
 
-195
-00:13:13,635 --> 00:13:17,619
+196
+00:13:20,596 --> 00:13:24,580
 une soixantaine passent surtout
 par un portail web, sans logiciel.
 
-196
-00:13:18,269 --> 00:13:21,564
+197
+00:13:25,230 --> 00:13:28,498
 Message clé : personne
 n'entre dans le réseau.
 
-197
-00:13:21,564 --> 00:13:25,550
+198
+00:13:28,498 --> 00:13:32,450
 Chaque utilisateur n'atteint
 que ses applications, après MFA,
 
-198
-00:13:25,550 --> 00:13:28,738
+199
+00:13:32,450 --> 00:13:35,613
 et contrôle de son poste
 quand l'agent est installé.
 
-199
-00:13:28,738 --> 00:13:32,405
+200
+00:13:35,613 --> 00:13:39,249
 Sans agent, seulement
 des applications web peu sensibles.
 
-200
-00:13:32,405 --> 00:13:35,647
-À l'inverse, un VPN ouvre le réseau entier.
-
 201
-00:13:36,297 --> 00:13:42,478
+00:13:39,249 --> 00:13:43,360
+À l'inverse, un VPN classique
+place le poste dans le réseau.
+
+202
+00:13:44,010 --> 00:13:50,193
 Chiffres : 3 000 nomades, et 3 300 licences
 FortiSASE en comptant les partenaires.
 
-202
-00:13:42,478 --> 00:13:48,014
+203
+00:13:50,193 --> 00:13:55,730
 Écarter ZPA, l'offre concurrente,
 évite environ 2 M€ bruts sur 36 mois.
 
-203
-00:13:48,664 --> 00:13:54,234
+204
+00:13:56,380 --> 00:14:01,950
 Question piège : le ZTNA est-il
 vraiment inclus ? Côté utilisateur, oui,
 
-204
-00:13:54,234 --> 00:13:58,947
-mais il faut aussi une licence sur
-les 4 pare-feu d'entrée des datacenters.
-
 205
-00:13:58,947 --> 00:14:02,963
+00:14:01,950 --> 00:14:06,663
+mais il faut aussi une licence
+sur les 4 pare-feu d'entrée des datacenters.
+
+206
+00:14:06,663 --> 00:14:10,679
 L'écart avec ZPA reste d'au moins
 un million et demi d'euros.
 
-206
-00:14:02,963 --> 00:14:05,534
+207
+00:14:10,679 --> 00:14:13,250
 Sur Gartner, même réponse que Farah.
 
-207
-00:14:06,184 --> 00:14:09,789
-Les diapos 15 et 18 affichent
-encore inclus et déjà payé :
-
 208
-00:14:09,789 --> 00:14:11,924
-corrigez-les, et ne le dites pas.
+00:14:13,900 --> 00:14:18,960
+Les diapos 15 et 18 affichent encore
+inclus et déjà payé : corrigez-les.
 
 209
-00:14:11,924 --> 00:14:15,671
-Sur la diapo 18, 24 % devient 25.
+00:14:18,960 --> 00:14:24,021
+À l'oral, dites : inclus côté utilisateur,
+licence à ajouter sur les hubs.
 
 210
-00:14:16,321 --> 00:14:20,213
+00:14:24,021 --> 00:14:28,100
+Sur la diapo 18, 24 % devient 25.
+
+211
+00:14:28,750 --> 00:14:32,640
 Limite à dire franchement :
 le ZTNA n'est pas dans la maquette,
 
-211
-00:14:20,213 --> 00:14:22,604
+212
+00:14:32,640 --> 00:14:35,030
 et ses 4 tests n'ont pas été exécutés.
 
-212
-00:14:23,254 --> 00:14:26,634
+213
+00:14:35,680 --> 00:14:39,060
 Transition : Diane va vous
 présenter ce que tout cela coûte.
 
-213
-00:14:28,134 --> 00:14:32,208
+214
+00:14:40,560 --> 00:14:44,630
 Septième rôle, Diane, finances, en 2 min 30.
 
-214
-00:14:32,858 --> 00:14:37,829
+215
+00:14:45,280 --> 00:14:50,251
 Diane présente les modèles d'équipements,
 les coûts, puis le phasage en 9 mois.
 
-215
-00:14:37,829 --> 00:14:41,937
+216
+00:14:50,251 --> 00:14:54,360
 D'abord le socle des datacenters,
 puis les sièges et 10 agences pilotes,
 
-216
-00:14:41,937 --> 00:14:44,575
+217
+00:14:54,360 --> 00:14:56,998
 puis environ 25 agences par semaine.
 
-217
-00:14:44,575 --> 00:14:48,176
+218
+00:14:56,998 --> 00:15:00,600
 L'international suit,
 et les nomades arrivent en parallèle.
 
-218
-00:14:48,826 --> 00:14:56,301
+219
+00:15:01,250 --> 00:15:08,727
 Message clé : 221 424 € HT par mois,
 pendant 36 mois, sans rien avancer.
 
-219
-00:14:56,301 --> 00:14:59,478
+220
+00:15:08,727 --> 00:15:11,906
 Un bailleur achète matériel
 et licences, puis les loue au mois,
 
-220
-00:14:59,478 --> 00:15:01,761
+221
+00:15:11,906 --> 00:15:14,190
 au taux supposé de 7 % par an.
 
-221
-00:15:02,411 --> 00:15:08,972
-Chiffres : le coût total sur
-36 mois, ou TCO, atteint 7,97 M€.
-
 222
-00:15:08,972 --> 00:15:14,045
-Soit 22,14 € par utilisateur
-et par mois, 418 par site.
+00:15:14,840 --> 00:15:21,368
+Chiffres : le coût total sur 36 mois,
+ou TCO, atteint 7,97 M€.
 
 223
-00:15:14,045 --> 00:15:16,888
+00:15:21,368 --> 00:15:26,895
+Soit 22,14 € par utilisateur
+et 418 € par site, chaque mois.
+
+224
+00:15:26,895 --> 00:15:29,723
 Une remise négociée de 20 %
 sur matériel et licences
 
-224
-00:15:16,888 --> 00:15:20,474
-ramènerait l'abonnement
-à 195 000 € par mois.
-
 225
-00:15:21,124 --> 00:15:27,210
-Par poste, la sécurité pèse 64 000 € par
-mois, devant le réseau et les services.
+00:15:29,723 --> 00:15:33,640
+ramènerait l'abonnement
+à environ 195 000 € par mois.
 
 226
-00:15:27,210 --> 00:15:28,875
-Les exclusions sont listées,
+00:15:34,280 --> 00:15:38,559
+Par poste, la sécurité pèse
+plus de 64 000 € par mois,
 
 227
-00:15:28,875 --> 00:15:34,336
-dont la licence ZTNA des hubs et la protection
-des postes de travail : citez-les.
+00:15:38,559 --> 00:15:42,374
+devant le réseau et les services.
+Les exclusions sont listées,
 
 228
-00:15:34,336 --> 00:15:36,833
-Prix sourcés, à confirmer par devis.
+00:15:42,374 --> 00:15:45,158
+dont la licence ZTNA
+des hubs et la protection
 
 229
-00:15:37,483 --> 00:15:39,154
-Le jury demandera sans doute :
+00:15:45,158 --> 00:15:47,735
+des postes de travail : citez-les.
 
 230
-00:15:39,154 --> 00:15:41,968
+00:15:47,735 --> 00:15:50,210
+Prix sourcés, à confirmer par devis.
+
+231
+00:15:50,870 --> 00:15:52,550
+Le jury demandera sans doute :
+
+232
+00:15:52,550 --> 00:15:55,379
 pourquoi l'abonnement coûte-t-il
 plus cher que l'achat ?
 
-231
-00:15:41,968 --> 00:15:49,707
-470 000 € de plus sur 3 ans : le prix
-du financement, qui évite d'avancer 4,22 M€.
+233
+00:15:55,379 --> 00:16:00,066
+Environ 470 000 € de plus sur 3 ans :
+le prix du financement,
 
-232
-00:15:50,357 --> 00:15:53,750
+234
+00:16:00,066 --> 00:16:03,470
+qui évite d'avancer 4,22 M€.
+
+235
+00:16:04,110 --> 00:16:07,504
 Transition : Valentin va vous
 montrer ce que notre maquette prouve,
 
-233
-00:15:53,750 --> 00:15:55,296
+236
+00:16:07,504 --> 00:16:09,050
 et ce qu'elle ne prouve pas.
 
-234
-00:15:57,296 --> 00:16:01,255
+237
+00:16:11,050 --> 00:16:15,010
 Voici les problématiques du client
 et de l'offre, et qui répond à chacune.
 
-235
-00:16:01,905 --> 00:16:06,409
+238
+00:16:15,660 --> 00:16:20,180
 Un, les données de santé :
 HDS, RGPD et DORA.
 
-236
-00:16:06,409 --> 00:16:09,774
-HDS n'est pas forcément
-obligatoire pour le remboursement,
-
-237
-00:16:09,774 --> 00:16:12,991
-mais nous l'exigeons par
-prudence : Nolan répond.
-
-238
-00:16:13,641 --> 00:16:16,292
-DORA s'applique très probablement.
-
 239
-00:16:16,292 --> 00:16:18,625
-Le Cloud Act oblige un fournisseur américain
+00:16:20,180 --> 00:16:24,352
+HDS ne vise pas, en principe,
+le remboursement des frais de santé,
 
 240
-00:16:18,625 --> 00:16:21,965
+00:16:24,352 --> 00:16:27,580
+mais nous l'exigeons
+par prudence : Nolan répond.
+
+241
+00:16:28,230 --> 00:16:30,882
+DORA s'applique très probablement.
+
+242
+00:16:30,882 --> 00:16:33,215
+Le Cloud Act oblige un fournisseur américain
+
+243
+00:16:33,215 --> 00:16:36,556
 à livrer les données qu'il
 détient, même en Europe.
 
-241
-00:16:21,965 --> 00:16:26,598
+244
+00:16:36,556 --> 00:16:41,190
 FortiSASE et nos consoles cloud y
 sont exposés, pas nos équipements.
 
-242
-00:16:26,598 --> 00:16:27,798
+245
+00:16:41,190 --> 00:16:42,390
 Younes répond.
 
-243
-00:16:28,448 --> 00:16:34,860
+246
+00:16:43,040 --> 00:16:49,451
 Deux, 530 sites à déployer : 570 pare-feu
 à livrer, et la fibre à vérifier.
 
-244
-00:16:34,860 --> 00:16:39,559
+247
+00:16:49,451 --> 00:16:54,150
 Younes répond, et Valentin pour le pare-feu
 de datacenter, qui n'est plus vendu.
 
-245
-00:16:40,209 --> 00:16:43,602
+248
+00:16:54,800 --> 00:16:58,194
 Trois, le budget au mois,
 d'où le choix de la location.
 
-246
-00:16:43,602 --> 00:16:46,948
+249
+00:16:58,194 --> 00:17:01,540
 Nos prix restent à confirmer
 par devis : Diane répond.
 
-247
-00:16:47,598 --> 00:16:49,455
+250
+00:17:02,190 --> 00:17:04,048
 Quatre, si un datacenter tombe,
 
-248
-00:16:49,455 --> 00:16:53,647
+251
+00:17:04,048 --> 00:17:08,240
 l'autre n'a que 2 téraoctets
 de mémoire pour 2,4 requis :
 
-249
-00:16:53,647 --> 00:16:57,266
+252
+00:17:08,240 --> 00:17:11,860
 seules les applications critiques
 redémarrent. Nolan répond.
 
-250
-00:16:57,916 --> 00:17:00,182
+253
+00:17:12,510 --> 00:17:14,776
 Cinq, la dépendance à Fortinet.
 
-251
-00:17:00,182 --> 00:17:03,766
+254
+00:17:14,776 --> 00:17:18,361
 DORA demande de l'encadrer
 par un plan de réversibilité,
 
-252
-00:17:03,766 --> 00:17:06,348
+255
+00:17:18,361 --> 00:17:20,943
 encore à rédiger : Maxime répond.
 
-253
-00:17:06,348 --> 00:17:10,406
-Enfin, le cahier des charges ne
-donne ni débits ni nombre de nomades,
+256
+00:17:20,943 --> 00:17:25,002
+Enfin, le cahier des charges ne donne
+ni débits ni nombre de nomades,
 
-254
-00:17:10,406 --> 00:17:13,093
+257
+00:17:25,002 --> 00:17:27,690
 d'où nos hypothèses : Farah répond.
 
-255
-00:17:14,593 --> 00:17:17,269
+258
+00:17:29,180 --> 00:17:31,860
 Puis 4 obstacles rencontrés
 pendant le projet.
 
-256
-00:17:17,919 --> 00:17:22,795
+259
+00:17:32,510 --> 00:17:37,387
 Un, le serveur loué pour la maquette a
 été piraté, avant même qu'elle existe.
 
-257
-00:17:22,795 --> 00:17:27,567
+260
+00:17:37,387 --> 00:17:42,160
 Le 16 octobre, on y a trouvé un rootkit,
 un programme malveillant caché.
 
-258
-00:17:27,567 --> 00:17:32,286
+261
+00:17:42,160 --> 00:17:46,880
 Cause probable, sans certitude :
 un accès à distance par mot de passe.
 
-259
-00:17:32,936 --> 00:17:36,664
+262
+00:17:47,530 --> 00:17:51,153
 Si le jury s'en inquiète, rejouez
 devant lui la recette en direct,
 
-260
-00:17:36,664 --> 00:17:40,895
+263
+00:17:51,153 --> 00:17:55,510
 depuis l'ordinateur de Maxime :
-les mêmes résultats se reproduisent.
+elle doit redonner 17 sur 17.
 
-261
-00:17:41,545 --> 00:17:44,820
-Deux, EVE-NG gratuit est limité à 7 nœuds.
+264
+00:17:56,150 --> 00:18:00,222
+Deux, l'édition gratuite d'EVE-NG
+Pro est limitée à 7 nœuds.
 
-262
-00:17:44,820 --> 00:17:48,829
+265
+00:18:00,222 --> 00:18:04,150
 Les 7 routeurs y restent ;
 les 8 serveurs et postes tournent à côté,
 
-263
-00:17:48,829 --> 00:17:52,104
+266
+00:18:04,150 --> 00:18:07,360
 en conteneurs, plus légers
 que des machines virtuelles.
 
-264
-00:17:52,754 --> 00:17:55,039
+267
+00:18:08,020 --> 00:18:10,306
 Trois, une bascule invisible :
 
-265
-00:17:55,039 --> 00:17:58,033
+268
+00:18:10,306 --> 00:18:13,299
 l'option IPsec MOBIKE faisait déménager
 
-266
-00:17:58,033 --> 00:18:00,971
+269
+00:18:13,299 --> 00:18:16,238
 le tunnel de l'opérateur A
 vers l'opérateur B.
 
-267
-00:18:00,971 --> 00:18:04,944
+270
+00:18:16,238 --> 00:18:20,211
 Le tunnel restait vivant :
 le routage ne voyait pas la panne,
 
-268
-00:18:04,944 --> 00:18:07,338
+271
+00:18:20,211 --> 00:18:22,606
 et la bascule échappait à la mesure.
 
-269
-00:18:07,338 --> 00:18:10,821
+272
+00:18:22,606 --> 00:18:26,089
 La recette l'a révélé,
 et l'option a été désactivée.
 
-270
-00:18:10,821 --> 00:18:13,542
+273
+00:18:26,089 --> 00:18:28,810
 Valentin la raconte à la diapo 22.
 
-271
-00:18:14,192 --> 00:18:15,824
+274
+00:18:29,450 --> 00:18:31,081
 Quatre, le 10 novembre,
 
-272
-00:18:15,824 --> 00:18:20,718
+275
+00:18:31,081 --> 00:18:35,974
 on découvre qu'un disque de routeur saturé
 de journaux a arrêté le routage OSPF.
 
-273
-00:18:20,718 --> 00:18:26,174
+276
+00:18:35,974 --> 00:18:41,428
 Après réparation : 17 sur 17,
 et une bascule toujours sous 4 secondes.
 
-274
-00:18:26,174 --> 00:18:30,457
+277
+00:18:41,428 --> 00:18:45,710
 Devant le jury, citez 3,8,
 le chiffre des diapos.
 
-275
-00:18:32,457 --> 00:18:34,882
+278
+00:18:47,720 --> 00:18:50,140
 Pour conclure, le message à retenir.
 
-276
-00:18:35,532 --> 00:18:42,042
-Une offre en abonnement : 221 400 € HT
+279
+00:18:50,790 --> 00:18:57,740
+Une offre en abonnement : 221 424 € HT
 par mois, sans investissement de départ.
 
-277
-00:18:42,692 --> 00:18:47,983
+280
+00:18:58,390 --> 00:19:03,680
 Une architecture cohérente, où tout est
 refusé par défaut, du site au datacenter.
 
-278
-00:18:48,633 --> 00:18:52,213
-Des principes prouvés sur
-maquette, 17 tests sur 17,
+281
+00:19:04,330 --> 00:19:07,911
+Des principes prouvés
+sur maquette, 17 tests sur 17,
 
-279
-00:18:52,213 --> 00:18:54,351
+282
+00:19:07,911 --> 00:19:10,050
 avec des limites dites franchement.
 
-280
-00:18:55,001 --> 00:19:01,408
+283
+00:19:10,700 --> 00:19:17,104
 Gardez en tête 5 points de vigilance :
 Gartner, le 600F, la licence ZTNA des hubs,
 
-281
-00:19:01,408 --> 00:19:03,885
+284
+00:19:17,104 --> 00:19:19,580
 le vSAN et la cause du piratage.
 
-282
-00:19:04,535 --> 00:19:07,462
+285
+00:19:20,230 --> 00:19:23,157
 Aux questions, n'inventez aucun chiffre.
 
-283
-00:19:07,462 --> 00:19:10,332
+286
+00:19:23,157 --> 00:19:26,027
 S'il dépend d'une hypothèse, dites-le :
 
-284
-00:19:10,332 --> 00:19:13,541
+287
+00:19:26,027 --> 00:19:29,236
 le script recalcule le prix
 avec la vraie valeur.
 
-285
-00:19:13,541 --> 00:19:16,806
+288
+00:19:29,236 --> 00:19:32,500
 Distinguez le prouvé,
 le sourcé et le supposé.
 
-286
-00:19:17,456 --> 00:19:21,604
+289
+00:19:33,160 --> 00:19:37,245
 La suite : demandez à Maxime
 l'accès en écriture au diaporama,
 
-287
-00:19:21,604 --> 00:19:24,911
+290
+00:19:37,245 --> 00:19:40,502
 puis lisez les notes
 d'orateur de vos diapositives.
 
-288
-00:19:24,911 --> 00:19:30,123
-Neuf n'ont qu'une note courte, listées
-à l'écran : écrivez-y votre texte.
+291
+00:19:40,502 --> 00:19:43,151
+Neuf d'entre elles n'ont qu'une note courte,
 
-289
-00:19:30,123 --> 00:19:34,832
+292
+00:19:43,151 --> 00:19:46,353
+listées à l'écran : écrivez-y votre texte.
+
+293
+00:19:46,353 --> 00:19:50,990
 Puis une répétition chronométrée,
 et des questions croisées entre rôles.
 
-290
-00:19:34,832 --> 00:19:36,345
+294
+00:19:50,990 --> 00:19:52,480
 Bonne préparation !

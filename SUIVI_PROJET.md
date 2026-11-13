@@ -2,7 +2,7 @@
 
 ## 1. Point de reprise immédiat
 
-- Dernière mise à jour : 13/11/2026 soir (CET) : vidéo explicative (`presentation/video/`) et documents remis en cohérence (journal, section 10).
+- Dernière mise à jour : 13/11/2026 soir (CET) : vidéo explicative refaite (nouvelle direction visuelle, 17 phrases corrigées, `presentation/video/`) ; contradictions entre documents signalées dans son LISEZMOI (journal, section 10).
 - Intervenant : Claude Code (Opus) pour kamaravael@gmail.com.
 - État : **offre, chiffrage, diaporama et maquette terminés et mis en cohérence le 28/10** (revue à 6 agents). Offre v1.0 (`docs/OFFRE_TECHNIQUE.md`, 19 sections, table de correspondance des 21 exigences) ; chiffrage : **221 424 € HT/mois sur 36 mois, TCO 7,97 M€, 22,14 €/utilisateur/mois** ; diaporama de 24 diapositives avec notes d'orateur ; maquette EVE vérifiée, recette **17/17 conforme** le 28/10 (`evidence/20261028T200408Z/`).
 - Objectif : soutenance de groupe à 7 (rôles dans `docs/ROLES_SOUTENANCE.md`).
@@ -104,7 +104,7 @@ Avant chaque opération longue, renseigner la cible, la commande ou le script sa
 
 ## 9. Trois prochaines actions
 
-1. Groupe : regarder la vidéo (`presentation/video/`, chapitre de son rôle) ; Maxime partage le diaporama en écriture ; chacun fait les corrections listées dans `presentation/video/LISEZMOI.md` (diapo 1 : `[Nom du groupe]` et `[Date de soutenance]` ; diapos 5, 8, 15, 18, 22 ; notes des diapos 3, 6, 7, 8, 18, 19, 20, 22, 23) ; puis répétition chronométrée et questions croisées.
+1. Groupe : regarder la vidéo (`presentation/video/`, chapitre de son rôle) ; Maxime partage le diaporama en écriture ; chaque membre fait les corrections listées dans `presentation/video/LISEZMOI.md` (diapo 1 : `[Nom du groupe]` et `[Date de soutenance]` ; diapos 3 et 24, 5, 8, 15, 18, 20, 22, 23, et le 600F des diapos 9, 10, 11, 19 ; notes des diapos 3, 6, 7, 8, 18, 19, 20, 22, 23) ; puis répétition chronométrée et questions croisées.
 2. Utilisateur, en root sur l'hôte : `qm snapshot 200 eve-lab-ok` ; changer le mot de passe du compte web `admin` d'EVE ; appliquer `automation/host/05_acces_camarades.sh` pour les camarades.
 3. Points à arbitrer par le groupe (ils sont déjà signalés comme limites ou hypothèses dans l'offre) : reprise après perte d'un DC limitée au périmètre critique, ou un serveur de plus par DC ; licences FortiSASE des infogérants ; protection DDoS (option) ; certification HDS du stockage de sauvegarde ; WALLIX (seule la version 6.0 de 2019 a une CSPN) ; DORA à confirmer ; étage de distribution des sièges non chiffré.
 
@@ -202,6 +202,15 @@ Les remplacer après chaque jalon par des actions précises avec fichiers, comma
   - PDF explicatif, pages 4, 6, 11 et 18.
 - La décision D6 reste valable : le ZTNA est compris côté utilisateur, mais une licence est à ajouter sur les 4 hubs (Q47) ; l'écart net avec ZPA est d'au moins 1,5 M€.
 - Diaporama non modifié : la vidéo et `presentation/video/LISEZMOI.md` listent les corrections à faire (diapos 1, 5, 8, 15, 18, 22, 23, et les 9 notes courtes).
+
+### 13/11/2026 soir — refonte visuelle et pédagogique de la vidéo
+
+- Intervenant : Claude Code (Opus 5.5), à la demande de Maxime ; branche `video-explicative` (PR #1, non fusionnée).
+- Livré : `presentation/video/projet_rao_explique.mp4` (19 min 56, 16 chapitres, sous-titres désactivés par défaut), `sous-titres_fr.srt`, `TRANSCRIPTION.md`, `LISEZMOI.md` ; sources : `presentation/sources/video/` (`ecrans.py` nouveau moteur d'écrans, `kerning.py` crénage GPOS, `build.py`, `script.json`, voix archivées). `scenes.py` (ancien moteur) supprimé.
+- Écrans refaits : fond uni, Instrument Sans, texte courant ≥ 30 px, couleurs fonctionnelles constantes, schéma de la solution construit au fil de la voix, fiches de rôle sur plusieurs écrans, risques en problème / conséquence / réponse.
+- Voix inchangée (Rémy) sauf 17 phrases corrigées après un audit de fiabilité (montants arrondis lus comme exacts, unités, négations ambiguës, formulations contestables) ; prononciation des 17 phrases contrôlée par Whisper.
+- Contrôles : audit de la version précédente (5 agents), extrait de 97 s validé avant extension, vérification de la nouvelle version (3 vérificateurs et leurs sceptiques), `test_build.py` (26 cas), ffprobe (durée, chapitres, pistes). Non fait : écoute humaine, essai dans d'autres lecteurs.
+- Non modifiés (hors périmètre) : documents commerciaux, diaporama, accès EVE-NG/Proxmox. Les contradictions trouvées entre documents sont listées dans `presentation/video/LISEZMOI.md` (600F, plan de réversibilité, « un seul éditeur » des diapos 3 et 24, non-inclus de la note de la diapo 20, décision D6 de ce suivi…).
 
 ### Modèle d’entrée à recopier
 
