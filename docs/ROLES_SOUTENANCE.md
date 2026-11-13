@@ -19,20 +19,20 @@ Enchaînement : chacun présente un bloc continu ; seuls la maquette (2), les ri
 ## Fiche par rôle
 
 ### 1. Chef de projet — Farah
-- **Message** : une architecture complète, en abonnement (221,4 k€ HT/mois, rien à avancer), prouvée sur maquette.
+- **Message** : une architecture complète, en abonnement (221,4 k€ HT/mois, rien à avancer), dont les principes sont prouvés sur maquette.
 - **À maîtriser** : les volumes du PDF, les hypothèses (3 000 nomades, 300 VM, 50 comptes à privilèges…) et pourquoi elles sont affichées.
 - **Questions probables** : « Pourquoi ces hypothèses ? » « Qu'est-ce qui change si elles sont fausses ? » (réponse : le chiffrage se recalcule en une commande).
 - **Passage de relais** : « Valentin va vous présenter comment les 530 sites sont reliés. »
 
 ### 2. Architecte WAN — Valentin
 - **Message** : SD-WAN Fortinet sur Internet, double hub vers les 2 DC ; pas de MPLS.
-- **À maîtriser** : profils d'accès par type de site, dimensionnement des hubs (~1 060 tunnels requis, 2 000 acceptés par FortiGate 600F), bascule mesurée à 3,8 s.
+- **À maîtriser** : profils d'accès par type de site, dimensionnement des hubs (~1 060 tunnels requis, 2 000 acceptés par FortiGate 600F, plus commandable depuis mai 2026 : 700G, successeur probable, même capacité de tunnels), bascule mesurée à 3,8 s.
 - **Maquette (diapo 22)** : 17/17 flux conformes, ce qui est prouvé et ce qui ne l'est pas ; anecdote MOBIKE (le tunnel « déménageait » sur l'autre opérateur et masquait la bascule). **Démonstration en direct dans EVE : scénario pas à pas dans `docs/DEMO_EVE.md`** (≈ 4 min, à ajouter au temps de passage).
 - **Questions probables** : « Pourquoi pas MPLS ? » « Que se passe-t-il si les deux accès d'une agence tombent ? » « Votre maquette prouve-t-elle vos produits ? » (non, les principes).
 
 ### 3. Architecte datacenter — Nolan
 - **Message** : 2 DC certifiés HDS, domaines de panne distincts, compute VMware N+1, sauvegarde 3-2-1 avec copie immuable.
-- **À maîtriser** : 4 hôtes Dell R760 par DC, vSAN RAID 5 inclus (64 TiB/DC), actif/actif pour la publication, actif/passif pour les bases.
+- **À maîtriser** : 4 hôtes Dell R760 par DC, vSAN RAID 5 inclus (64 TiB bruts/DC ; 70 à 80 requis, extension probable), actif/actif pour la publication, actif/passif pour les bases.
 - **Questions probables** : « Quelle distance entre les DC ? Réplication synchrone ou asynchrone ? » « RPO/RTO ? » (à fixer avec le client) « Pourquoi VMware après le rachat par Broadcom ? » (alternative Proxmox/Nutanix documentée).
 
 ### 4. Responsable sécurité des flux — Fatih
@@ -48,7 +48,7 @@ Enchaînement : chacun présente un bloc continu ; seuls la maquette (2), les ri
 
 ### 6. Expert Zero Trust — Maxime
 - **Message** : personne n'accède au réseau, chacun n'atteint que ses applications, après MFA et contrôle du poste.
-- **À maîtriser** : FortiSASE pour 3 000 nomades, partenaires 40 % site à site / 60 % nomades (portail sans agent), choix du ZTNA : ZPA écarté, 1,99 M€ évités (de 1,24 à 3,31 M€ selon les estimations).
+- **À maîtriser** : FortiSASE pour 3 000 nomades, partenaires 40 % site à site / 60 % nomades (portail sans agent), choix du ZTNA : ZPA écarté, 1,99 M€ bruts évités (de 1,24 à 3,31 M€ selon les estimations), au moins 1,5 M€ après la licence d'accès privé des 4 FortiGate hubs (Q47).
 - **Questions probables** : « VPN ou ZTNA, quelle différence ? » « Et si le fournisseur SASE tombe ? » « Dépendance à un seul éditeur ? » (identité indépendante, plan de réversibilité).
 
 ### 7. Responsable financier — Diane

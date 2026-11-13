@@ -1,6 +1,6 @@
 # Chiffrage de l'offre
 
-Généré par `automation/chiffrage/calcul.py` le 28/10/2026. Ne pas modifier à la main : corriger `docs/CHIFFRAGE.csv` puis relancer le script.
+Généré par `automation/chiffrage/calcul.py` le 13/11/2026. Ne pas modifier à la main : corriger `docs/CHIFFRAGE.csv` puis relancer le script.
 
 Montants en **euros hors taxes**. Devises converties au taux de référence BCE du 15/10/2026 (1 € = 1,1208 $ = 1,5923 $ CA = 0,8461 £).
 
@@ -30,7 +30,7 @@ Location financière sur 36 mois au taux annuel de 7 % (hypothèse à faire conf
 | Offre retenue (ZTNA par FortiSASE) | 4 219 196 € | 91 147 € | 7 500 489 € | 221 424 € | 7 971 248 € | 22,14 € | 418 € |
 | Variante écartée (avec Zscaler ZPA) | 4 219 196 € | 146 353 € | 9 487 909 € | 276 630 € | 9 958 668 € | 27,66 € | 522 € |
 
-La variante avec Zscaler ZPA est écartée (16/10/2026) : le ZTNA est déjà inclus dans FortiSASE. Justification : `docs/OFFRE_TECHNIQUE.md`, section « Choix du ZTNA ».
+La variante avec Zscaler ZPA est écartée (16/10/2026) : le ZTNA est compris dans la souscription utilisateur FortiSASE ; seule une licence d'accès privé reste à ajouter sur les 4 FortiGate hubs, à chiffrer au devis (offre, section 12.3). Justification : `docs/OFFRE_TECHNIQUE.md`, section « Choix du ZTNA ».
 
 ## Par poste du PDF : Offre retenue (ZTNA par FortiSASE)
 
@@ -74,6 +74,8 @@ Une agence FR de plus (pare-feu, switch, borne Wi-Fi, licences, une journée de 
 - Couche de distribution des sièges : 53 switches d'accès par siège en double attachement dépassent les 24 ports SFP+ d'une paire de CX 8100 ; étage de distribution ou cœur plus dense à dimensionner.
 - Onduleurs en agence, licences des systèmes et applications des 300 VM : supposés fournis par le client.
 - Protection DDoS volumétrique chez les opérateurs de transit des DC : option sur devis.
+- Licence d'accès privé FortiSASE sur les 4 FortiGate hubs (ou édition Advanced) : de ~30 k€ à ~410 k€ sur 36 mois, à chiffrer au devis (offre, section 12.3).
+- Protection des postes de travail (EDR) : supposée existante chez le client, à chiffrer si besoin.
 
 ## Hypothèses de quantité
 

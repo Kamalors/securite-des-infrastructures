@@ -48,6 +48,9 @@ NON_INCLUS = [
     "24 ports SFP+ d'une paire de CX 8100 ; étage de distribution ou cœur plus dense à dimensionner.",
     "Onduleurs en agence, licences des systèmes et applications des 300 VM : supposés fournis par le client.",
     "Protection DDoS volumétrique chez les opérateurs de transit des DC : option sur devis.",
+    "Licence d'accès privé FortiSASE sur les 4 FortiGate hubs (ou édition Advanced) : de ~30 k€ à ~410 k€ sur 36 mois, "
+    "à chiffrer au devis (offre, section 12.3).",
+    "Protection des postes de travail (EDR) : supposée existante chez le client, à chiffrer si besoin.",
 ]
 
 
@@ -195,8 +198,9 @@ def rapport(lignes):
         o.append(f"| {nom} | {eur(i)} | {eur(m)} | {eur(i + MOIS * m)} | {eur(a)} | "
                  f"{eur(MOIS * a)} | {eur(a / UTILISATEURS, 2)} | {eur(a / SITES)} |")
 
-    o += ["", "La variante avec Zscaler ZPA est écartée (16/10/2026) : le ZTNA est déjà inclus dans FortiSASE. "
-          "Justification : `docs/OFFRE_TECHNIQUE.md`, section « Choix du ZTNA »."]
+    o += ["", "La variante avec Zscaler ZPA est écartée (16/10/2026) : le ZTNA est compris dans la souscription utilisateur "
+          "FortiSASE ; seule une licence d'accès privé reste à ajouter sur les 4 FortiGate hubs, à chiffrer au devis "
+          "(offre, section 12.3). Justification : `docs/OFFRE_TECHNIQUE.md`, section « Choix du ZTNA »."]
     o += ["", f"## Par poste du PDF : {next(iter(SCENARIOS))}", "",
           "| Poste | Frais initiaux | Récurrent mensuel | Abonnement mensuel (36 mois) | TCO 36 mois (abonnement) |",
           "|---|---:|---:|---:|---:|"]

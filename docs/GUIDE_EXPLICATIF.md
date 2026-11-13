@@ -117,7 +117,7 @@ Chaque fiche suit le même plan : le problème, notre réponse, pourquoi (et l'a
 - **Pas de MPLS** (le réseau privé classique des opérateurs). L'Internet professionnel coûte une fraction du prix et se commande en abonnement mensuel. La sécurité est portée par le chiffrement et les pare-feu, pas par le réseau de l'opérateur. Le MPLS reste une option pour les sièges si un SLA de bout en bout est exigé (`docs/HLD.md` §1.3).
 - **Double hub** : si un datacenter tombe, les sites joignent l'autre.
 - **HA au-delà de 50 utilisateurs** : un siège ou une agence internationale a deux boîtiers ; une agence de 8 personnes en a un seul, avec un secours 4G.
-- **Alternative écartée** : Cato Networks, un SASE entièrement dans le cloud. Les deux éditeurs sont « Leaders » du Magic Quadrant SASE 2026 de Gartner. Nous avons retenu Fortinet pour avoir une seule famille de produits du datacenter à l'agence et aux nomades : une politique, une console, un support (`docs/OFFRE_TECHNIQUE.md`, « Choix du ZTNA », point 4).
+- **Alternative écartée** : Cato Networks, un SASE entièrement dans le cloud. Dans le Magic Quadrant SASE 2026 de Gartner, Cato est « Leader » et Fortinet « Challenger » (« Leader » en 2025) ; Fortinet est en revanche « Leader » 2026 des pare-feu, l'essentiel de notre usage. Nous avons retenu Fortinet pour avoir une seule famille de produits du datacenter à l'agence et aux nomades : une politique, une console, un support (`docs/OFFRE_TECHNIQUE.md`, « Choix du ZTNA », point 4).
 
 **Chiffres clés.** Connectivité WAN : **41 273 €/mois** en abonnement (`docs/CHIFFRAGE.md`). Une agence France : fibre à 34,99 €/mois + SIM 4G à 13,99 €/mois. Dimensionnement des hubs : environ **1 060 tunnels** nécessaires par hub (530 sites × 2 accès), **2 000** acceptés par un FortiGate 600F.
 
@@ -252,12 +252,12 @@ Les droits sont donnés par groupe et par application, jamais au réseau entier.
 *Analogie* : un VPN classique, c'est un badge qui ouvre tout l'immeuble une fois la porte d'entrée franchie. Le ZTNA, c'est un badge vérifié à chaque porte, qui n'ouvre que les bureaux dont vous avez besoin.
 
 **Pourquoi FortiSASE plutôt que Zscaler ZPA** (`docs/OFFRE_TECHNIQUE.md`, « Choix du ZTNA ») :
-1. **La fonction est déjà payée** : la souscription FortiSASE comprend l'accès privé (à confirmer sur le guide de commande Fortinet au moment du devis).
-2. **1,99 M€ évités sur 36 mois** (de 1,24 à 3,31 M€ selon les estimations du prix de ZPA, qui n'a pas de prix public).
+1. **La fonction est incluse côté utilisateur** : la souscription FortiSASE comprend l'accès privé ; le guide de commande Fortinet demande en plus une licence sur chacun des 4 hubs FortiGate, à chiffrer au devis (`docs/QUESTIONS_JURY.md`, Q47).
+2. **1,99 M€ évités sur 36 mois** (de 1,24 à 3,31 M€ selon les estimations du prix de ZPA, qui n'a pas de prix public) ; après la licence des hubs, l'écart reste d'au moins 1,5 M€.
 3. **Un seul agent** sur le poste au lieu de deux qui se disputeraient le trafic.
 4. **Une seule politique et une seule console** du datacenter aux nomades.
 5. **Les partenaires sans poste géré restent couverts** par un portail sans agent.
-6. Fortinet est « Leader » du Magic Quadrant SASE 2026 de Gartner.
+6. Fortinet est « Leader » 2026 des pare-feu selon Gartner ; en SASE, il est « Challenger » en 2026 (« Leader » en 2025).
 
 **Le risque assumé** : dépendre d'un seul éditeur. C'est justement le sujet de la « stratégie de sortie » exigée par DORA. Parades : identité et MFA chez un fournisseur indépendant, protocoles standard (IPsec, SAML/OIDC), engagement de 36 mois aligné sur la location, plan de réversibilité.
 
