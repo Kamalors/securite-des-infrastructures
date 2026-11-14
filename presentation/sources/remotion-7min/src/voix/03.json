@@ -1,0 +1,211 @@
+{
+ "duree": 15.571,
+ "parties": {
+  "03": {
+   "debut": 0.0,
+   "duree": 15.571
+  }
+ },
+ "mots": [
+  {
+   "mot": "Il",
+   "debut": 0.16,
+   "fin": 0.88
+  },
+  {
+   "mot": "annonce",
+   "debut": 0.88,
+   "fin": 1.12
+  },
+  {
+   "mot": "trois",
+   "debut": 1.12,
+   "fin": 1.36
+  },
+  {
+   "mot": "critères.",
+   "debut": 1.36,
+   "fin": 2.08
+  },
+  {
+   "mot": "Un :",
+   "debut": 2.08,
+   "fin": 2.32
+  },
+  {
+   "mot": "pour",
+   "debut": 2.32,
+   "fin": 2.48
+  },
+  {
+   "mot": "chaque",
+   "debut": 2.48,
+   "fin": 2.8
+  },
+  {
+   "mot": "fonction,",
+   "debut": 2.8,
+   "fin": 3.52
+  },
+  {
+   "mot": "l'équipement",
+   "debut": 3.52,
+   "fin": 4.0
+  },
+  {
+   "mot": "retenu,",
+   "debut": 4.0,
+   "fin": 4.72
+  },
+  {
+   "mot": "et",
+   "debut": 4.72,
+   "fin": 4.88
+  },
+  {
+   "mot": "pourquoi.",
+   "debut": 4.88,
+   "fin": 5.6
+  },
+  {
+   "mot": "Deux :",
+   "debut": 5.6,
+   "fin": 6.0
+  },
+  {
+   "mot": "les",
+   "debut": 6.0,
+   "fin": 6.16
+  },
+  {
+   "mot": "schémas",
+   "debut": 6.16,
+   "fin": 6.64
+  },
+  {
+   "mot": "d'architecture,",
+   "debut": 6.64,
+   "fin": 7.36
+  },
+  {
+   "mot": "pour",
+   "debut": 7.36,
+   "fin": 7.6
+  },
+  {
+   "mot": "le",
+   "debut": 7.6,
+   "fin": 7.76
+  },
+  {
+   "mot": "centre",
+   "debut": 7.76,
+   "fin": 8.0
+  },
+  {
+   "mot": "de",
+   "debut": 8.0,
+   "fin": 8.16
+  },
+  {
+   "mot": "données",
+   "debut": 8.16,
+   "fin": 8.4
+  },
+  {
+   "mot": "et",
+   "debut": 8.4,
+   "fin": 8.8
+  },
+  {
+   "mot": "pour",
+   "debut": 8.8,
+   "fin": 9.04
+  },
+  {
+   "mot": "les",
+   "debut": 9.04,
+   "fin": 9.2
+  },
+  {
+   "mot": "agences.",
+   "debut": 9.2,
+   "fin": 9.92
+  },
+  {
+   "mot": "Trois :",
+   "debut": 9.92,
+   "fin": 10.24
+  },
+  {
+   "mot": "le",
+   "debut": 10.24,
+   "fin": 10.4
+  },
+  {
+   "mot": "coût,",
+   "debut": 10.4,
+   "fin": 11.04
+  },
+  {
+   "mot": "poste",
+   "debut": 11.04,
+   "fin": 11.36
+  },
+  {
+   "mot": "par",
+   "debut": 11.36,
+   "fin": 11.52
+  },
+  {
+   "mot": "poste…",
+   "debut": 11.52,
+   "fin": 12.24
+  },
+  {
+   "mot": "avec",
+   "debut": 12.24,
+   "fin": 12.48
+  },
+  {
+   "mot": "une",
+   "debut": 12.48,
+   "fin": 12.72
+  },
+  {
+   "mot": "préférence",
+   "debut": 12.72,
+   "fin": 13.2
+  },
+  {
+   "mot": "nette",
+   "debut": 13.2,
+   "fin": 13.68
+  },
+  {
+   "mot": "pour",
+   "debut": 13.68,
+   "fin": 13.92
+  },
+  {
+   "mot": "l'abonnement",
+   "debut": 13.92,
+   "fin": 14.48
+  },
+  {
+   "mot": "plutôt",
+   "debut": 14.48,
+   "fin": 14.8
+  },
+  {
+   "mot": "que",
+   "debut": 14.8,
+   "fin": 14.96
+  },
+  {
+   "mot": "l'achat.",
+   "debut": 14.96,
+   "fin": 15.221
+  }
+ ]
+}

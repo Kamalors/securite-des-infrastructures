@@ -1,0 +1,86 @@
+{
+ "duree": 6.0,
+ "parties": {
+  "09": {
+   "debut": 0.0,
+   "duree": 6.0
+  }
+ },
+ "mots": [
+  {
+   "mot": "Cinq",
+   "debut": 0.16,
+   "fin": 0.56
+  },
+  {
+   "mot": "cent",
+   "debut": 0.56,
+   "fin": 0.8
+  },
+  {
+   "mot": "trente",
+   "debut": 0.8,
+   "fin": 1.2
+  },
+  {
+   "mot": "sites",
+   "debut": 1.2,
+   "fin": 1.52
+  },
+  {
+   "mot": "protégés,",
+   "debut": 1.52,
+   "fin": 2.24
+  },
+  {
+   "mot": "un",
+   "debut": 2.24,
+   "fin": 2.4
+  },
+  {
+   "mot": "prix",
+   "debut": 2.4,
+   "fin": 2.56
+  },
+  {
+   "mot": "au",
+   "debut": 2.56,
+   "fin": 2.8
+  },
+  {
+   "mot": "mois,",
+   "debut": 2.8,
+   "fin": 3.52
+  },
+  {
+   "mot": "et",
+   "debut": 3.52,
+   "fin": 3.68
+  },
+  {
+   "mot": "des",
+   "debut": 3.68,
+   "fin": 3.84
+  },
+  {
+   "mot": "preuves.",
+   "debut": 3.84,
+   "fin": 4.56
+  },
+  {
+   "mot": "Voilà",
+   "debut": 4.56,
+   "fin": 4.88
+  },
+  {
+   "mot": "notre",
+   "debut": 4.88,
+   "fin": 5.12
+  },
+  {
+   "mot": "réponse.",
+   "debut": 5.12,
+   "fin": 5.726
+  }
+ ]
+}

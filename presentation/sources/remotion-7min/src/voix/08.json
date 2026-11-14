@@ -1,0 +1,331 @@
+{
+ "duree": 25.811,
+ "parties": {
+  "08": {
+   "debut": 0.0,
+   "duree": 25.811
+  }
+ },
+ "mots": [
+  {
+   "mot": "Le",
+   "debut": 0.16,
+   "fin": 0.48
+  },
+  {
+   "mot": "jour",
+   "debut": 0.48,
+   "fin": 0.64
+  },
+  {
+   "mot": "de",
+   "debut": 0.64,
+   "fin": 0.8
+  },
+  {
+   "mot": "la",
+   "debut": 0.8,
+   "fin": 0.96
+  },
+  {
+   "mot": "soutenance,",
+   "debut": 0.96,
+   "fin": 1.68
+  },
+  {
+   "mot": "nous",
+   "debut": 1.68,
+   "fin": 1.84
+  },
+  {
+   "mot": "sommes",
+   "debut": 1.84,
+   "fin": 2.08
+  },
+  {
+   "mot": "sept,",
+   "debut": 2.08,
+   "fin": 2.72
+  },
+  {
+   "mot": "avec",
+   "debut": 2.72,
+   "fin": 2.88
+  },
+  {
+   "mot": "un",
+   "debut": 2.88,
+   "fin": 3.04
+  },
+  {
+   "mot": "domaine",
+   "debut": 3.04,
+   "fin": 3.44
+  },
+  {
+   "mot": "chacun.",
+   "debut": 3.44,
+   "fin": 4.16
+  },
+  {
+   "mot": "Farah",
+   "debut": 4.16,
+   "fin": 4.56
+  },
+  {
+   "mot": "ouvre",
+   "debut": 4.56,
+   "fin": 5.04
+  },
+  {
+   "mot": "et",
+   "debut": 5.04,
+   "fin": 5.28
+  },
+  {
+   "mot": "pilote",
+   "debut": 5.28,
+   "fin": 5.6
+  },
+  {
+   "mot": "le",
+   "debut": 5.6,
+   "fin": 5.76
+  },
+  {
+   "mot": "projet.",
+   "debut": 5.76,
+   "fin": 6.48
+  },
+  {
+   "mot": "Valentin",
+   "debut": 6.48,
+   "fin": 7.04
+  },
+  {
+   "mot": "présente",
+   "debut": 7.04,
+   "fin": 7.44
+  },
+  {
+   "mot": "le",
+   "debut": 7.44,
+   "fin": 7.6
+  },
+  {
+   "mot": "réseau",
+   "debut": 7.6,
+   "fin": 8.0
+  },
+  {
+   "mot": "entre",
+   "debut": 8.0,
+   "fin": 8.24
+  },
+  {
+   "mot": "les",
+   "debut": 8.24,
+   "fin": 8.4
+  },
+  {
+   "mot": "sites.",
+   "debut": 8.4,
+   "fin": 8.88
+  },
+  {
+   "mot": "Nolan,",
+   "debut": 8.88,
+   "fin": 9.6
+  },
+  {
+   "mot": "les",
+   "debut": 9.6,
+   "fin": 9.84
+  },
+  {
+   "mot": "centres",
+   "debut": 9.84,
+   "fin": 10.16
+  },
+  {
+   "mot": "de",
+   "debut": 10.16,
+   "fin": 10.4
+  },
+  {
+   "mot": "données.",
+   "debut": 10.4,
+   "fin": 11.12
+  },
+  {
+   "mot": "Fatih,",
+   "debut": 11.12,
+   "fin": 11.84
+  },
+  {
+   "mot": "le",
+   "debut": 11.84,
+   "fin": 12.0
+  },
+  {
+   "mot": "filtrage",
+   "debut": 12.0,
+   "fin": 12.48
+  },
+  {
+   "mot": "des",
+   "debut": 12.48,
+   "fin": 12.72
+  },
+  {
+   "mot": "échanges.",
+   "debut": 12.72,
+   "fin": 13.44
+  },
+  {
+   "mot": "Younes,",
+   "debut": 13.44,
+   "fin": 14.16
+  },
+  {
+   "mot": "l'exploitation",
+   "debut": 14.16,
+   "fin": 14.88
+  },
+  {
+   "mot": "et",
+   "debut": 14.88,
+   "fin": 15.12
+  },
+  {
+   "mot": "les",
+   "debut": 15.12,
+   "fin": 15.36
+  },
+  {
+   "mot": "agences.",
+   "debut": 15.36,
+   "fin": 16.08
+  },
+  {
+   "mot": "Maxime,",
+   "debut": 16.08,
+   "fin": 16.8
+  },
+  {
+   "mot": "l'accès",
+   "debut": 16.8,
+   "fin": 17.28
+  },
+  {
+   "mot": "Zéro",
+   "debut": 17.28,
+   "fin": 17.68
+  },
+  {
+   "mot": "Confiance.",
+   "debut": 17.68,
+   "fin": 18.4
+  },
+  {
+   "mot": "Et",
+   "debut": 18.4,
+   "fin": 18.56
+  },
+  {
+   "mot": "Diane,",
+   "debut": 18.56,
+   "fin": 19.2
+  },
+  {
+   "mot": "les",
+   "debut": 19.2,
+   "fin": 19.44
+  },
+  {
+   "mot": "coûts.",
+   "debut": 19.44,
+   "fin": 19.84
+  },
+  {
+   "mot": "Valentin,",
+   "debut": 19.84,
+   "fin": 20.56
+  },
+  {
+   "mot": "Younes",
+   "debut": 20.56,
+   "fin": 21.04
+  },
+  {
+   "mot": "et",
+   "debut": 21.04,
+   "fin": 21.36
+  },
+  {
+   "mot": "Farah",
+   "debut": 21.36,
+   "fin": 21.68
+  },
+  {
+   "mot": "reviennent",
+   "debut": 21.68,
+   "fin": 22.16
+  },
+  {
+   "mot": "à",
+   "debut": 22.16,
+   "fin": 22.32
+  },
+  {
+   "mot": "la",
+   "debut": 22.32,
+   "fin": 22.48
+  },
+  {
+   "mot": "fin :",
+   "debut": 22.48,
+   "fin": 22.72
+  },
+  {
+   "mot": "pour",
+   "debut": 22.72,
+   "fin": 23.04
+  },
+  {
+   "mot": "la",
+   "debut": 23.04,
+   "fin": 23.2
+  },
+  {
+   "mot": "démonstration,",
+   "debut": 23.2,
+   "fin": 23.92
+  },
+  {
+   "mot": "les",
+   "debut": 23.92,
+   "fin": 24.08
+  },
+  {
+   "mot": "risques…",
+   "debut": 24.08,
+   "fin": 24.8
+  },
+  {
+   "mot": "et",
+   "debut": 24.8,
+   "fin": 24.96
+  },
+  {
+   "mot": "la",
+   "debut": 24.96,
+   "fin": 25.12
+  },
+  {
+   "mot": "conclusion.",
+   "debut": 25.12,
+   "fin": 25.462
+  }
+ ]
+}

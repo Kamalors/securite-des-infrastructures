@@ -1,0 +1,19 @@
+{
+  "fps": 30,
+  "debut": 0.8,
+  "transition": 24,
+  "scenes": [
+    { "id": "01", "fichier": "01", "fin": 1.6, "chapitre": "L'accroche" },
+    { "id": "02", "fichier": "02", "fin": 1.2, "chapitre": "Le client" },
+    { "id": "03", "fichier": "03", "fin": 1.4, "chapitre": "Ce que le client va noter" },
+    { "id": "04a", "fichier": "04", "fin": 2.2, "chapitre": "La solution en quatre briques" },
+    { "id": "04b", "fichier": "04", "fin": 1.2 },
+    { "id": "04c", "fichier": "04", "fin": 1.4 },
+    { "id": "04d", "fichier": "04", "fin": 1.4 },
+    { "id": "05", "fichier": "05", "fin": 1.6, "chapitre": "Combien ça coûte" },
+    { "id": "06", "fichier": "06", "fin": 1.6, "chapitre": "La preuve" },
+    { "id": "07", "fichier": "07", "fin": 1.6, "chapitre": "Les limites que nous assumons" },
+    { "id": "08", "fichier": "08", "fin": 1.6, "chapitre": "L'équipe" },
+    { "id": "09", "fichier": "09", "fin": 3.0, "chapitre": "La fin" }
+  ]
+}

@@ -1,0 +1,406 @@
+{
+ "duree": 30.392,
+ "parties": {
+  "02": {
+   "debut": 0.0,
+   "duree": 30.392
+  }
+ },
+ "mots": [
+  {
+   "mot": "Notre",
+   "debut": 0.16,
+   "fin": 0.4
+  },
+  {
+   "mot": "client",
+   "debut": 0.4,
+   "fin": 0.8
+  },
+  {
+   "mot": "est",
+   "debut": 0.8,
+   "fin": 1.12
+  },
+  {
+   "mot": "une",
+   "debut": 1.12,
+   "fin": 1.36
+  },
+  {
+   "mot": "grande",
+   "debut": 1.36,
+   "fin": 1.68
+  },
+  {
+   "mot": "mutuelle",
+   "debut": 1.68,
+   "fin": 2.16
+  },
+  {
+   "mot": "santé,",
+   "debut": 2.16,
+   "fin": 2.88
+  },
+  {
+   "mot": "fictive.",
+   "debut": 2.88,
+   "fin": 3.6
+  },
+  {
+   "mot": "Deux",
+   "debut": 3.6,
+   "fin": 3.92
+  },
+  {
+   "mot": "sièges,",
+   "debut": 3.92,
+   "fin": 4.4
+  },
+  {
+   "mot": "quatre",
+   "debut": 4.4,
+   "fin": 4.64
+  },
+  {
+   "mot": "cent",
+   "debut": 4.64,
+   "fin": 4.88
+  },
+  {
+   "mot": "quatre-vingt-dix-huit",
+   "debut": 4.88,
+   "fin": 5.92
+  },
+  {
+   "mot": "agences",
+   "debut": 5.92,
+   "fin": 6.32
+  },
+  {
+   "mot": "en",
+   "debut": 6.32,
+   "fin": 6.64
+  },
+  {
+   "mot": "France,",
+   "debut": 6.64,
+   "fin": 7.36
+  },
+  {
+   "mot": "trente",
+   "debut": 7.36,
+   "fin": 7.68
+  },
+  {
+   "mot": "à",
+   "debut": 7.68,
+   "fin": 7.84
+  },
+  {
+   "mot": "l'étranger.",
+   "debut": 7.84,
+   "fin": 8.56
+  },
+  {
+   "mot": "Dix",
+   "debut": 8.56,
+   "fin": 8.8
+  },
+  {
+   "mot": "mille",
+   "debut": 8.8,
+   "fin": 9.12
+  },
+  {
+   "mot": "utilisateurs.",
+   "debut": 9.12,
+   "fin": 9.84
+  },
+  {
+   "mot": "Et",
+   "debut": 9.84,
+   "fin": 10.48
+  },
+  {
+   "mot": "une",
+   "debut": 10.48,
+   "fin": 10.72
+  },
+  {
+   "mot": "centaine",
+   "debut": 10.72,
+   "fin": 11.12
+  },
+  {
+   "mot": "de",
+   "debut": 11.12,
+   "fin": 11.36
+  },
+  {
+   "mot": "partenaires,",
+   "debut": 11.36,
+   "fin": 12.08
+  },
+  {
+   "mot": "qui",
+   "debut": 12.08,
+   "fin": 12.24
+  },
+  {
+   "mot": "doivent",
+   "debut": 12.24,
+   "fin": 12.56
+  },
+  {
+   "mot": "eux",
+   "debut": 12.56,
+   "fin": 12.88
+  },
+  {
+   "mot": "aussi",
+   "debut": 12.88,
+   "fin": 13.2
+  },
+  {
+   "mot": "accéder",
+   "debut": 13.2,
+   "fin": 13.92
+  },
+  {
+   "mot": "à",
+   "debut": 13.92,
+   "fin": 14.16
+  },
+  {
+   "mot": "certaines",
+   "debut": 14.16,
+   "fin": 14.48
+  },
+  {
+   "mot": "applications.",
+   "debut": 14.48,
+   "fin": 15.2
+  },
+  {
+   "mot": "Le",
+   "debut": 15.2,
+   "fin": 15.84
+  },
+  {
+   "mot": "point",
+   "debut": 15.84,
+   "fin": 16.08
+  },
+  {
+   "mot": "sensible,",
+   "debut": 16.08,
+   "fin": 16.8
+  },
+  {
+   "mot": "ce",
+   "debut": 16.8,
+   "fin": 16.96
+  },
+  {
+   "mot": "sont",
+   "debut": 16.96,
+   "fin": 17.12
+  },
+  {
+   "mot": "les",
+   "debut": 17.12,
+   "fin": 17.28
+  },
+  {
+   "mot": "données :",
+   "debut": 17.28,
+   "fin": 17.52
+  },
+  {
+   "mot": "des",
+   "debut": 17.52,
+   "fin": 17.84
+  },
+  {
+   "mot": "informations",
+   "debut": 17.84,
+   "fin": 18.4
+  },
+  {
+   "mot": "de",
+   "debut": 18.4,
+   "fin": 18.64
+  },
+  {
+   "mot": "santé.",
+   "debut": 18.64,
+   "fin": 19.36
+  },
+  {
+   "mot": "Une",
+   "debut": 19.36,
+   "fin": 19.6
+  },
+  {
+   "mot": "fuite,",
+   "debut": 19.6,
+   "fin": 20.32
+  },
+  {
+   "mot": "et",
+   "debut": 20.32,
+   "fin": 20.48
+  },
+  {
+   "mot": "c'est",
+   "debut": 20.48,
+   "fin": 20.8
+  },
+  {
+   "mot": "la",
+   "debut": 20.8,
+   "fin": 21.04
+  },
+  {
+   "mot": "confiance",
+   "debut": 21.04,
+   "fin": 21.28
+  },
+  {
+   "mot": "des",
+   "debut": 21.28,
+   "fin": 21.68
+  },
+  {
+   "mot": "adhérents",
+   "debut": 21.68,
+   "fin": 22.24
+  },
+  {
+   "mot": "qui",
+   "debut": 22.24,
+   "fin": 22.4
+  },
+  {
+   "mot": "s'effondre.",
+   "debut": 22.4,
+   "fin": 23.12
+  },
+  {
+   "mot": "Le",
+   "debut": 23.12,
+   "fin": 23.36
+  },
+  {
+   "mot": "client",
+   "debut": 23.36,
+   "fin": 23.68
+  },
+  {
+   "mot": "lance",
+   "debut": 23.68,
+   "fin": 24.08
+  },
+  {
+   "mot": "donc",
+   "debut": 24.08,
+   "fin": 24.4
+  },
+  {
+   "mot": "un",
+   "debut": 24.4,
+   "fin": 24.64
+  },
+  {
+   "mot": "appel",
+   "debut": 24.64,
+   "fin": 24.88
+  },
+  {
+   "mot": "d'offres :",
+   "debut": 24.88,
+   "fin": 25.36
+  },
+  {
+   "mot": "il",
+   "debut": 25.36,
+   "fin": 25.52
+  },
+  {
+   "mot": "veut",
+   "debut": 25.52,
+   "fin": 25.68
+  },
+  {
+   "mot": "une",
+   "debut": 25.68,
+   "fin": 25.92
+  },
+  {
+   "mot": "nouvelle",
+   "debut": 25.92,
+   "fin": 26.16
+  },
+  {
+   "mot": "architecture",
+   "debut": 26.16,
+   "fin": 26.72
+  },
+  {
+   "mot": "de",
+   "debut": 26.72,
+   "fin": 26.96
+  },
+  {
+   "mot": "sécurité,",
+   "debut": 26.96,
+   "fin": 27.68
+  },
+  {
+   "mot": "pour",
+   "debut": 27.68,
+   "fin": 28.0
+  },
+  {
+   "mot": "ses",
+   "debut": 28.0,
+   "fin": 28.16
+  },
+  {
+   "mot": "centres",
+   "debut": 28.16,
+   "fin": 28.48
+  },
+  {
+   "mot": "de",
+   "debut": 28.48,
+   "fin": 28.64
+  },
+  {
+   "mot": "données",
+   "debut": 28.64,
+   "fin": 28.96
+  },
+  {
+   "mot": "comme",
+   "debut": 28.96,
+   "fin": 29.28
+  },
+  {
+   "mot": "pour",
+   "debut": 29.28,
+   "fin": 29.52
+  },
+  {
+   "mot": "ses",
+   "debut": 29.52,
+   "fin": 29.68
+  },
+  {
+   "mot": "agences.",
+   "debut": 29.68,
+   "fin": 30.042
+  }
+ ]
+}
