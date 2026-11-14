@@ -1,0 +1,386 @@
+{
+ "duree": 29.996,
+ "parties": {
+  "07": {
+   "debut": 0.0,
+   "duree": 29.996
+  }
+ },
+ "mots": [
+  {
+   "mot": "Une",
+   "debut": 0.16,
+   "fin": 0.4
+  },
+  {
+   "mot": "bonne",
+   "debut": 0.4,
+   "fin": 0.64
+  },
+  {
+   "mot": "offre",
+   "debut": 0.64,
+   "fin": 1.12
+  },
+  {
+   "mot": "dit",
+   "debut": 1.12,
+   "fin": 1.36
+  },
+  {
+   "mot": "aussi",
+   "debut": 1.36,
+   "fin": 1.92
+  },
+  {
+   "mot": "ses",
+   "debut": 1.92,
+   "fin": 2.24
+  },
+  {
+   "mot": "limites.",
+   "debut": 2.24,
+   "fin": 2.88
+  },
+  {
+   "mot": "Nous",
+   "debut": 2.88,
+   "fin": 3.2
+  },
+  {
+   "mot": "en",
+   "debut": 3.2,
+   "fin": 3.44
+  },
+  {
+   "mot": "assumons",
+   "debut": 3.44,
+   "fin": 3.76
+  },
+  {
+   "mot": "quatre.",
+   "debut": 3.76,
+   "fin": 4.48
+  },
+  {
+   "mot": "Le",
+   "debut": 4.48,
+   "fin": 4.72
+  },
+  {
+   "mot": "pare-feu",
+   "debut": 4.72,
+   "fin": 5.2
+  },
+  {
+   "mot": "prévu",
+   "debut": 5.2,
+   "fin": 5.6
+  },
+  {
+   "mot": "à",
+   "debut": 5.6,
+   "fin": 5.76
+  },
+  {
+   "mot": "l'entrée",
+   "debut": 5.76,
+   "fin": 6.08
+  },
+  {
+   "mot": "des",
+   "debut": 6.08,
+   "fin": 6.32
+  },
+  {
+   "mot": "centres",
+   "debut": 6.32,
+   "fin": 6.72
+  },
+  {
+   "mot": "de",
+   "debut": 6.72,
+   "fin": 6.96
+  },
+  {
+   "mot": "données,",
+   "debut": 6.96,
+   "fin": 7.28
+  },
+  {
+   "mot": "le",
+   "debut": 7.28,
+   "fin": 7.44
+  },
+  {
+   "mot": "six",
+   "debut": 7.44,
+   "fin": 7.68
+  },
+  {
+   "mot": "cents",
+   "debut": 7.68,
+   "fin": 8.0
+  },
+  {
+   "mot": "F,",
+   "debut": 8.0,
+   "fin": 8.72
+  },
+  {
+   "mot": "n'est",
+   "debut": 8.72,
+   "fin": 9.04
+  },
+  {
+   "mot": "plus",
+   "debut": 9.04,
+   "fin": 9.36
+  },
+  {
+   "mot": "commercialisé :",
+   "debut": 9.36,
+   "fin": 10.08
+  },
+  {
+   "mot": "son",
+   "debut": 10.08,
+   "fin": 10.32
+  },
+  {
+   "mot": "successeur",
+   "debut": 10.32,
+   "fin": 11.04
+  },
+  {
+   "mot": "probable",
+   "debut": 11.04,
+   "fin": 11.52
+  },
+  {
+   "mot": "sera",
+   "debut": 11.52,
+   "fin": 11.92
+  },
+  {
+   "mot": "rechiffré",
+   "debut": 11.92,
+   "fin": 12.64
+  },
+  {
+   "mot": "au",
+   "debut": 12.64,
+   "fin": 12.88
+  },
+  {
+   "mot": "devis.",
+   "debut": 12.88,
+   "fin": 13.6
+  },
+  {
+   "mot": "La",
+   "debut": 13.6,
+   "fin": 13.84
+  },
+  {
+   "mot": "licence",
+   "debut": 13.84,
+   "fin": 14.32
+  },
+  {
+   "mot": "Zéro",
+   "debut": 14.32,
+   "fin": 14.72
+  },
+  {
+   "mot": "Confiance",
+   "debut": 14.72,
+   "fin": 15.36
+  },
+  {
+   "mot": "des",
+   "debut": 15.36,
+   "fin": 15.52
+  },
+  {
+   "mot": "quatre",
+   "debut": 15.52,
+   "fin": 15.84
+  },
+  {
+   "mot": "pare-feu",
+   "debut": 15.84,
+   "fin": 16.4
+  },
+  {
+   "mot": "d'entrée",
+   "debut": 16.4,
+   "fin": 16.96
+  },
+  {
+   "mot": "n'est",
+   "debut": 16.96,
+   "fin": 17.44
+  },
+  {
+   "mot": "pas",
+   "debut": 17.44,
+   "fin": 17.68
+  },
+  {
+   "mot": "incluse",
+   "debut": 17.68,
+   "fin": 18.16
+  },
+  {
+   "mot": "dans",
+   "debut": 18.16,
+   "fin": 18.4
+  },
+  {
+   "mot": "le",
+   "debut": 18.4,
+   "fin": 18.56
+  },
+  {
+   "mot": "prix.",
+   "debut": 18.56,
+   "fin": 19.28
+  },
+  {
+   "mot": "Le",
+   "debut": 19.28,
+   "fin": 19.52
+  },
+  {
+   "mot": "stockage",
+   "debut": 19.52,
+   "fin": 20.0
+  },
+  {
+   "mot": "prévu",
+   "debut": 20.0,
+   "fin": 20.48
+  },
+  {
+   "mot": "sera",
+   "debut": 20.48,
+   "fin": 20.88
+  },
+  {
+   "mot": "sans",
+   "debut": 20.88,
+   "fin": 21.12
+  },
+  {
+   "mot": "doute",
+   "debut": 21.12,
+   "fin": 21.28
+  },
+  {
+   "mot": "trop",
+   "debut": 21.28,
+   "fin": 21.52
+  },
+  {
+   "mot": "juste :",
+   "debut": 21.52,
+   "fin": 21.84
+  },
+  {
+   "mot": "une",
+   "debut": 21.84,
+   "fin": 22.16
+  },
+  {
+   "mot": "extension",
+   "debut": 22.16,
+   "fin": 22.64
+  },
+  {
+   "mot": "est",
+   "debut": 22.64,
+   "fin": 23.04
+  },
+  {
+   "mot": "probable.",
+   "debut": 23.04,
+   "fin": 23.76
+  },
+  {
+   "mot": "Et",
+   "debut": 23.76,
+   "fin": 24.0
+  },
+  {
+   "mot": "la",
+   "debut": 24.0,
+   "fin": 24.16
+  },
+  {
+   "mot": "certification",
+   "debut": 24.16,
+   "fin": 24.88
+  },
+  {
+   "mot": "H-D-S",
+   "debut": 24.88,
+   "fin": 25.6
+  },
+  {
+   "mot": "n'est",
+   "debut": 25.6,
+   "fin": 25.92
+  },
+  {
+   "mot": "pas",
+   "debut": 25.92,
+   "fin": 26.08
+  },
+  {
+   "mot": "forcément",
+   "debut": 26.08,
+   "fin": 26.48
+  },
+  {
+   "mot": "obligatoire",
+   "debut": 26.48,
+   "fin": 27.2
+  },
+  {
+   "mot": "pour",
+   "debut": 27.2,
+   "fin": 27.44
+  },
+  {
+   "mot": "une",
+   "debut": 27.44,
+   "fin": 27.6
+  },
+  {
+   "mot": "mutuelle…",
+   "debut": 27.6,
+   "fin": 28.32
+  },
+  {
+   "mot": "nous",
+   "debut": 28.32,
+   "fin": 28.48
+  },
+  {
+   "mot": "l'exigeons",
+   "debut": 28.48,
+   "fin": 28.96
+  },
+  {
+   "mot": "par",
+   "debut": 28.96,
+   "fin": 29.2
+  },
+  {
+   "mot": "prudence.",
+   "debut": 29.2,
+   "fin": 29.646
+  }
+ ]
+}

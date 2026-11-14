@@ -1,0 +1,186 @@
+{
+ "duree": 12.4,
+ "parties": {
+  "01": {
+   "debut": 0.0,
+   "duree": 12.4
+  }
+ },
+ "mots": [
+  {
+   "mot": "Comment",
+   "debut": 0.16,
+   "fin": 0.48
+  },
+  {
+   "mot": "protéger",
+   "debut": 0.48,
+   "fin": 1.04
+  },
+  {
+   "mot": "cinq",
+   "debut": 1.04,
+   "fin": 1.36
+  },
+  {
+   "mot": "cent",
+   "debut": 1.36,
+   "fin": 1.6
+  },
+  {
+   "mot": "trente",
+   "debut": 1.6,
+   "fin": 1.92
+  },
+  {
+   "mot": "sites,",
+   "debut": 1.92,
+   "fin": 2.64
+  },
+  {
+   "mot": "dix",
+   "debut": 2.64,
+   "fin": 2.96
+  },
+  {
+   "mot": "mille",
+   "debut": 2.96,
+   "fin": 3.28
+  },
+  {
+   "mot": "utilisateurs",
+   "debut": 3.28,
+   "fin": 3.76
+  },
+  {
+   "mot": "et",
+   "debut": 3.76,
+   "fin": 3.92
+  },
+  {
+   "mot": "des",
+   "debut": 3.92,
+   "fin": 4.08
+  },
+  {
+   "mot": "données",
+   "debut": 4.08,
+   "fin": 4.32
+  },
+  {
+   "mot": "de",
+   "debut": 4.32,
+   "fin": 4.48
+  },
+  {
+   "mot": "santé…",
+   "debut": 4.48,
+   "fin": 5.2
+  },
+  {
+   "mot": "sans",
+   "debut": 5.2,
+   "fin": 5.36
+  },
+  {
+   "mot": "faire",
+   "debut": 5.36,
+   "fin": 5.68
+  },
+  {
+   "mot": "exploser",
+   "debut": 5.68,
+   "fin": 6.16
+  },
+  {
+   "mot": "le",
+   "debut": 6.16,
+   "fin": 6.32
+  },
+  {
+   "mot": "budget",
+   "debut": 6.32,
+   "fin": 6.64
+  },
+  {
+   "mot": "?",
+   "debut": 6.64,
+   "fin": 7.36
+  },
+  {
+   "mot": "C'est",
+   "debut": 7.36,
+   "fin": 7.68
+  },
+  {
+   "mot": "la",
+   "debut": 7.68,
+   "fin": 7.84
+  },
+  {
+   "mot": "question",
+   "debut": 7.84,
+   "fin": 8.24
+  },
+  {
+   "mot": "que",
+   "debut": 8.24,
+   "fin": 8.48
+  },
+  {
+   "mot": "nous",
+   "debut": 8.48,
+   "fin": 8.64
+  },
+  {
+   "mot": "a",
+   "debut": 8.64,
+   "fin": 8.8
+  },
+  {
+   "mot": "posée",
+   "debut": 8.8,
+   "fin": 9.04
+  },
+  {
+   "mot": "notre",
+   "debut": 9.04,
+   "fin": 9.28
+  },
+  {
+   "mot": "client.",
+   "debut": 9.28,
+   "fin": 10.0
+  },
+  {
+   "mot": "Voici",
+   "debut": 10.0,
+   "fin": 10.32
+  },
+  {
+   "mot": "notre",
+   "debut": 10.32,
+   "fin": 10.56
+  },
+  {
+   "mot": "réponse,",
+   "debut": 10.56,
+   "fin": 11.28
+  },
+  {
+   "mot": "en",
+   "debut": 11.28,
+   "fin": 11.52
+  },
+  {
+   "mot": "cinq",
+   "debut": 11.52,
+   "fin": 11.76
+  },
+  {
+   "mot": "minutes.",
+   "debut": 11.76,
+   "fin": 12.077
+  }
+ ]
+}

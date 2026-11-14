@@ -1,0 +1,1263 @@
+{
+ "duree": 92.684,
+ "parties": {
+  "04a": {
+   "debut": 0.0,
+   "duree": 24.527
+  },
+  "04b": {
+   "debut": 24.977,
+   "duree": 16.88
+  },
+  "04c": {
+   "debut": 42.307,
+   "duree": 27.915
+  },
+  "04d": {
+   "debut": 70.672,
+   "duree": 22.011
+  }
+ },
+ "mots": [
+  {
+   "mot": "Notre",
+   "debut": 0.16,
+   "fin": 0.4
+  },
+  {
+   "mot": "solution",
+   "debut": 0.4,
+   "fin": 0.96
+  },
+  {
+   "mot": "tient",
+   "debut": 0.96,
+   "fin": 1.36
+  },
+  {
+   "mot": "en",
+   "debut": 1.36,
+   "fin": 1.52
+  },
+  {
+   "mot": "quatre",
+   "debut": 1.52,
+   "fin": 1.76
+  },
+  {
+   "mot": "briques.",
+   "debut": 1.76,
+   "fin": 2.48
+  },
+  {
+   "mot": "Première",
+   "debut": 2.48,
+   "fin": 2.88
+  },
+  {
+   "mot": "brique :",
+   "debut": 2.88,
+   "fin": 3.2
+  },
+  {
+   "mot": "relier",
+   "debut": 3.2,
+   "fin": 3.52
+  },
+  {
+   "mot": "les",
+   "debut": 3.52,
+   "fin": 3.68
+  },
+  {
+   "mot": "sites.",
+   "debut": 3.68,
+   "fin": 4.4
+  },
+  {
+   "mot": "Chaque",
+   "debut": 4.4,
+   "fin": 4.8
+  },
+  {
+   "mot": "site",
+   "debut": 4.8,
+   "fin": 4.96
+  },
+  {
+   "mot": "reçoit",
+   "debut": 4.96,
+   "fin": 5.44
+  },
+  {
+   "mot": "un",
+   "debut": 5.44,
+   "fin": 5.68
+  },
+  {
+   "mot": "pare-feu",
+   "debut": 5.68,
+   "fin": 6.16
+  },
+  {
+   "mot": "FortiGate.",
+   "debut": 6.16,
+   "fin": 6.88
+  },
+  {
+   "mot": "Avec",
+   "debut": 6.88,
+   "fin": 7.2
+  },
+  {
+   "mot": "ses",
+   "debut": 7.2,
+   "fin": 7.36
+  },
+  {
+   "mot": "deux",
+   "debut": 7.36,
+   "fin": 7.6
+  },
+  {
+   "mot": "accès",
+   "debut": 7.6,
+   "fin": 7.92
+  },
+  {
+   "mot": "à",
+   "debut": 7.92,
+   "fin": 8.08
+  },
+  {
+   "mot": "Internet,",
+   "debut": 8.08,
+   "fin": 8.8
+  },
+  {
+   "mot": "il",
+   "debut": 8.8,
+   "fin": 8.96
+  },
+  {
+   "mot": "monte",
+   "debut": 8.96,
+   "fin": 9.2
+  },
+  {
+   "mot": "des",
+   "debut": 9.2,
+   "fin": 9.44
+  },
+  {
+   "mot": "tunnels",
+   "debut": 9.44,
+   "fin": 9.84
+  },
+  {
+   "mot": "chiffrés",
+   "debut": 9.84,
+   "fin": 10.32
+  },
+  {
+   "mot": "vers",
+   "debut": 10.32,
+   "fin": 10.56
+  },
+  {
+   "mot": "les",
+   "debut": 10.56,
+   "fin": 10.72
+  },
+  {
+   "mot": "deux",
+   "debut": 10.72,
+   "fin": 10.88
+  },
+  {
+   "mot": "centres",
+   "debut": 10.88,
+   "fin": 11.2
+  },
+  {
+   "mot": "de",
+   "debut": 11.2,
+   "fin": 11.36
+  },
+  {
+   "mot": "données.",
+   "debut": 11.36,
+   "fin": 12.08
+  },
+  {
+   "mot": "C'est",
+   "debut": 12.08,
+   "fin": 12.4
+  },
+  {
+   "mot": "ce",
+   "debut": 12.4,
+   "fin": 12.56
+  },
+  {
+   "mot": "qu'on",
+   "debut": 12.56,
+   "fin": 12.88
+  },
+  {
+   "mot": "appelle",
+   "debut": 12.88,
+   "fin": 13.2
+  },
+  {
+   "mot": "le",
+   "debut": 13.2,
+   "fin": 13.68
+  },
+  {
+   "mot": "S-D-WAN :",
+   "debut": 13.68,
+   "fin": 14.4
+  },
+  {
+   "mot": "un",
+   "debut": 14.4,
+   "fin": 14.8
+  },
+  {
+   "mot": "réseau",
+   "debut": 14.8,
+   "fin": 15.2
+  },
+  {
+   "mot": "étendu",
+   "debut": 15.2,
+   "fin": 15.6
+  },
+  {
+   "mot": "piloté",
+   "debut": 15.6,
+   "fin": 16.08
+  },
+  {
+   "mot": "par",
+   "debut": 16.08,
+   "fin": 16.32
+  },
+  {
+   "mot": "logiciel,",
+   "debut": 16.32,
+   "fin": 17.04
+  },
+  {
+   "mot": "qui",
+   "debut": 17.04,
+   "fin": 17.28
+  },
+  {
+   "mot": "choisit",
+   "debut": 17.28,
+   "fin": 17.68
+  },
+  {
+   "mot": "à",
+   "debut": 17.68,
+   "fin": 17.84
+  },
+  {
+   "mot": "chaque",
+   "debut": 17.84,
+   "fin": 18.08
+  },
+  {
+   "mot": "instant",
+   "debut": 18.08,
+   "fin": 18.48
+  },
+  {
+   "mot": "le",
+   "debut": 18.48,
+   "fin": 18.72
+  },
+  {
+   "mot": "meilleur",
+   "debut": 18.72,
+   "fin": 18.96
+  },
+  {
+   "mot": "chemin.",
+   "debut": 18.96,
+   "fin": 19.36
+  },
+  {
+   "mot": "Et",
+   "debut": 19.36,
+   "fin": 19.84
+  },
+  {
+   "mot": "si",
+   "debut": 19.84,
+   "fin": 20.0
+  },
+  {
+   "mot": "un",
+   "debut": 20.0,
+   "fin": 20.16
+  },
+  {
+   "mot": "opérateur",
+   "debut": 20.16,
+   "fin": 20.64
+  },
+  {
+   "mot": "tombe",
+   "debut": 20.64,
+   "fin": 20.96
+  },
+  {
+   "mot": "?",
+   "debut": 20.96,
+   "fin": 21.28
+  },
+  {
+   "mot": "Le",
+   "debut": 21.28,
+   "fin": 21.44
+  },
+  {
+   "mot": "trafic",
+   "debut": 21.44,
+   "fin": 21.76
+  },
+  {
+   "mot": "bascule",
+   "debut": 21.76,
+   "fin": 22.24
+  },
+  {
+   "mot": "sur",
+   "debut": 22.24,
+   "fin": 22.4
+  },
+  {
+   "mot": "l'autre…",
+   "debut": 22.4,
+   "fin": 22.96
+  },
+  {
+   "mot": "en",
+   "debut": 22.96,
+   "fin": 23.2
+  },
+  {
+   "mot": "moins",
+   "debut": 23.2,
+   "fin": 23.36
+  },
+  {
+   "mot": "de",
+   "debut": 23.36,
+   "fin": 23.52
+  },
+  {
+   "mot": "quatre",
+   "debut": 23.52,
+   "fin": 23.84
+  },
+  {
+   "mot": "secondes.",
+   "debut": 23.84,
+   "fin": 24.177
+  },
+  {
+   "mot": "Deuxième",
+   "debut": 25.137,
+   "fin": 25.617
+  },
+  {
+   "mot": "brique :",
+   "debut": 25.617,
+   "fin": 26.097
+  },
+  {
+   "mot": "deux",
+   "debut": 26.097,
+   "fin": 26.497
+  },
+  {
+   "mot": "centres",
+   "debut": 26.497,
+   "fin": 26.817
+  },
+  {
+   "mot": "de",
+   "debut": 26.817,
+   "fin": 27.057
+  },
+  {
+   "mot": "données,",
+   "debut": 27.057,
+   "fin": 27.697
+  },
+  {
+   "mot": "chez",
+   "debut": 27.697,
+   "fin": 27.937
+  },
+  {
+   "mot": "des",
+   "debut": 27.937,
+   "fin": 28.177
+  },
+  {
+   "mot": "hébergeurs",
+   "debut": 28.177,
+   "fin": 28.817
+  },
+  {
+   "mot": "certifiés",
+   "debut": 28.817,
+   "fin": 29.377
+  },
+  {
+   "mot": "pour",
+   "debut": 29.377,
+   "fin": 29.617
+  },
+  {
+   "mot": "les",
+   "debut": 29.617,
+   "fin": 29.777
+  },
+  {
+   "mot": "données",
+   "debut": 29.777,
+   "fin": 30.017
+  },
+  {
+   "mot": "de",
+   "debut": 30.017,
+   "fin": 30.177
+  },
+  {
+   "mot": "santé,",
+   "debut": 30.177,
+   "fin": 30.897
+  },
+  {
+   "mot": "H-D-S.",
+   "debut": 30.897,
+   "fin": 31.617
+  },
+  {
+   "mot": "Les",
+   "debut": 31.617,
+   "fin": 32.337
+  },
+  {
+   "mot": "applications",
+   "debut": 32.337,
+   "fin": 32.977
+  },
+  {
+   "mot": "publiées",
+   "debut": 32.977,
+   "fin": 33.617
+  },
+  {
+   "mot": "tournent",
+   "debut": 33.617,
+   "fin": 33.937
+  },
+  {
+   "mot": "dans",
+   "debut": 33.937,
+   "fin": 34.097
+  },
+  {
+   "mot": "les",
+   "debut": 34.097,
+   "fin": 34.257
+  },
+  {
+   "mot": "deux.",
+   "debut": 34.257,
+   "fin": 34.737
+  },
+  {
+   "mot": "Les",
+   "debut": 34.737,
+   "fin": 34.977
+  },
+  {
+   "mot": "bases",
+   "debut": 34.977,
+   "fin": 35.297
+  },
+  {
+   "mot": "sont",
+   "debut": 35.297,
+   "fin": 35.617
+  },
+  {
+   "mot": "copiées",
+   "debut": 35.617,
+   "fin": 36.017
+  },
+  {
+   "mot": "de",
+   "debut": 36.017,
+   "fin": 36.177
+  },
+  {
+   "mot": "l'un",
+   "debut": 36.177,
+   "fin": 36.497
+  },
+  {
+   "mot": "vers",
+   "debut": 36.497,
+   "fin": 36.657
+  },
+  {
+   "mot": "l'autre.",
+   "debut": 36.657,
+   "fin": 37.377
+  },
+  {
+   "mot": "Et",
+   "debut": 37.377,
+   "fin": 37.617
+  },
+  {
+   "mot": "une",
+   "debut": 37.617,
+   "fin": 37.857
+  },
+  {
+   "mot": "sauvegarde",
+   "debut": 37.857,
+   "fin": 38.497
+  },
+  {
+   "mot": "immuable,",
+   "debut": 38.497,
+   "fin": 39.217
+  },
+  {
+   "mot": "que",
+   "debut": 39.217,
+   "fin": 39.377
+  },
+  {
+   "mot": "même",
+   "debut": 39.377,
+   "fin": 39.537
+  },
+  {
+   "mot": "un",
+   "debut": 39.537,
+   "fin": 39.777
+  },
+  {
+   "mot": "attaquant",
+   "debut": 39.777,
+   "fin": 40.257
+  },
+  {
+   "mot": "ne",
+   "debut": 40.257,
+   "fin": 40.417
+  },
+  {
+   "mot": "peut",
+   "debut": 40.417,
+   "fin": 40.657
+  },
+  {
+   "mot": "pas",
+   "debut": 40.657,
+   "fin": 40.977
+  },
+  {
+   "mot": "effacer.",
+   "debut": 40.977,
+   "fin": 41.586
+  },
+  {
+   "mot": "Troisième",
+   "debut": 42.467,
+   "fin": 42.947
+  },
+  {
+   "mot": "brique :",
+   "debut": 42.947,
+   "fin": 43.347
+  },
+  {
+   "mot": "filtrer",
+   "debut": 43.347,
+   "fin": 44.067
+  },
+  {
+   "mot": "chaque",
+   "debut": 44.067,
+   "fin": 44.387
+  },
+  {
+   "mot": "échange.",
+   "debut": 44.387,
+   "fin": 45.107
+  },
+  {
+   "mot": "Ce",
+   "debut": 45.107,
+   "fin": 45.347
+  },
+  {
+   "mot": "qui",
+   "debut": 45.347,
+   "fin": 45.507
+  },
+  {
+   "mot": "vient",
+   "debut": 45.507,
+   "fin": 45.667
+  },
+  {
+   "mot": "d'Internet",
+   "debut": 45.667,
+   "fin": 46.387
+  },
+  {
+   "mot": "s'arrête",
+   "debut": 46.387,
+   "fin": 46.867
+  },
+  {
+   "mot": "dans",
+   "debut": 46.867,
+   "fin": 47.107
+  },
+  {
+   "mot": "une",
+   "debut": 47.107,
+   "fin": 47.347
+  },
+  {
+   "mot": "zone",
+   "debut": 47.347,
+   "fin": 47.747
+  },
+  {
+   "mot": "tampon,",
+   "debut": 47.747,
+   "fin": 48.467
+  },
+  {
+   "mot": "la",
+   "debut": 48.467,
+   "fin": 48.627
+  },
+  {
+   "mot": "D-M-Z,",
+   "debut": 48.627,
+   "fin": 49.347
+  },
+  {
+   "mot": "où",
+   "debut": 49.347,
+   "fin": 49.507
+  },
+  {
+   "mot": "un",
+   "debut": 49.507,
+   "fin": 49.747
+  },
+  {
+   "mot": "pare-feu",
+   "debut": 49.747,
+   "fin": 50.307
+  },
+  {
+   "mot": "applicatif",
+   "debut": 50.307,
+   "fin": 51.027
+  },
+  {
+   "mot": "bloque",
+   "debut": 51.027,
+   "fin": 51.747
+  },
+  {
+   "mot": "les",
+   "debut": 51.747,
+   "fin": 51.987
+  },
+  {
+   "mot": "attaques",
+   "debut": 51.987,
+   "fin": 52.307
+  },
+  {
+   "mot": "web.",
+   "debut": 52.307,
+   "fin": 53.027
+  },
+  {
+   "mot": "Derrière,",
+   "debut": 53.027,
+   "fin": 53.667
+  },
+  {
+   "mot": "un",
+   "debut": 53.667,
+   "fin": 53.827
+  },
+  {
+   "mot": "second",
+   "debut": 53.827,
+   "fin": 54.067
+  },
+  {
+   "mot": "pare-feu",
+   "debut": 54.067,
+   "fin": 54.547
+  },
+  {
+   "mot": "découpe",
+   "debut": 54.547,
+   "fin": 55.027
+  },
+  {
+   "mot": "le",
+   "debut": 55.027,
+   "fin": 55.187
+  },
+  {
+   "mot": "centre",
+   "debut": 55.187,
+   "fin": 55.507
+  },
+  {
+   "mot": "de",
+   "debut": 55.507,
+   "fin": 55.747
+  },
+  {
+   "mot": "données",
+   "debut": 55.747,
+   "fin": 55.987
+  },
+  {
+   "mot": "en",
+   "debut": 55.987,
+   "fin": 56.307
+  },
+  {
+   "mot": "cinq",
+   "debut": 56.307,
+   "fin": 56.547
+  },
+  {
+   "mot": "zones.",
+   "debut": 56.547,
+   "fin": 57.267
+  },
+  {
+   "mot": "La",
+   "debut": 57.267,
+   "fin": 57.507
+  },
+  {
+   "mot": "règle",
+   "debut": 57.507,
+   "fin": 57.827
+  },
+  {
+   "mot": "est",
+   "debut": 57.827,
+   "fin": 57.987
+  },
+  {
+   "mot": "simple :",
+   "debut": 57.987,
+   "fin": 58.227
+  },
+  {
+   "mot": "tout",
+   "debut": 58.227,
+   "fin": 58.627
+  },
+  {
+   "mot": "est",
+   "debut": 58.627,
+   "fin": 58.787
+  },
+  {
+   "mot": "interdit,",
+   "debut": 58.787,
+   "fin": 59.507
+  },
+  {
+   "mot": "sauf",
+   "debut": 59.507,
+   "fin": 59.827
+  },
+  {
+   "mot": "ce",
+   "debut": 59.827,
+   "fin": 59.987
+  },
+  {
+   "mot": "qui",
+   "debut": 59.987,
+   "fin": 60.147
+  },
+  {
+   "mot": "est",
+   "debut": 60.147,
+   "fin": 60.387
+  },
+  {
+   "mot": "explicitement",
+   "debut": 60.387,
+   "fin": 61.027
+  },
+  {
+   "mot": "autorisé.",
+   "debut": 61.027,
+   "fin": 61.747
+  },
+  {
+   "mot": "Le",
+   "debut": 61.747,
+   "fin": 61.987
+  },
+  {
+   "mot": "serveur",
+   "debut": 61.987,
+   "fin": 62.307
+  },
+  {
+   "mot": "web",
+   "debut": 62.307,
+   "fin": 62.547
+  },
+  {
+   "mot": "parle",
+   "debut": 62.547,
+   "fin": 62.867
+  },
+  {
+   "mot": "à",
+   "debut": 62.867,
+   "fin": 63.107
+  },
+  {
+   "mot": "l'application…",
+   "debut": 63.107,
+   "fin": 63.827
+  },
+  {
+   "mot": "jamais",
+   "debut": 63.827,
+   "fin": 64.307
+  },
+  {
+   "mot": "directement",
+   "debut": 64.307,
+   "fin": 65.027
+  },
+  {
+   "mot": "à",
+   "debut": 65.027,
+   "fin": 65.347
+  },
+  {
+   "mot": "la",
+   "debut": 65.347,
+   "fin": 65.507
+  },
+  {
+   "mot": "base",
+   "debut": 65.507,
+   "fin": 65.747
+  },
+  {
+   "mot": "de",
+   "debut": 65.747,
+   "fin": 65.907
+  },
+  {
+   "mot": "données.",
+   "debut": 65.907,
+   "fin": 66.227
+  },
+  {
+   "mot": "Et",
+   "debut": 66.227,
+   "fin": 66.467
+  },
+  {
+   "mot": "les",
+   "debut": 66.467,
+   "fin": 66.707
+  },
+  {
+   "mot": "administrateurs",
+   "debut": 66.707,
+   "fin": 67.427
+  },
+  {
+   "mot": "passent",
+   "debut": 67.427,
+   "fin": 67.747
+  },
+  {
+   "mot": "tous",
+   "debut": 67.747,
+   "fin": 67.987
+  },
+  {
+   "mot": "par",
+   "debut": 67.987,
+   "fin": 68.227
+  },
+  {
+   "mot": "un",
+   "debut": 68.227,
+   "fin": 68.387
+  },
+  {
+   "mot": "bastion,",
+   "debut": 68.387,
+   "fin": 68.867
+  },
+  {
+   "mot": "qui",
+   "debut": 68.867,
+   "fin": 69.107
+  },
+  {
+   "mot": "trace",
+   "debut": 69.107,
+   "fin": 69.347
+  },
+  {
+   "mot": "chaque",
+   "debut": 69.347,
+   "fin": 69.587
+  },
+  {
+   "mot": "action.",
+   "debut": 69.587,
+   "fin": 69.872
+  },
+  {
+   "mot": "Quatrième",
+   "debut": 70.832,
+   "fin": 71.552
+  },
+  {
+   "mot": "brique :",
+   "debut": 71.552,
+   "fin": 71.793
+  },
+  {
+   "mot": "ceux",
+   "debut": 71.793,
+   "fin": 71.953
+  },
+  {
+   "mot": "qui",
+   "debut": 71.953,
+   "fin": 72.112
+  },
+  {
+   "mot": "travaillent",
+   "debut": 72.112,
+   "fin": 72.433
+  },
+  {
+   "mot": "à",
+   "debut": 72.433,
+   "fin": 72.593
+  },
+  {
+   "mot": "distance.",
+   "debut": 72.593,
+   "fin": 73.312
+  },
+  {
+   "mot": "Trois",
+   "debut": 73.312,
+   "fin": 73.552
+  },
+  {
+   "mot": "mille",
+   "debut": 73.552,
+   "fin": 73.793
+  },
+  {
+   "mot": "salariés",
+   "debut": 73.793,
+   "fin": 74.192
+  },
+  {
+   "mot": "nomades,",
+   "debut": 74.192,
+   "fin": 74.912
+  },
+  {
+   "mot": "et",
+   "debut": 74.912,
+   "fin": 75.153
+  },
+  {
+   "mot": "les",
+   "debut": 75.153,
+   "fin": 75.392
+  },
+  {
+   "mot": "utilisateurs",
+   "debut": 75.392,
+   "fin": 75.873
+  },
+  {
+   "mot": "des",
+   "debut": 75.873,
+   "fin": 76.032
+  },
+  {
+   "mot": "partenaires.",
+   "debut": 76.032,
+   "fin": 76.752
+  },
+  {
+   "mot": "Ici,",
+   "debut": 76.752,
+   "fin": 77.233
+  },
+  {
+   "mot": "on",
+   "debut": 77.233,
+   "fin": 77.392
+  },
+  {
+   "mot": "applique",
+   "debut": 77.392,
+   "fin": 77.713
+  },
+  {
+   "mot": "le",
+   "debut": 77.713,
+   "fin": 77.873
+  },
+  {
+   "mot": "Zéro",
+   "debut": 77.873,
+   "fin": 78.112
+  },
+  {
+   "mot": "Confiance,",
+   "debut": 78.112,
+   "fin": 78.832
+  },
+  {
+   "mot": "le",
+   "debut": 78.832,
+   "fin": 78.993
+  },
+  {
+   "mot": "Z-T-N-A :",
+   "debut": 78.993,
+   "fin": 79.632
+  },
+  {
+   "mot": "chacun",
+   "debut": 79.632,
+   "fin": 79.953
+  },
+  {
+   "mot": "prouve",
+   "debut": 79.953,
+   "fin": 80.352
+  },
+  {
+   "mot": "son",
+   "debut": 80.352,
+   "fin": 80.593
+  },
+  {
+   "mot": "identité",
+   "debut": 80.593,
+   "fin": 81.233
+  },
+  {
+   "mot": "avec",
+   "debut": 81.233,
+   "fin": 81.793
+  },
+  {
+   "mot": "un",
+   "debut": 81.793,
+   "fin": 82.112
+  },
+  {
+   "mot": "second",
+   "debut": 82.112,
+   "fin": 82.352
+  },
+  {
+   "mot": "facteur,",
+   "debut": 82.352,
+   "fin": 83.073
+  },
+  {
+   "mot": "puis",
+   "debut": 83.073,
+   "fin": 83.233
+  },
+  {
+   "mot": "n'atteint",
+   "debut": 83.233,
+   "fin": 83.632
+  },
+  {
+   "mot": "que",
+   "debut": 83.632,
+   "fin": 83.793
+  },
+  {
+   "mot": "ses",
+   "debut": 83.793,
+   "fin": 84.032
+  },
+  {
+   "mot": "applications…",
+   "debut": 84.032,
+   "fin": 84.752
+  },
+  {
+   "mot": "jamais",
+   "debut": 84.752,
+   "fin": 85.233
+  },
+  {
+   "mot": "le",
+   "debut": 85.233,
+   "fin": 85.392
+  },
+  {
+   "mot": "réseau",
+   "debut": 85.392,
+   "fin": 85.713
+  },
+  {
+   "mot": "entier.",
+   "debut": 85.713,
+   "fin": 86.272
+  },
+  {
+   "mot": "La",
+   "debut": 86.272,
+   "fin": 86.513
+  },
+  {
+   "mot": "différence",
+   "debut": 86.513,
+   "fin": 86.993
+  },
+  {
+   "mot": "avec",
+   "debut": 86.993,
+   "fin": 87.153
+  },
+  {
+   "mot": "un",
+   "debut": 87.153,
+   "fin": 87.312
+  },
+  {
+   "mot": "réseau",
+   "debut": 87.312,
+   "fin": 87.632
+  },
+  {
+   "mot": "privé",
+   "debut": 87.632,
+   "fin": 87.873
+  },
+  {
+   "mot": "virtuel",
+   "debut": 87.873,
+   "fin": 88.273
+  },
+  {
+   "mot": "classique,",
+   "debut": 88.273,
+   "fin": 88.993
+  },
+  {
+   "mot": "un",
+   "debut": 88.993,
+   "fin": 89.153
+  },
+  {
+   "mot": "V-P-N",
+   "debut": 89.153,
+   "fin": 89.793
+  },
+  {
+   "mot": "?",
+   "debut": 89.793,
+   "fin": 90.032
+  },
+  {
+   "mot": "Un",
+   "debut": 90.032,
+   "fin": 90.192
+  },
+  {
+   "mot": "poste",
+   "debut": 90.192,
+   "fin": 90.513
+  },
+  {
+   "mot": "piraté",
+   "debut": 90.513,
+   "fin": 90.912
+  },
+  {
+   "mot": "ne",
+   "debut": 90.912,
+   "fin": 91.072
+  },
+  {
+   "mot": "devient",
+   "debut": 91.072,
+   "fin": 91.312
+  },
+  {
+   "mot": "plus",
+   "debut": 91.312,
+   "fin": 91.552
+  },
+  {
+   "mot": "une",
+   "debut": 91.552,
+   "fin": 91.713
+  },
+  {
+   "mot": "porte",
+   "debut": 91.713,
+   "fin": 92.032
+  },
+  {
+   "mot": "d'entrée.",
+   "debut": 92.032,
+   "fin": 92.334
+  }
+ ]
+}

@@ -1,0 +1,406 @@
+{
+ "duree": 34.317,
+ "parties": {
+  "06": {
+   "debut": 0.0,
+   "duree": 34.317
+  }
+ },
+ "mots": [
+  {
+   "mot": "Et",
+   "debut": 0.16,
+   "fin": 0.4
+  },
+  {
+   "mot": "nous",
+   "debut": 0.4,
+   "fin": 0.56
+  },
+  {
+   "mot": "ne",
+   "debut": 0.56,
+   "fin": 0.72
+  },
+  {
+   "mot": "nous",
+   "debut": 0.72,
+   "fin": 0.88
+  },
+  {
+   "mot": "sommes",
+   "debut": 0.88,
+   "fin": 1.2
+  },
+  {
+   "mot": "pas",
+   "debut": 1.2,
+   "fin": 1.92
+  },
+  {
+   "mot": "contentés",
+   "debut": 1.92,
+   "fin": 2.64
+  },
+  {
+   "mot": "d'un",
+   "debut": 2.64,
+   "fin": 2.96
+  },
+  {
+   "mot": "dossier.",
+   "debut": 2.96,
+   "fin": 3.68
+  },
+  {
+   "mot": "Nous",
+   "debut": 3.68,
+   "fin": 3.92
+  },
+  {
+   "mot": "avons",
+   "debut": 3.92,
+   "fin": 4.24
+  },
+  {
+   "mot": "construit",
+   "debut": 4.24,
+   "fin": 4.96
+  },
+  {
+   "mot": "une",
+   "debut": 4.96,
+   "fin": 5.2
+  },
+  {
+   "mot": "maquette :",
+   "debut": 5.2,
+   "fin": 5.6
+  },
+  {
+   "mot": "quinze",
+   "debut": 5.6,
+   "fin": 5.92
+  },
+  {
+   "mot": "machines,",
+   "debut": 5.92,
+   "fin": 6.64
+  },
+  {
+   "mot": "qui",
+   "debut": 6.64,
+   "fin": 6.96
+  },
+  {
+   "mot": "reproduisent",
+   "debut": 6.96,
+   "fin": 7.68
+  },
+  {
+   "mot": "un",
+   "debut": 7.68,
+   "fin": 7.92
+  },
+  {
+   "mot": "siège,",
+   "debut": 7.92,
+   "fin": 8.64
+  },
+  {
+   "mot": "une",
+   "debut": 8.64,
+   "fin": 8.96
+  },
+  {
+   "mot": "agence,",
+   "debut": 8.96,
+   "fin": 9.6
+  },
+  {
+   "mot": "un",
+   "debut": 9.6,
+   "fin": 9.76
+  },
+  {
+   "mot": "partenaire,",
+   "debut": 9.76,
+   "fin": 10.48
+  },
+  {
+   "mot": "les",
+   "debut": 10.48,
+   "fin": 10.72
+  },
+  {
+   "mot": "opérateurs",
+   "debut": 10.72,
+   "fin": 11.44
+  },
+  {
+   "mot": "et",
+   "debut": 11.44,
+   "fin": 12.0
+  },
+  {
+   "mot": "les",
+   "debut": 12.0,
+   "fin": 12.16
+  },
+  {
+   "mot": "centres",
+   "debut": 12.16,
+   "fin": 12.48
+  },
+  {
+   "mot": "de",
+   "debut": 12.48,
+   "fin": 12.72
+  },
+  {
+   "mot": "données.",
+   "debut": 12.72,
+   "fin": 13.44
+  },
+  {
+   "mot": "Dix-sept",
+   "debut": 13.44,
+   "fin": 14.0
+  },
+  {
+   "mot": "tests :",
+   "debut": 14.0,
+   "fin": 14.48
+  },
+  {
+   "mot": "les",
+   "debut": 14.48,
+   "fin": 14.8
+  },
+  {
+   "mot": "échanges",
+   "debut": 14.8,
+   "fin": 15.2
+  },
+  {
+   "mot": "autorisés",
+   "debut": 15.2,
+   "fin": 15.76
+  },
+  {
+   "mot": "passent,",
+   "debut": 15.76,
+   "fin": 16.24
+  },
+  {
+   "mot": "les",
+   "debut": 16.24,
+   "fin": 16.56
+  },
+  {
+   "mot": "interdits",
+   "debut": 16.56,
+   "fin": 17.12
+  },
+  {
+   "mot": "sont",
+   "debut": 17.12,
+   "fin": 17.52
+  },
+  {
+   "mot": "bloqués",
+   "debut": 17.52,
+   "fin": 18.16
+  },
+  {
+   "mot": "et",
+   "debut": 18.16,
+   "fin": 18.48
+  },
+  {
+   "mot": "journalisés.",
+   "debut": 18.48,
+   "fin": 19.2
+  },
+  {
+   "mot": "Résultat…",
+   "debut": 19.2,
+   "fin": 19.92
+  },
+  {
+   "mot": "dix-sept",
+   "debut": 19.92,
+   "fin": 20.64
+  },
+  {
+   "mot": "sur",
+   "debut": 20.64,
+   "fin": 20.96
+  },
+  {
+   "mot": "dix-sept.",
+   "debut": 20.96,
+   "fin": 21.68
+  },
+  {
+   "mot": "On",
+   "debut": 21.68,
+   "fin": 21.84
+  },
+  {
+   "mot": "coupe",
+   "debut": 21.84,
+   "fin": 22.08
+  },
+  {
+   "mot": "un",
+   "debut": 22.08,
+   "fin": 22.32
+  },
+  {
+   "mot": "opérateur",
+   "debut": 22.32,
+   "fin": 23.04
+  },
+  {
+   "mot": "en",
+   "debut": 23.04,
+   "fin": 23.44
+  },
+  {
+   "mot": "pleine",
+   "debut": 23.44,
+   "fin": 23.68
+  },
+  {
+   "mot": "démonstration :",
+   "debut": 23.68,
+   "fin": 24.4
+  },
+  {
+   "mot": "le",
+   "debut": 24.4,
+   "fin": 24.72
+  },
+  {
+   "mot": "trafic",
+   "debut": 24.72,
+   "fin": 25.2
+  },
+  {
+   "mot": "bascule",
+   "debut": 25.2,
+   "fin": 25.84
+  },
+  {
+   "mot": "en",
+   "debut": 25.84,
+   "fin": 26.16
+  },
+  {
+   "mot": "trois",
+   "debut": 26.16,
+   "fin": 26.4
+  },
+  {
+   "mot": "virgule",
+   "debut": 26.4,
+   "fin": 26.96
+  },
+  {
+   "mot": "huit",
+   "debut": 26.96,
+   "fin": 27.36
+  },
+  {
+   "mot": "secondes.",
+   "debut": 27.36,
+   "fin": 28.08
+  },
+  {
+   "mot": "Et",
+   "debut": 28.08,
+   "fin": 28.24
+  },
+  {
+   "mot": "nous",
+   "debut": 28.24,
+   "fin": 28.4
+  },
+  {
+   "mot": "le",
+   "debut": 28.4,
+   "fin": 28.56
+  },
+  {
+   "mot": "disons",
+   "debut": 28.56,
+   "fin": 28.96
+  },
+  {
+   "mot": "franchement",
+   "debut": 28.96,
+   "fin": 29.6
+  },
+  {
+   "mot": "au",
+   "debut": 29.6,
+   "fin": 29.76
+  },
+  {
+   "mot": "jury :",
+   "debut": 29.76,
+   "fin": 30.08
+  },
+  {
+   "mot": "la",
+   "debut": 30.08,
+   "fin": 30.4
+  },
+  {
+   "mot": "maquette",
+   "debut": 30.4,
+   "fin": 30.88
+  },
+  {
+   "mot": "prouve",
+   "debut": 30.88,
+   "fin": 31.28
+  },
+  {
+   "mot": "nos",
+   "debut": 31.28,
+   "fin": 31.52
+  },
+  {
+   "mot": "principes,",
+   "debut": 31.52,
+   "fin": 32.24
+  },
+  {
+   "mot": "pas",
+   "debut": 32.24,
+   "fin": 32.48
+  },
+  {
+   "mot": "les",
+   "debut": 32.48,
+   "fin": 32.72
+  },
+  {
+   "mot": "produits",
+   "debut": 32.72,
+   "fin": 32.96
+  },
+  {
+   "mot": "Fortinet",
+   "debut": 32.96,
+   "fin": 33.52
+  },
+  {
+   "mot": "eux-mêmes.",
+   "debut": 33.52,
+   "fin": 33.967
+  }
+ ]
+}

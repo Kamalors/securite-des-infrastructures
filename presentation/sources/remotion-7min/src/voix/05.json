@@ -1,0 +1,411 @@
+{
+ "duree": 29.387,
+ "parties": {
+  "05": {
+   "debut": 0.0,
+   "duree": 29.387
+  }
+ },
+ "mots": [
+  {
+   "mot": "Combien",
+   "debut": 0.16,
+   "fin": 0.64
+  },
+  {
+   "mot": "ça",
+   "debut": 0.64,
+   "fin": 0.8
+  },
+  {
+   "mot": "coûte",
+   "debut": 0.8,
+   "fin": 1.2
+  },
+  {
+   "mot": "?…",
+   "debut": 1.2,
+   "fin": 1.92
+  },
+  {
+   "mot": "Environ",
+   "debut": 1.92,
+   "fin": 2.4
+  },
+  {
+   "mot": "deux",
+   "debut": 2.4,
+   "fin": 2.8
+  },
+  {
+   "mot": "cent",
+   "debut": 2.8,
+   "fin": 3.04
+  },
+  {
+   "mot": "vingt",
+   "debut": 3.04,
+   "fin": 3.36
+  },
+  {
+   "mot": "et",
+   "debut": 3.36,
+   "fin": 3.6
+  },
+  {
+   "mot": "un",
+   "debut": 3.6,
+   "fin": 3.84
+  },
+  {
+   "mot": "mille",
+   "debut": 3.84,
+   "fin": 4.08
+  },
+  {
+   "mot": "euros",
+   "debut": 4.08,
+   "fin": 4.48
+  },
+  {
+   "mot": "hors",
+   "debut": 4.48,
+   "fin": 4.8
+  },
+  {
+   "mot": "taxes",
+   "debut": 4.8,
+   "fin": 5.12
+  },
+  {
+   "mot": "par",
+   "debut": 5.12,
+   "fin": 5.44
+  },
+  {
+   "mot": "mois,",
+   "debut": 5.44,
+   "fin": 5.92
+  },
+  {
+   "mot": "sur",
+   "debut": 5.92,
+   "fin": 6.16
+  },
+  {
+   "mot": "trois",
+   "debut": 6.16,
+   "fin": 6.48
+  },
+  {
+   "mot": "ans.",
+   "debut": 6.48,
+   "fin": 7.2
+  },
+  {
+   "mot": "Rapporté",
+   "debut": 7.2,
+   "fin": 7.84
+  },
+  {
+   "mot": "à",
+   "debut": 7.84,
+   "fin": 8.0
+  },
+  {
+   "mot": "chacun :",
+   "debut": 8.0,
+   "fin": 8.32
+  },
+  {
+   "mot": "vingt-deux",
+   "debut": 8.32,
+   "fin": 9.04
+  },
+  {
+   "mot": "euros",
+   "debut": 9.04,
+   "fin": 9.36
+  },
+  {
+   "mot": "par",
+   "debut": 9.36,
+   "fin": 9.6
+  },
+  {
+   "mot": "utilisateur",
+   "debut": 9.6,
+   "fin": 10.32
+  },
+  {
+   "mot": "et",
+   "debut": 10.32,
+   "fin": 10.56
+  },
+  {
+   "mot": "par",
+   "debut": 10.56,
+   "fin": 10.72
+  },
+  {
+   "mot": "mois.",
+   "debut": 10.72,
+   "fin": 11.44
+  },
+  {
+   "mot": "Sur",
+   "debut": 11.44,
+   "fin": 11.68
+  },
+  {
+   "mot": "trente-six",
+   "debut": 11.68,
+   "fin": 12.24
+  },
+  {
+   "mot": "mois,",
+   "debut": 12.24,
+   "fin": 12.72
+  },
+  {
+   "mot": "le",
+   "debut": 12.72,
+   "fin": 12.88
+  },
+  {
+   "mot": "coût",
+   "debut": 12.88,
+   "fin": 13.04
+  },
+  {
+   "mot": "total",
+   "debut": 13.04,
+   "fin": 13.44
+  },
+  {
+   "mot": "atteint",
+   "debut": 13.44,
+   "fin": 13.92
+  },
+  {
+   "mot": "près",
+   "debut": 13.92,
+   "fin": 14.16
+  },
+  {
+   "mot": "de",
+   "debut": 14.16,
+   "fin": 14.4
+  },
+  {
+   "mot": "huit",
+   "debut": 14.4,
+   "fin": 14.64
+  },
+  {
+   "mot": "millions",
+   "debut": 14.64,
+   "fin": 14.96
+  },
+  {
+   "mot": "d'euros.",
+   "debut": 14.96,
+   "fin": 15.68
+  },
+  {
+   "mot": "L'abonnement",
+   "debut": 15.68,
+   "fin": 16.24
+  },
+  {
+   "mot": "coûte",
+   "debut": 16.24,
+   "fin": 16.48
+  },
+  {
+   "mot": "un",
+   "debut": 16.48,
+   "fin": 16.64
+  },
+  {
+   "mot": "peu",
+   "debut": 16.64,
+   "fin": 16.8
+  },
+  {
+   "mot": "plus",
+   "debut": 16.8,
+   "fin": 17.12
+  },
+  {
+   "mot": "cher",
+   "debut": 17.12,
+   "fin": 17.36
+  },
+  {
+   "mot": "que",
+   "debut": 17.36,
+   "fin": 17.52
+  },
+  {
+   "mot": "l'achat :",
+   "debut": 17.52,
+   "fin": 18.0
+  },
+  {
+   "mot": "environ",
+   "debut": 18.0,
+   "fin": 18.48
+  },
+  {
+   "mot": "quatre",
+   "debut": 18.48,
+   "fin": 18.96
+  },
+  {
+   "mot": "cent",
+   "debut": 18.96,
+   "fin": 19.28
+  },
+  {
+   "mot": "soixante-dix",
+   "debut": 19.28,
+   "fin": 20.0
+  },
+  {
+   "mot": "mille",
+   "debut": 20.0,
+   "fin": 20.32
+  },
+  {
+   "mot": "euros",
+   "debut": 20.32,
+   "fin": 20.56
+  },
+  {
+   "mot": "de",
+   "debut": 20.56,
+   "fin": 20.72
+  },
+  {
+   "mot": "plus",
+   "debut": 20.72,
+   "fin": 20.96
+  },
+  {
+   "mot": "sur",
+   "debut": 20.96,
+   "fin": 21.2
+  },
+  {
+   "mot": "trois",
+   "debut": 21.2,
+   "fin": 21.52
+  },
+  {
+   "mot": "ans.",
+   "debut": 21.52,
+   "fin": 22.16
+  },
+  {
+   "mot": "Mais",
+   "debut": 22.16,
+   "fin": 22.4
+  },
+  {
+   "mot": "le",
+   "debut": 22.4,
+   "fin": 22.56
+  },
+  {
+   "mot": "client",
+   "debut": 22.56,
+   "fin": 22.8
+  },
+  {
+   "mot": "n'a",
+   "debut": 22.8,
+   "fin": 23.12
+  },
+  {
+   "mot": "pas",
+   "debut": 23.12,
+   "fin": 23.36
+  },
+  {
+   "mot": "à",
+   "debut": 23.36,
+   "fin": 23.52
+  },
+  {
+   "mot": "avancer",
+   "debut": 23.52,
+   "fin": 24.0
+  },
+  {
+   "mot": "quatre",
+   "debut": 24.0,
+   "fin": 24.4
+  },
+  {
+   "mot": "virgule",
+   "debut": 24.4,
+   "fin": 25.04
+  },
+  {
+   "mot": "deux",
+   "debut": 25.04,
+   "fin": 25.36
+  },
+  {
+   "mot": "millions",
+   "debut": 25.36,
+   "fin": 25.68
+  },
+  {
+   "mot": "d'euros",
+   "debut": 25.68,
+   "fin": 26.16
+  },
+  {
+   "mot": "dès",
+   "debut": 26.16,
+   "fin": 26.4
+  },
+  {
+   "mot": "le",
+   "debut": 26.4,
+   "fin": 26.64
+  },
+  {
+   "mot": "départ.",
+   "debut": 26.64,
+   "fin": 27.28
+  },
+  {
+   "mot": "C'est",
+   "debut": 27.28,
+   "fin": 27.68
+  },
+  {
+   "mot": "exactement",
+   "debut": 27.68,
+   "fin": 28.24
+  },
+  {
+   "mot": "ce",
+   "debut": 28.24,
+   "fin": 28.4
+  },
+  {
+   "mot": "qu'il",
+   "debut": 28.4,
+   "fin": 28.72
+  },
+  {
+   "mot": "demandait.",
+   "debut": 28.72,
+   "fin": 29.037
+  }
+ ]
+}
